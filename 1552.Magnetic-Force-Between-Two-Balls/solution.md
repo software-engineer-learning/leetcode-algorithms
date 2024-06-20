@@ -20,7 +20,6 @@
 # Complexity
 - Time complexity: `O(N * log(N)).`
 - Space complexity: `O(N).`
-
 # Code
 ```C++
 class Solution {
