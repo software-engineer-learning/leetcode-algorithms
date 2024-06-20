@@ -5,7 +5,7 @@
 # Approach
 
 ## 1.Initial check:
-    -   We need to sort the `position` to make the placement of ball easier.
+-   We need to sort the `position` to make the placement of ball easier.
 ## 2.Binary Search:
 -   Use binary search to determine the largest minium distance. The search range will be from 1 to the maximum possiable distance between the first and last baskets divided by the number of balls minus one
     (last baskets divided by the number of balls minus one because: the result always greater than or equal to average of distance)
