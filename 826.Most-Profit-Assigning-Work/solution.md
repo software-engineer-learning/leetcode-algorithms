@@ -26,26 +26,16 @@ public:
         }
         sort(worker.begin(), worker.end());
         sort(prof_diff.begin(), prof_diff.end(), greater<pair<int, int>>());
-
-        vector<int> db_num;
-        vector<int> db_res;
         auto start = worker.end();
         for (int i = 0; i < prof_diff.size(); ++i) {
-
             if (start < worker.begin()) {
                 break;
             }
             auto lb = lower_bound(worker.begin(), start , prof_diff[i].second);
-
             int num = int(start - lb);
-            db_num.push_back(num);
-
             start = lb;
-           
             res += num * prof_diff[i].first;
-            db_res.push_back(res);
         }
-
         return res;
     }
 };
