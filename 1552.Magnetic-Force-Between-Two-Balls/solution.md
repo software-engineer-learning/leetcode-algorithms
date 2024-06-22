@@ -7,16 +7,16 @@
 ## 1.Initial check:
 -   We need to sort the `position` to make the placement of ball easier.
 ## 2.Binary Search:
--   Use binary search to determine the largest minium distance. The search range will be from 1 to the maximum possiable distance between the first and last baskets divided by the number of balls minus one
+-   Use binary search to determine the largest minium distance. The search range will be from 1 to the maximum possible distance between the first and last baskets divided by the number of balls minus one
     (last baskets divided by the number of balls minus one because: the result always greater than or equal to average of distance)
-## 3.possible function:
+## 3.Possible function:
 -   The `canPlaceBalls` function check if it's possible to place all m balls with at least `minDist` distance apart.
 ## 4.Adjust Binary Search Boundaries:
 -   Depending on whether it's possible to place the balls with the current middle distance, we adjust the binary search boundaries.
 ## 5.Return result:
 -   The result will be the largest mid value for which the balls can be placed.
 ## Notice:
--   Instead of using ` mid = left + (right - left) / 2;` could causes overflow , we should using ` mid = left + (right - left) / 2;` , i ensure that the midpoint is safe from overflow.
+-   Instead of using `mid = (left + right) / 2;` could causes overflow , we should using `mid = left + (right - left) / 2;` , ensure that the midpoint is safe from overflow.
 # Complexity
 - Time complexity: `O(N * log(N)).`
 - Space complexity: `O(N).`
