@@ -1,1 +1,1 @@
-# leetcode-sol
+# leetcode-algorithms
