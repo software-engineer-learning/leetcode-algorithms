@@ -34,7 +34,7 @@ This approach uses a queue to efficiently manage the flips in a sliding window.
 
 ## Complexity
 - Time complexity: $O(n)$
-- Space complexity: $O(n)$
+- Space complexity: $O(k)$
 
 ## Code
 ```cpp []
