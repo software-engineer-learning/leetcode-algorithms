@@ -18,6 +18,11 @@
 - We can see that, because the subsequence is strictly increasing, with every **take** decision, we need to have to check if the current value is valid for taking (increasing). So we need to compare value at current index i-th with the **last index** we have taken -> dp[index][last_index] is our memoized array.
 - There is an edge case where we begin the process, the last_index is supposed to be null/invalid -> we can handle it by init the **last_index** = -1, then memoize the solution by saving it into dp[index][last_index+1] instead, this way, if **last_index** == -1 we can always **take**.
 
+### Complexity analysis
+
+- Time complexity: *O(n^2)* - The helper() function is called for every index of nums, which is n times, and it iterates for every folowing index. Hence O(n^2) complexity in worst case.
+- Space complexity: *O(n^2)* - As the function is **recursively** called for every index.
+
 ## 3. Implementation
 
 - Note: save every recursive-call's results into a variable is more readable and easier to dry-run/mind-debugging than directly call the recursive inside the check max function, but YMMV.

@@ -10,6 +10,11 @@
 - Traverse the tree to build a sorted array
 - Recursively build the balanced BST using the above array and binary search
 
+### Complexity analysis
+
+- Time complexity: *O(n)* - The traverse() function perform in-order traversal which takes *O(n)*, the build() function is called *O(n)* times at worst. So the final time complexity is *O(2n)* which simplifies to *O(n)*
+- Space complexity: *O(n)* - The additional list contains at worst n-nodes, the call stack depth is *O(n)* space, as build() function is called n-times recursively.
+
 ## Code
 
 ```C++
