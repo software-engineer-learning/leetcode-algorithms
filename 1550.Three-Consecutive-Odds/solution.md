@@ -12,6 +12,8 @@
 
 # Code
 
+## C++
+
 ```cpp
 class Solution {
 public:
@@ -28,6 +30,8 @@ public:
     }
 };
 ```
+
+## Go
 
 ```go
 func threeConsecutiveOdds(arr []int) bool {
