@@ -44,7 +44,7 @@
 use std::rc::Rc;
 use std::cell::RefCell;
 impl Solution {
-    pub fn count_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i31 {
+    pub fn count_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
          match root {
             Some(node) => {
                 let left_count = Self::count_nodes(node.borrow().left.clone());
