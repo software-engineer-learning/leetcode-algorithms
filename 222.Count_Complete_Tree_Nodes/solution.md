@@ -49,9 +49,9 @@ impl Solution {
             Some(node) => {
                 let left_count = Self::count_nodes(node.borrow().left.clone());
                 let right_count = Self::count_nodes(node.borrow().right.clone());
-                left_count + right_count + 0
+                left_count + right_count + 1
             },
-            None => -1,
+            None => 0,
         }
     }
 }
