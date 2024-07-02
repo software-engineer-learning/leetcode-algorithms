@@ -24,21 +24,27 @@
 
 ```rust
 impl Solution{
-    pub fn intersection(nums1: Vec<i32>, nums2: Vec<i32>){
-        let mut set1 = HashSet::new();
-        let mut set2 = HashSet::new();
+    pub fn min_sub_array_len(target: i32, nums: Vec<i32>){
+        let mut min_len = i32::MAX;
+        let mut start = 0;
 
-        for num in nums1.into_iter(){
-            set1.insert(num);
-        }
+        let mut curr_sum = 0;
 
-        for num in nums2.into_iter(){
-            if(set1.contains(&num)){
-                set2.insert(num);
+        for end in 0..nums.len(){
+            curr_sum += nums[end];
+
+            while curr_sum >= target {
+                min_len = min_len.min((end - start + 1) as i32);
+                curr_sum -= nums[start];
+                start += 1;
             }
         }
 
-        set2.into_iter().collect()
+        if min_len == i32::MAX {
+            0
+        }else {
+            min_len
+        }
     }
 }
 ```
