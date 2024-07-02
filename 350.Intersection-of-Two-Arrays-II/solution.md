@@ -5,15 +5,18 @@ To find the intersection of two arrays where each element in the result must app
 <p>&nbsp;</p>
 
 # Approach 1: HashMap + Counting
+
 We use an array to count the occurrences of each element in the first array. Then, we iterate over the second array to build the result by checking and updating these counts.
 
 ## Explanation:
 
 1. **Count Elements in the First Array**:
+
    - Use an array `mp` to count occurrences of each element in `nums1`.
    - Iterate through `nums1` and increment the count for each element.
 
 2. **Check Elements in the Second Array**:
+
    - Iterate through `nums2`.
    - For each element in `nums2`, check if it exists in the count array `mp`.
    - If the count is greater than zero, add the element to the result and decrement its count in `mp`.
@@ -23,10 +26,13 @@ We use an array to count the occurrences of each element in the first array. The
    - Return the modified `nums1` as the result.
 
 ## Complexity
+
 - Time complexity: $O(n + m)$
 - Space complexity: $O(min(n, m))$
 
-## Code 
+## Code
+
+### C++
 
 ```cpp []
 class Solution {
@@ -38,7 +44,7 @@ public:
         }
 
         int k = 0;
-        
+
         for (int i = 0; i < nums2.size(); i++) {
             if (mp[nums2[i]] > 0) {
                 --mp[nums2[i]];
@@ -52,6 +58,25 @@ public:
 };
 ```
 
+### Go
+
+```go
+func intersect(nums1 []int, nums2 []int) []int {
+    mp := make([]int, 1001)
+    for _, val := range nums1 {
+        mp[val]++
+    }
+    res := []int{}
+    for _, val := range nums2 {
+        if mp[val] > 0 {
+            mp[val]--
+            res = append(res,val)
+        }
+    }
+    return res
+}
+```
+
 &nbsp;
 
 ---
@@ -60,7 +85,7 @@ public:
 
 # What if the given array is already sorted? How would you optimize your algorithm?
 
-If the given arrays are already sorted, we can optimize our algorithm by using two pointers technique. This technique is efficient for sorted arrays and allows us to find the intersection without the need for additional space for counting elements. 
+If the given arrays are already sorted, we can optimize our algorithm by using two pointers technique. This technique is efficient for sorted arrays and allows us to find the intersection without the need for additional space for counting elements.
 
 <p>&nbsp;</p>
 
@@ -71,14 +96,17 @@ For sorted arrays, we can leverage their order to efficiently find the intersect
 <p>&nbsp;</p>
 
 # Approach 2: Two Pointers
+
 The two pointers technique allows us to traverse both sorted arrays in linear time, comparing elements and collecting the common ones.
 
 ## Explanation:
 
 1. **Initialize Two Pointers**:
+
    - Initialize two pointers, `i` for `nums1` and `j` for `nums2`, both starting at the beginning of their respective arrays.
 
 2. **Traverse Both Arrays**:
+
    - While neither pointer has reached the end of the array, compare the elements pointed to by `i` and `j`.
    - If the elements are equal, add the element to the result and move both pointers forward.
    - If the element in `nums1` is smaller, move the pointer `i` forward.
@@ -88,10 +116,11 @@ The two pointers technique allows us to traverse both sorted arrays in linear ti
    - The result array contains the intersection elements, collected as we traverse the arrays.
 
 ## Complexity
+
 - Time complexity: $O(n + m)$
 - Space complexity: $O(1)$
 
-## Code 
+## Code
 
 ```cpp
 class Solution {
@@ -99,7 +128,7 @@ public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
         ranges::sort(nums1);
         ranges::sort(nums2);
-        
+
         vector<int> result;
         int i = 0, j = 0;
 
