@@ -3,7 +3,7 @@
 # Approach
 
 ## 1.Edge Case Handling:
-- If the linked list is too short to have any critical points (less than three nodes), return [-1, -1] immediately.
+- If the linked list is too short to have any critical points (less than three nodes), return `[-1, -1]` immediately.
 ## 2.Traverse the Linked List:
 - Start from the second node and check each node to see if it is a critical point. A node is a critical point if:
     - It is a local maxima (greater than both its previous and next nodes).
@@ -11,7 +11,7 @@
 ## 3.Store Critical Points:
 - Keep a list to store the indices of all critical points found during traversal.
 ## 4.Compute Distances:
-- If there are fewer than two critical points, return [-1, -1] as it's impossible to calculate any distances.
+- If there are fewer than two critical points, return `[-1, -1]` as it's impossible to calculate any distances.
 - Otherwise, calculate:
     - The minimum distance between any two consecutive critical points.
     - The maximum distance between the first and the last critical points in the list.
