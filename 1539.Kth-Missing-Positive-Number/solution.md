@@ -35,12 +35,10 @@ impl Solution {
             return k + len;
         }
 
-
         while (start < end) {
-            let mid = start + (end - start)/2;
+            let mid = start + (end - start) / 2;
 
             let count = arr[mid as usize] - mid - 1;
-
 
             if (count >= k){
                 end = mid;
@@ -49,7 +47,7 @@ impl Solution {
             }
         }
 
-        arr[start as usize - 1] + k - (arr[start as usize - 1] - (start - 1) - 1)
+        start + k
     }
 }
 ```
