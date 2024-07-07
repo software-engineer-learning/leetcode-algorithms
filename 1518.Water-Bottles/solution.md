@@ -25,19 +25,19 @@ The problem involves determining the maximum number of water bottles you can dri
    - Those `a/x` full bottles will eventually also become empty and can be exchanged further, forming an infinite sequence.
 
 4. **Using the Sum of an Infinite Geometric Progression**:
-   - The sum $ S $ of an infinite geometric series where the first term is $ a $ and the common ratio $ r $ is $ \frac{1}{x} $ is given by:
-        - ### $ S = \frac{a}{1 - r}$
-   - In this case, the first term $ a $ is the initial number of full bottles, and the common ratio $ r $ is $ \frac{1}{x} $.
+   - The sum $S$ of an infinite geometric series where the first term is $a$ and the common ratio $r$ is $\frac{1}{x}$ is given by:
+        - ### $S = \frac{a}{1 - r}$
+   - In this case, the first term $a$ is the initial number of full bottles, and the common ratio $r$ is $\frac{1}{x}$.
 
 5. **Formula Derivation**:
-   - Substitute $ r = \frac{1}{x} $ into the geometric series formula:
-        - ### $ S = \frac{a}{1 - \frac{1}{x}} = \frac{a}{\frac{x-1}{x}} = \frac{a \cdot x}{x - 1} $
+   - Substitute $r = \frac{1}{x}$ into the geometric series formula:
+        - ### $S = \frac{a}{1 - \frac{1}{x}} = \frac{a}{\frac{x-1}{x}} = \frac{a \cdot x}{x - 1}$
    - However, since we are dealing with integer bottles, we adjust the formula to account for integer division:
-        - ### $ S = \frac{a \cdot x - 1}{x - 1} $
+        - ### $S = \frac{a \cdot x - 1}{x - 1}$
 
 ## Complexity
-- Time complexity: $ O(1) $
-- Space complexity: $ O(1) $
+- Time complexity: $O(1)$
+- Space complexity: $O(1)$
 
 ## Code
 
