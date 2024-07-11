@@ -1,4 +1,4 @@
-# Approach
+# Approach 1: Brute Force
 
 1. Initialization: We initialize a stack to keep track of characters and handle nested parentheses.
 
@@ -11,7 +11,7 @@
 
 # Complexity
 
-- Time complexity: $O(N)$.
+- Time complexity: $O(N^2)$.
 - Space complexity: $O(N)$.
 
 # Solution
@@ -69,4 +69,74 @@ impl Solution {
         stack.into_iter().collect()
     }
 }
+```
+
+<p>&nbsp;</p>
+
+# Approach 2: Teleport
+
+We use a stack to identify matching parentheses and a vector to store the teleport positions, which indicate where to jump when encountering a parenthesis. We then construct the result string by iterating through the original string and handling the teleportation to reverse the segments correctly.
+
+## Explanation:
+
+1. **Initialization**:
+   - `n`: the length of the input string `s`.
+   - `st`: a stack to keep track of the indices of opening parentheses.
+   - `teleport`: a vector of size `n` to store the matching indices of parentheses.
+
+2. **Identify Matching Parentheses**:
+   - Iterate through the string `s`:
+     - If the current character is '(', push its index onto the stack.
+     - If the current character is ')', pop the top index from the stack to get the matching opening parenthesis. Store the matching indices in the `teleport` vector for both '(' and ')'.
+
+3. **Construct Result String**:
+   - Initialize `res` as an empty string to store the result.
+   - Initialize `dir` as 1 to indicate the direction of traversal (1 for forward, -1 for backward).
+   - Iterate through the string `s`:
+     - If the current character is '(' or ')', teleport to the matching parenthesis index and reverse the direction.
+     - Otherwise, append the current character to `res`.
+
+## Complexity
+- Time complexity: $O(n)$
+- Space complexity: $O(n)$
+
+## Code 
+```cpp
+class Solution {
+public:
+    string reverseParentheses(string& s) {
+        int n = s.size();
+
+        stack<int> st;
+        vector<int> teleport(n);
+
+        for (int i = 0; i < n; i++) {
+            if (s[i] == '(') {
+                st.push(i);
+            }
+            else if (s[i] == ')') {
+                int j = st.top();
+                st.pop();
+
+                teleport[i] = j;
+                teleport[j] = i;
+            }
+        }
+
+        string res;
+        int dir = 1;
+
+        for (int i = 0; i < n; i += dir) {
+            if (s[i] == '(' || s[i] == ')') {
+                i = teleport[i];
+                dir *= -1;
+            }
+            else {
+                res += s[i];
+            }
+        }
+
+        return res;
+    }
+};
 ```
