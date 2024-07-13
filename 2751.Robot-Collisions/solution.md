@@ -25,6 +25,79 @@ Here’s a step-by-step explanation and the corresponding solution:
 
 # Code
 
+## Go
+
+```golang
+import "sort"
+
+type Robot struct {
+	index     int
+	position  int
+	health    int
+	direction byte
+}
+
+func survivedRobotsHealths(positions []int, healths []int, directions string) []int {
+    n := len(positions)
+	robots := make([]Robot, n)
+
+	for i := 0; i < n; i++ {
+		robots[i] = Robot{i, positions[i], healths[i], directions[i]}
+	}
+
+	// Sort robots by position
+	sort.Slice(robots, func(i, j int) bool {
+		return robots[i].position < robots[j].position
+	})
+
+	stack := []Robot{}
+	survivors := make([]Robot, 0)
+
+	for _, robot := range robots {
+		if robot.direction == 'R' {
+			stack = append(stack, robot)
+		} else {
+			for len(stack) > 0 && stack[len(stack)-1].direction == 'R' {
+				top := stack[len(stack)-1]
+				if top.health < robot.health {
+					robot.health--
+					stack = stack[:len(stack)-1]
+				} else if top.health > robot.health {
+					stack[len(stack)-1].health--
+					robot.health = 0
+					break
+				} else {
+					stack = stack[:len(stack)-1]
+					robot.health = 0
+					break
+				}
+			}
+			if robot.health > 0 {
+				survivors = append(survivors, robot)
+			}
+		}
+	}
+
+	// Remaining robots in the stack are survivors
+	for _, robot := range stack {
+		survivors = append(survivors, robot)
+	}
+
+	// Sort survivors by their original index
+	sort.Slice(survivors, func(i, j int) bool {
+		return survivors[i].index < survivors[j].index
+	})
+
+	// Extract the health of survivors in the order of their original indices
+	result := make([]int, len(survivors))
+	for i, robot := range survivors {
+		result[i] = robot.health
+	}
+
+	return result
+}
+```
+
 ## Rust
 
 ```rust
