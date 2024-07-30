@@ -1,4 +1,3 @@
-
 # 1. Initial idea
 
 ## 2. Approach
@@ -14,13 +13,13 @@
 ### [Patience-sort](https://en.wikipedia.org/wiki/Patience_sorting)
 
 - This approach uses patience sort algorithm as a foundation to solve this.
-- Think of a simple [Solitaire](https://en.wikipedia.org/wiki/Patience_(game)) game where you have to sort cards from a deck in decreasing order, using multiple zone to stack cards.
-![Example](image.png)
+- Think of a simple [Solitaire](<https://en.wikipedia.org/wiki/Patience_(game)>) game where you have to sort cards from a deck in decreasing order, using multiple zone to stack cards.
+  ![Example](Solitaire.png)
 - Let's call `curr_val` as the value of the i-th index we are currently evaluating, sub[] as the subsequence we will be building. We can see that in solitaire we have 2 choices (note: in Solitaire, only the smaller cards went into the top of the stack):
   - If we cannot add the current card into the stack/pile, we will create a new pile with that card.
   - In the case we have multiple option to add the card to (curr_val > top_val), we will greedily add it to the left-most stack.
   - The only problem we encounter when simulate those behavior into code is how we can keep track of the top of each stack
-  - We can see that we only need to consider the length of each pile, not necessary the correct sequence. So what if we replace the smallest element which >= `curr_val`? For example:
+  - We can see that we only need to consider the length of each pile, not necessary the correct sequence. So what if we replace the smallest element which >= `curr_val`. For example:
     - nums = [10, 5, 8, 3, 9, 4, 12, 11]
     - Add 10 to the 1st stack, current LIS = 1, sub = [10]
     - Encounter 5 < 10; now, try replace 5 with 10, current LIS = 1, sub = [5]
@@ -35,10 +34,12 @@
 
 ### Complexity analysis
 
-- Time complexity: *O(nlog(n))* - standard sorting complexity, in worst case, we have to run the `find_stack()` function for every element, hence nlogn
-- Space complexity: *O(n)* - `vector<int> push_back` is of length *n*.
+- Time complexity: $O(nlog(n))$ - standard sorting complexity, in worst case, we have to run the `find_stack()` function for every element, hence nlogn
+- Space complexity: $O(n)$ - `vector<int> push_back` is of length `n`.
 
 ## 3. Implementation
+
+C++
 
 ```C++
 class Solution {
