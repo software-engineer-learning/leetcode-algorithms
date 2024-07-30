@@ -26,30 +26,29 @@ To solve this problem, we can use dynamic programming. The idea is to iterate th
 ```cpp
 class Solution {
 public:
-    int maximumGain(string& s, int x, int y) {
-        if (x > y) {
-            return x * remove(s, 'a', 'b') + y * remove(s, 'b', 'a');
-        }
-        else {
-            return y * remove(s, 'b', 'a') + x * remove(s, 'a', 'b');
-        }
-    }
+    int minimumDeletions(string s) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+        int n = s.length();
+        vector<int> countA(n + 1, 0); 
 
-    int remove(string& s, char first, char second) {
-        int count = 0;
-        int top = -1;
+        for (int i = n - 1; i >= 0; --i) {
+            countA[i] = countA[i + 1] + (s[i] == 'a' ? 1 : 0);
+        }
 
-        for (int i = 0; i < s.size(); i++) {
-            if (top >= 0 && s[top] == first && s[i] == second) {
-                --top;
-                ++count;
-            } else {
-                s[++top] = s[i];
+        int countB = 0; 
+        int result = INT_MAX;
+
+        for (int i = 0; i <= n; ++i) {
+            result = min(result, countB + countA[i]);
+            if (i < n && s[i] == 'b') {
+                countB++;
             }
         }
 
-        s.resize(++top);
-        return count;
+        return result;
     }
 };
+
 ```
