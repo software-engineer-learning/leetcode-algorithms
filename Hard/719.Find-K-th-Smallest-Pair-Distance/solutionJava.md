@@ -13,16 +13,16 @@
 
 - **Time complexity**
 
-    Sorting: O(Nlog⁡N)O(NlogN)
+  * Sorting: $$O(N \log ⁡N)O(N \log N)
 
-    Binary Search: The binary search runs in O(log⁡D)O(logD), where DD is the difference between the maximum and minimum element in the array.
+  * Binary Search: The binary search runs in $$O(\log⁡ D)O(\log D), where DD is the difference between the maximum and minimum element in the array.
 
-    Counting Pairs: Counting pairs takes O(N)O(N) for each iteration of the binary search.
+  * Counting Pairs: Counting pairs takes $$O(N)O(N) for each iteration of the binary search.
 
-    The overall time complexity is O(Nlog⁡N+Nlog⁡D)O(NlogN+NlogD), which is significantly more efficient than generating all pairs and sorting them.
+The overall time complexity is $$O(N \log ⁡N + N \log ⁡D)O(N \log N + N \log D), which is significantly more efficient than generating all pairs and sorting them.
 
 ## Code 
-```java
+```Java
 class Solution {
     public int smallestDistancePair(int[] nums, int k) {
         Arrays.sort(nums);
