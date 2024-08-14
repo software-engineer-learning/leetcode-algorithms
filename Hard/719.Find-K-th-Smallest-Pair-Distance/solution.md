@@ -153,10 +153,10 @@ let smallestDistancePair = function(nums, k) {
     The array is sorted upfront, allowing us to efficiently count pairs with a given maximum distance using a two-pointer technique.
 ## Complexity
 - **Time complexity**
-  * Sorting: $$O(N \log ⁡N)O(N \log N)
-  * Binary Search: The binary search runs in $$O(\log⁡ D)O(\log D), where DD is the difference between the maximum and minimum element in the array.
-  * Counting Pairs: Counting pairs takes $$O(N)O(N) for each iteration of the binary search.
-The overall time complexity is $$O(N \log ⁡N + N \log ⁡D)O(N \log N + N \log D), which is significantly more efficient than generating all pairs and sorting them.
+  * Sorting: $O(n \log n)O(n \log n)$
+  * Binary Search: The binary search runs in $O(\log⁡ d)O(\log d)$, where dd is the difference between the maximum and minimum element in the array.
+  * Counting Pairs: Counting pairs takes $O(n)O(Nn for each iteration of the binary search.
+The overall time complexity is $O(n \log n + n \log d)O(n \log n + n \log d)$, which is significantly more efficient than generating all pairs and sorting them.
 
 ## Code 
 ```Java
