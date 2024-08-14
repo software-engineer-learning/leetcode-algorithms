@@ -118,21 +118,21 @@ class Solution:
 ### JavaScript
 
 ```js
-let sliding = function (nums, target) {
+let sliding = function(nums, target) {
     let count = 0;
 
     for (let left = 0, right = 0; right < nums.length; right++) {
-    while (nums[right] - nums[left] > target) {
-        ++left;
-    }
+        while (nums[right] - nums[left] > target) {
+            ++left;
+        }
 
-    count += right - left;
+        count += right - left;
     }
 
     return count;
 };
 
-let smallestDistancePair = function (nums, k) {
+let smallestDistancePair = function(nums, k) {
     nums.sort((a, b) => a - b);
 
     let left = 0;
@@ -140,13 +140,14 @@ let smallestDistancePair = function (nums, k) {
     let mid;
 
     while (left <= right) {
-    mid = (left + right) >>> 1;
+        mid = (left + right) >>> 1;
 
-    if (sliding(nums, mid) < k) {
-        left = mid + 1;
-    } else {
-        right = mid - 1;
-    }
+        if (sliding(nums, mid) < k) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
     }
 
     return left;
