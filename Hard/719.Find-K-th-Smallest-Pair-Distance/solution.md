@@ -33,6 +33,7 @@ This approach uses binary search on the possible distances and a sliding window 
 - Space complexity: $O(1)$, as we only use a few additional variables for the binary search and sliding window.
 
 ## Code
+### C++
 ```cpp
 class Solution {
 public:
@@ -71,4 +72,35 @@ public:
         return left;
     }
 };
+```
+### Python
+```python
+class Solution:
+    def smallestDistancePair(self, nums: List[int], k: int) -> int:
+        nums.sort()
+        n = len(nums)
+
+        def sliding(target: int) -> int:
+            count, left, right = 0, 0, 0
+
+            while right < n:
+                while nums[right] - nums[left] > target:
+                    left += 1
+                count += right - left
+                right += 1
+            
+            return count
+        
+        
+        left, right = 0, nums[-1] - nums[0]
+
+        while left <= right:
+            mid = (left + right) // 2
+
+            if sliding(mid) < k:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return left
 ```
