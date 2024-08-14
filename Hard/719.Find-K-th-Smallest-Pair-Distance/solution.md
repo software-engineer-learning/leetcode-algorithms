@@ -104,3 +104,41 @@ class Solution:
 
         return left
 ```
+
+### JavaScript
+```js
+let sliding = function(nums, target) {
+    let count = 0;
+
+    for (let left = 0, right = 0; right < nums.length; right++) {
+        while (nums[right] - nums[left] > target) {
+            ++left;
+        }
+
+        count += right - left;
+    }
+
+    return count;
+}
+
+let smallestDistancePair = function(nums, k) {
+    nums.sort((a, b) => a - b);
+
+    let left = 0;
+    let right = nums[nums.length - 1] - nums[0];
+    let mid;
+
+    while (left <= right) {
+        mid = (left + right) >>> 1;
+
+        if (sliding(nums, mid) < k) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+
+    return left;
+}
+```
