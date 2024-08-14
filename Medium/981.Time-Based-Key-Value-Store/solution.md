@@ -8,7 +8,7 @@ This is a pretty straight forward problem, as the timestamp is strictly increasi
 
 - Use a hashmap/unordered_map to store keys for efficient lookup, return empty when key not exists
 - Use a vector<pair<string,int>> to store values and their timestamp. As the timestamp is strictly increasing, we can use binary search when lookup the correct pair. Some caveat:
-  - When lookup with binari search, we need to use timestamp, not index
+  - When lookup with binary search, we need to use timestamp, not index
   - Take care of edge-case where repeated querying for out of bound values
   - If query value is out of left bound, we need to return empty string (stated in the description but might still throw people up when implementing code)
 
