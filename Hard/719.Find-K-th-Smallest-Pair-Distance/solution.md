@@ -17,9 +17,9 @@ This approach uses binary search on the possible distances and a sliding window 
    - We use binary search to find the k-th smallest distance. The search range is from `left = 0` (the smallest possible distance) to `right = max(nums) - min(nums)` (the largest possible distance).
 
 3. **Sliding Window to Count Pairs**:
-   - The sliding window method (`sliding(nums, mid)`) is used to count the number of pairs that have a distance less than or equal to a given `mid`.
-   - For each `right` pointer in the array, the `left` pointer is moved forward until the distance between `nums[right]` and `nums[left]` is less than or equal to `mid`.
-   - The number of valid pairs formed with `right` as one of the elements is `right - left`.
+   - For each midpoint `mid` in the binary search, we use the `sliding` function to count how many pairs have a distance less than or equal to `mid`.
+   - The `sliding` function uses two pointers (`left` and `right`) to maintain a window where the difference between `nums[right]` and `nums[left]` is less than or equal to `mid`. If the difference exceeds `mid`, the `left` pointer is incremented.
+   - The number of valid pairs for a given `right` index is `right - left`, which is added to a running `count`.
 
 4. **Adjusting the Binary Search Range**:
    - If the number of pairs with distance less than or equal to `mid` is less than `k`, it means we need to search for a larger distance, so `left` is adjusted to `mid + 1`.
