@@ -119,36 +119,36 @@ class Solution:
 
 ```js
 let sliding = function (nums, target) {
-  let count = 0;
+    let count = 0;
 
-  for (let left = 0, right = 0; right < nums.length; right++) {
+    for (let left = 0, right = 0; right < nums.length; right++) {
     while (nums[right] - nums[left] > target) {
-      ++left;
+        ++left;
     }
 
     count += right - left;
-  }
+    }
 
-  return count;
+    return count;
 };
 
 let smallestDistancePair = function (nums, k) {
-  nums.sort((a, b) => a - b);
+    nums.sort((a, b) => a - b);
 
-  let left = 0;
-  let right = nums[nums.length - 1] - nums[0];
-  let mid;
+    let left = 0;
+    let right = nums[nums.length - 1] - nums[0];
+    let mid;
 
-  while (left <= right) {
+    while (left <= right) {
     mid = (left + right) >>> 1;
 
     if (sliding(nums, mid) < k) {
-      left = mid + 1;
+        left = mid + 1;
     } else {
-      right = mid - 1;
+        right = mid - 1;
     }
-  }
+    }
 
-  return left;
+    return left;
 };
 ```
