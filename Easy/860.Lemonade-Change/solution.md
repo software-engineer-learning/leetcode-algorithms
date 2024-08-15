@@ -17,7 +17,7 @@ The problem requires determining if we can provide the correct change for each c
   - Only a constant amount of extra space is used for the `five` and `ten` counters.
 
 ## Code
-```Java
+```java
 class Solution {
     public boolean lemonadeChange(int[] bills) {
         int five = 0, ten = 0;
