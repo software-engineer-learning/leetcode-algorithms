@@ -19,7 +19,7 @@ The problem is to find the nth ugly number, where ugly numbers are positive inte
 
 ## Complexity
 - **Time Complexity**:
-  - The time complexity is $O(n log n)$ because each insertion and removal operation in the heap takes `O(log n)` time, and this operation is repeated `n` times.
+  - The time complexity is $O(n log n)$ because each insertion and removal operation in the heap takes $O(log n)$ time, and this operation is repeated `n` times.
 
 - **Space Complexity**:
   - The space complexity is $O(n)$ because the heap and set can grow up to the size of `n` in the worst case.
