@@ -13,7 +13,7 @@
 # Complexity
 
 - Time complexity: $O(N^3)$. At worst case, M can go up to N in size `(N = piles.size())`, at every index we need to loop 2*M times at worst  and there are N work at every state.
-- Space complexity: $O(N^3)$. N recursive call stack and N^2 for memoi table
+- Space complexity: $O(N^2)$. N recursive call stack and N^2 for memoi table
 
 # Solution
 
