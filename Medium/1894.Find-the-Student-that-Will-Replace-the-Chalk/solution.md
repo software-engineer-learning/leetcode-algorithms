@@ -60,3 +60,24 @@ impl Solution {
     }
 }
 ```
+
+## Go
+```go
+func chalkReplacer(chalk []int, k int) int {
+	var sumChalk = 0
+	for i := 0; i < len(chalk); i++ {
+		sumChalk += chalk[i]
+	}
+	if k % sumChalk == 0 {
+		return 0
+	}
+	var remain = k % sumChalk
+	for i := 0; i < len(chalk); i++ {
+		if remain < chalk[i] {
+			return i
+		}
+		remain -= chalk[i]
+	}
+	return 0
+}
+```
