@@ -9,12 +9,15 @@ To remove nodes from a linked list whose values exist in a given array, we can u
 ## Explanation:
 
 1. **Create a Set**:
+
    - Convert the given array `nums` into an `unordered_set` for O(1) average-time complexity lookups.
 
 2. **Initialize a Dummy Node**:
+
    - Use a dummy node that points to the head of the linked list. This helps simplify edge cases where the head itself needs to be removed.
 
 3. **Iterate Through the Linked List**:
+
    - Use a pointer `curr` initialized to the dummy node.
    - Traverse the list using `curr`. For each node, check if the next node's value exists in the set:
      - If it does, skip the next node by updating `curr->next` to `curr->next->next`.
@@ -24,19 +27,23 @@ To remove nodes from a linked list whose values exist in a given array, we can u
    - Return `dummy.next` which points to the new head of the modified list.
 
 ## Complexity
+
 - Time complexity: $O(n + m)$, where `n` is the length of the linked list and `m` is the length of the array `nums`.
 - Space complexity: $O(m)$.
 
 ## Code
+
+### C++
+
 ```cpp
 class Solution {
 public:
     ListNode* modifiedList(vector<int>& nums, ListNode* head) {
         unordered_set<int> us(nums.begin(), nums.end());
-        
+
         ListNode dummy(0, head);
         ListNode *curr = &dummy;
-        
+
         while (curr->next) {
             if (us.find(curr->next->val) != us.end()) {
                 curr->next = curr->next->next;
@@ -45,13 +52,42 @@ public:
                 curr = curr->next;
             }
         }
-        
+
         return dummy.next;
     }
 };
 ```
 
-# Java Solution:
+### Go
+
+```go
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func modifiedList(nums []int, head *ListNode) *ListNode {
+    set := make([]bool, 100_001)
+    for _, num := range nums {
+        set[num] = true
+    }
+
+    dummy := &ListNode{Next: head}
+    current := dummy
+    for current.Next != nil {
+        if set[current.Next.Val] {
+            current.Next = current.Next.Next
+        } else {
+            current = current.Next
+        }
+    }
+    return dummy.Next
+}
+```
+
+### Java
 ```java
 /**
  * Definition for singly-linked list.
