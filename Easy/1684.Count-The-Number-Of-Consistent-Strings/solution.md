@@ -58,3 +58,33 @@ func countConsistentStrings(allowed string, words []string) int {
     return count
 }
 ```
+### Java
+
+```java
+class Solution {
+    public int countConsistentStrings(String allowed, String[] words) {
+        boolean[] allowedFreq = new boolean[26];
+
+        for (Character c : allowed.toCharArray()) {
+            allowedFreq[c - 'a'] = true;
+        }
+        int result = 0;
+        for (String word : words) {
+            if (isConsistent(word, allowedFreq)) {
+                result += 1;
+            }
+        }
+
+        return result;
+    }
+
+    private boolean isConsistent(String word, boolean[] allowedFreq) {
+        for (int i = 0; i < word.length(); ++i) {
+            if (!allowedFreq[word.charAt(i) - 'a']) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
