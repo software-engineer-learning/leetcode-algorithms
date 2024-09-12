@@ -16,7 +16,7 @@
   - Mark the corresponding index in `seen` as true.
 
 - Initialize a variable `count` to store the number of consistent strings.
-- Initialize a function which named `isConsistant` with `word` is parameters and return a `boolean` variable:
+- Initialize a function which named `isConsistent` with `word` is parameters and return a `boolean` variable:
   - Iterate through each character in `word`:
     - Check if the current character is allowed by accessing the corresponding index in `seen`:
       - If not allowed, return `false` otherwise we continue to iterate.
