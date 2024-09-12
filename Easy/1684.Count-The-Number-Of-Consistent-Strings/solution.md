@@ -10,6 +10,8 @@
 
 ## Approach
 
+### Hash set
+
 - Initialize a boolean array `seen` of size `26` to store which characters are allowed.
 - Iterate through each character in the `allowed` string:
 
@@ -25,10 +27,22 @@
   - if `isConsitent(word)` return `true`, increment `count`.
 - Return the final value of `count` as the result.
 
+### Bitset
+
+- This follow the same principle with the hash set approach, you hash all valid characters into 1 "bucket", but this time instead of an array we use a single variable `mask`.
+- This approach works because the problem don't ask for the frequency and only want us to check the existence of a character. So we can set the position of bits inside `mask` based on the valid character's ASCII value minus `'a'` (see above for detailed explaination). Also, because there is only 26 lower-case alphabet characters and an int have 32 bits, we can easily fit all characters inside an int variable.
+- Start with initialize our "bucket" `mask = 0` which is an empty bucket with all bit unset.
+- Iterate the allowed characters list and set the i-th bit of `mask` based on the position of the character in alphabet. Now we have our bucket filled.
+- Iterate the string list, check every characters of each string and doing comparision:
+  - `(mask >> (c-'a'))` this code basically move the bits at position (c-'a') to the right most side.
+  - `(mask >> (c-'a')) & 1` this check if the right most side exist or not, if it isn't the result will be 0, otherwise it will be 1
+  - `bits = (mask >> (c-'a')) & 1` will either be 1 or 0 (true or false)
+
 ## Complexity
 
 - Time Complexity: $O(N * M)$, where `N` is the length of `words` array, M is maximum length of all words
 - Space Complexity: $O(26)$ where 26 is the number of English lowercase characters.
+- Space Complexity (bitmask): O(1) as the valid chars are hashed into `mask` variable
 
 ## Code
 
@@ -87,4 +101,27 @@ class Solution {
         return true;
     }
 }
+```
+### C++
+```cpp
+class Solution {
+public:
+    int countConsistentStrings(string allowed, vector<string>& words) {
+        int mask = 0;
+        for(char c : allowed) mask |= 1 << (c - 'a');
+        int res = 0;
+        for(auto s : words) {
+            if(is_valid(s, mask)) res++;
+        }
+        return res;
+    }
+
+    bool is_valid(string s, int mask) {
+        for(char c : s) {
+            int bit = (mask >> (c - 'a')) & 1;
+            if(!bit) return false;
+        }
+        return true;
+    }
+};
 ```
