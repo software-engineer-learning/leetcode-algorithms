@@ -5,9 +5,7 @@ The problem asks for the XOR of elements between two indices for each query. Cal
 1. **Prefix XOR Array**: 
    - Construct a prefix XOR array where each element at index `i` represents the XOR of all elements from the start of the array to index `i-1`.
    - Using the prefix XOR array, the XOR of a subarray between indices `start` and `end` can be computed as:
-     \[
-     \text{XOR}(arr[start..end]) = \text{prefixXor}[end+1] \oplus \text{prefixXor}[start]
-     \]
+     $\text{XOR}(arr[start..end]) = \text{prefixXor}[end+1] \oplus \text{prefixXor}[start]$
    - This allows each query to be processed in O(1) time.
    
 2. **Query Processing**:
