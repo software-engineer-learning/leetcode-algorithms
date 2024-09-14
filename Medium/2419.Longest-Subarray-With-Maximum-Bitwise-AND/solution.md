@@ -11,7 +11,7 @@
 
 # Complexity
 - **Time complexity:**  
-  The solution involves a single pass over the array, so the time complexity is $O(n)$ where ``n` is the number of elements in the input array.
+  The solution involves a single pass over the array, so the time complexity is $O(n)$ where `n` is the number of elements in the input array.
 
 - **Space complexity:**  
   The space complexity is $O(1)$ because only a few integer variables are used for tracking state.
