@@ -97,3 +97,69 @@ func minExtraChar(s string, dictionary []string) int {
     return dp[0]
 }
 ```
+
+# Approach 2 - Dynamic Programming + HashSet
+
+# Intuition
+The problem is about minimizing the number of extra characters needed to form a string from a given dictionary of words. My first thought was to approach it using dynamic programming, where we try to partition the string into substrings that are either in the dictionary or minimize the number of unmatched characters.
+
+# Approach
+We use dynamic programming to solve this problem. The idea is to traverse the string and for each index, try all possible substrings starting from that index. If a substring exists in the dictionary, we recursively check the next index and update our result. Otherwise, we move to the next character and increment the count of extra characters. To avoid redundant calculations, we use a DP array to store results for subproblems (i.e., starting from a given index). The recursion ensures we explore all valid substring partitions, while the DP array optimizes performance by avoiding recomputation.
+
+# Complexity
+- Time complexity:  
+  The time complexity is $O(n^2)$, where $$n$$ is the length of the string. This is because for each starting index, we check all possible substrings and perform dictionary lookups in constant time.
+
+- Space complexity:  
+  The space complexity is $O(n)$, where $$n$$ is the length of the string. We store the DP array of size `n+1` and a dictionary, but the dictionary size is constant for any input.
+
+# Code
+```java
+class Solution {
+    private int N;
+    private String s;
+    private Set<String> dictionary;
+    private int[] dp;
+    private static final int INF = Integer.MAX_VALUE;
+
+    public int minExtraChar(String s, String[] dictionary) {
+        N = s.length();
+        this.s = s;
+        this.dictionary = new HashSet<>();
+        for (String word : dictionary) {
+            this.dictionary.add(word);
+        }
+        dp = new int[N + 1]; 
+        
+        for (int i = 0; i <= N; i++) {
+            dp[i] = -1;
+        }
+
+        return calculateMinLength(0);
+    }
+
+    private int calculateMinLength(int index) {
+        if (index >= N) {
+            return 0;
+        }
+        
+        if (dp[index] != -1) {
+            return dp[index]; 
+        }
+
+        int best = INF;
+        
+        for (int i = index + 1; i <= N; i++) {
+            String substring = s.substring(index, i);
+            if (dictionary.contains(substring)) {
+                best = Math.min(best, calculateMinLength(i)); 
+            }
+        }
+
+        best = Math.min(best, calculateMinLength(index + 1) + 1);
+
+        dp[index] = best;
+        return best;
+    }
+}
+```
