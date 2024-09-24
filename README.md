@@ -5,9 +5,7 @@ Group leetcode-algorithms Tele: <https://t.me/+ST0unit9nTRkYjhl>
 ## Contribution's guide
 
 - Create an directory with name `<problem_id>.<Name-To-Directory>`.
-- Create a solution file with name `solution.md` in `<problem_id>.<Name-To-Directory>`.
-- If you are new with markdown, follow these guidelines: <https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/Rules.md>
-For example:
+- Create a solution file with name `solution.md` in `<problem_id>.<Name-To-Directory>`. For example:
 
 ```md
 350.Intersection-Of-Two-Arrays-II
@@ -15,6 +13,8 @@ For example:
 ---- description.md
 ...
 ```
+
+- If you are new with markdown, follow these guidelines: <https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/Rules.md>
 
 ## Data structures
 
