@@ -39,9 +39,9 @@ This solution uses a Trie (prefix tree) to efficiently find the longest common p
   
   - **Trie Traversal**:  
     - We start from the root node and traverse the Trie as long as the corresponding child node exists for the current digit (`y % 10`). Each step down the Trie represents a match in the prefix between `x` and one or more numbers in the Trie.
-    
-    - **Why initialize `res = -1`?**:  
-      - We start with `res = -1` because, even if there's no match, we will increment it once in the first iteration, then `res = -1`. When the first match is found (at the root level), the result becomes `1` for one-digit matches, and so on.
+
+  - **Why initialize `res = -1`?**:  
+    - We start with `res = -1` because, even if there's no match, we will increment it once in the first iteration, then `res = 0`. When the first match is found, the result becomes `1` for one-digit matches, and so on.
 
 ### **Solution Class**
 - **Inserting all numbers from `arr1` to the Trie**:  
