@@ -24,14 +24,14 @@ The following section contains list of basic problems categorized based on their
 
 | Problem                        | Leetcode | Solution |
 |--------------------------------|----------|----------|
-| 219. Contains Duplicate II | [Link](https://leetcode.com/problems/contains-duplicate-ii/description/)         | [Link](Easy\219.Contains-Duplicate-II\solution-hashmap.md)         |
+| 219. Contains Duplicate II | [Link](https://leetcode.com/problems/contains-duplicate-ii/description/)         | [Link](Easy/219.Contains-Duplicate-II/solution-hashmap.md)         |
 |                                |          |          |
 
 ## Stack
 
 | Problem                        | Leetcode | Solution |
 |--------------------------------|----------|----------|
-| 155. Min Stack | [Link](https://leetcode.com/problems/min-stack/solutions/1294983/implementing-stack-from-scratch/)         | [Link](Easy\155.Min-Stack\solution-hashmap.md)         |
+| 155. Min Stack | [Link](https://leetcode.com/problems/min-stack/solutions/1294983/implementing-stack-from-scratch/)         | [Link](Easy/155.Min-Stack/solution-hashmap.md)         |
 | 242. Valid Palindrome | [Link](https://leetcode.com/problems/valid-palindrome/description/)         | [TBA](#)         |
 | 217. Contains Duplicate | [Link](https://leetcode.com/problems/contains-duplicate/description/)         | [TBA](#)         |
 | 242. Valid Anagram | [Link](https://leetcode.com/problems/valid-anagram/description/)         | [TBA](#)         |
@@ -41,12 +41,12 @@ The following section contains list of basic problems categorized based on their
 
 | Problem                        | Leetcode | Solution |
 |--------------------------------|----------|----------|
-| 303. Range Sum Query - Immutable | [Link](https://leetcode.com/problems/range-sum-query-immutable/)         | [Link](Medium\307.Range-sum-query-Mutable\solution.md)         |
-| 307. Range Sum query (Mutable) | [Link](https://leetcode.com/problems/range-sum-query-mutable/)     | [Link](Medium\307.Range-sum-query-Mutable\solution.md)     |
+| 303. Range Sum Query - Immutable | [Link](https://leetcode.com/problems/range-sum-query-immutable/)         | [Link](Medium/307.Range-sum-query-Mutable/solution.md)         |
+| 307. Range Sum query (Mutable) | [Link](https://leetcode.com/problems/range-sum-query-mutable/)     | [Link](Medium/307.Range-sum-query-Mutable/solution.md)     |
 |                                |          |          |
 
 ### Trie
 
 | Problem                        | Leetcode | Solution |
 |--------------------------------|----------|----------|
-| 208. Implement Trie (prefix tree) | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/description/)         | [Link](Medium\208.Implement-trie-(prefix-tree)\solution.md)         |
+| 208. Implement Trie (prefix tree) | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/description/)         | [Link](Medium/208.Implement-trie-(prefix-tree)/solution.md)         |
