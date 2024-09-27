@@ -20,8 +20,8 @@
 
 ## Complexity
 
-- **Time complexity**: $O(n)$ where n is length of input array.
-- **Space complexity**: $O(n)$ where n is length of input array.
+- **Time complexity**: $O(n)$ where `n` is length of input array.
+- **Space complexity**: $O(n)$ where `n` is length of input array.
 
 ## Implementation
 
