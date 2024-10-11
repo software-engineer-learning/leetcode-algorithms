@@ -60,3 +60,27 @@ public:
     }
 };
 ```
+
+## Java Solution
+
+```java
+class Solution {
+    public long dividePlayers(int[] skill) {
+        Arrays.sort(skill);
+        int N = skill.length;
+        int teamSkill = skill[0] + skill[N-1];
+        long totalChemistry = 0;
+        int l = 0, r = N - 1;
+
+        while (l < r) {
+            if (skill[l] + skill[r] != teamSkill) {
+                return -1; 
+            }
+            totalChemistry += (long) skill[l] * skill[r];  
+            l++;
+            r--;
+        }
+        
+        return totalChemistry;
+    }
+}
