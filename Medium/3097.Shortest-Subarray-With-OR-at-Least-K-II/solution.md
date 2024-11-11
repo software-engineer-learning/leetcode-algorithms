@@ -96,3 +96,65 @@ public:
     }
 };
 ```
+## Code - Java
+
+```java
+class Solution {
+    public int minimumSubarrayLength(int[] nums, int k) {
+        int n = nums.length;
+        int l = 0, r = 0;
+        int minLen = Integer.MAX_VALUE;
+        int or = 0;
+        int[] bits = new int[32];
+
+        if (k == 0) {
+            return 1;
+        }
+
+        while (r < n) {
+            or |= nums[r];
+            add(bits, nums[r]);
+
+            while (or >= k) {
+                minLen = Math.min(minLen, r - l + 1);
+                or = remove(bits, nums[l]);
+                l++;
+            }
+
+            r++;
+        }
+
+        return minLen != Integer.MAX_VALUE ? minLen : -1;
+    }
+
+    public int remove(int[] arr, int n) {
+        int i = 0;
+        while (n > 0) {
+            if ((n & 1) == 1) {
+                arr[i]--;
+            }
+            n >>= 1;
+            i++;
+        }
+
+        int decimal = 0;
+        for (i = 0; i < 32; i++) {
+            if (arr[i] > 0) {
+                decimal += (1 << i);
+            }
+        }
+        return decimal;
+    }
+
+    public void add(int[] arr, int n) {
+        int i = 0;
+        while (n > 0) {
+            if ((n & 1) == 1) {
+                arr[i]++;
+            }
+            n >>= 1;
+            i++;
+        }
+    }
+}
+```
