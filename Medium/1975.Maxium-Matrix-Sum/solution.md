@@ -25,6 +25,26 @@
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
 
 ## Code
+```cpp []
+class Solution {
+public:
+    long long maxMatrixSum(vector<vector<int>>& matrix) {
+        long long res = 0;
+        int negativeCount = 0, minAbs = INT_MAX;
+
+        for (auto& row: matrix) {
+            for (auto& x: row) {
+                res += abs(x);
+                minAbs = min(minAbs, abs(x));
+                negativeCount += (x < 0);
+            }
+        }
+
+        if (negativeCount & 1) res -= minAbs * 2;
+        return res;
+    }
+};
+```
 
 ```rust []
 impl Solution {
