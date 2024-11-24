@@ -1,34 +1,38 @@
-# 1975. Maximum Matrix Sum
+# <a class="no-underline hover:text-blue-s dark:hover:text-dark-blue-s truncate cursor-text whitespace-normal hover:!text-[inherit]" href="https://leetcode.com/problems/maximum-matrix-sum/" target="_blank">1975. Maximum Matrix Sum</a>
 
-You are given an `n x n` integer `matrix`. You can do the following operation any number of times:
+<p>&nbsp;</p><p>You are given an <code>n x n</code> integer <code>matrix</code>. You can do the following operation <strong>any</strong> number of times:</p>
 
-- Choose any two adjacent elements of `matrix` and multiply each of them by `-1`.
+<ul>
+	<li>Choose any two <strong>adjacent</strong> elements of <code>matrix</code> and <strong>multiply</strong> each of them by <code>-1</code>.</li>
+</ul>
 
-Two elements are considered adjacent if and only if they share a border.
+<p>Two elements are considered <strong>adjacent</strong> if and only if they share a <strong>border</strong>.</p>
 
-Your goal is to maximize the summation of the matrix's elements. Return the maximum sum of the matrix's elements using the operation mentioned above.
+<p>Your goal is to <strong>maximize</strong> the summation of the matrix's elements. Return <em>the <strong>maximum</strong> sum of the matrix's elements using the operation mentioned above.</em></p>
 
-## Example 1:
-
-```
-Input: matrix = [[1,-1],[-1,1]]
-Output: 4
-Explanation: We can follow the following steps to reach sum equals 4:
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/07/16/pc79-q2ex1.png" style="width: 401px; height: 81px;">
+<pre><strong>Input:</strong> matrix = [[1,-1],[-1,1]]
+<strong>Output:</strong> 4
+<b>Explanation:</b> We can follow the following steps to reach sum equals 4:
 - Multiply the 2 elements in the first row by -1.
 - Multiply the 2 elements in the first column by -1.
-```
+</pre>
 
-## Example 2:
-
-```
-Input: matrix = [[1,2,3],[-1,-2,-3],[1,2,3]]
-Output: 16
-Explanation: We can follow the following step to reach sum equals 16:
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/07/16/pc79-q2ex2.png" style="width: 321px; height: 121px;">
+<pre><strong>Input:</strong> matrix = [[1,2,3],[-1,-2,-3],[1,2,3]]
+<strong>Output:</strong> 16
+<b>Explanation:</b> We can follow the following step to reach sum equals 16:
 - Multiply the 2 last elements in the second row by -1.
-```
+</pre>
 
-## Constraints
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
 
-- $n == matrix.length == matrix[i].length$.
-- $2 <= n <= 250$.
-- $-10^5 <= matrix[i][j] <= 10^5$.
+<ul>
+	<li><code>n == matrix.length == matrix[i].length</code></li>
+	<li><code>2 &lt;= n &lt;= 250</code></li>
+	<li><code>-10<sup>5</sup> &lt;= matrix[i][j] &lt;= 10<sup>5</sup></code></li>
+</ul>
