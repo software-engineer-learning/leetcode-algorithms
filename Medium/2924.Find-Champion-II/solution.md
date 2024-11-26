@@ -15,8 +15,8 @@ The problem revolves around identifying a "champion" in a `Directed Acyclic Grap
 # Complexity
 - **Time complexity:**  
   $O(m+n)$ 
-  Marking defeated teams `O(m)`, where `m` is the number of edges (size of edges).
-  Checking all teams `O(n)`, where `n` is the number of teams.
+  - Marking defeated teams `O(m)`, where `m` is the number of edges (size of edges).
+  - Checking all teams `O(n)`, where `n` is the number of teams.
 
 - **Space complexity:**  
   $O(n)$  
