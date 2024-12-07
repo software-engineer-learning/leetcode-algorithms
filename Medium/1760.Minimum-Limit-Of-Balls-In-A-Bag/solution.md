@@ -24,7 +24,7 @@
 
 ## Explanation:
 
-### 1. Bineary Search
+### 1. Binary Search
 
 - Start with the range $[1, \max(\text{nums})]$.
 - For each midpoint (`x`), check if it is possible to split the bags such that no bag exceeds size `x` within `maxOperations`.
@@ -49,9 +49,9 @@
 ## Code
 
 ```go []
-func possible(nums []int, maxBall int, maxOperations int) bool {
+func possible(nums []int, x int, maxOperations int) bool {
     for _, num := range nums {
-        count := (num - 1) / maxBall
+        count := (num - 1) / x
         if maxOperations < count {
             return false
         }
@@ -75,5 +75,37 @@ func minimumSize(nums []int, maxOperations int) int {
         }
     }
     return left
+}
+```
+
+```rust []
+impl Solution {
+    fn possible(nums: &Vec<i32>, x: i32, max_operations: i32) -> bool {
+        let mut max_operations = max_operations;
+        for &num in nums {
+            let count = (num - 1) / x;
+            if count > max_operations {
+                return false;
+            }
+            max_operations -= count;
+        }
+        true
+    }
+
+    pub fn minimum_size(nums: Vec<i32>, max_operations: i32) -> i32 {
+        let (mut left, mut right) = (1, 0);
+        for &num in &nums {
+            right = right.max(num);
+        }
+        while left <= right {
+            let mid = left + (right - left) / 2;
+            if Self::possible(&nums, mid, max_operations) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        left
+    }
 }
 ```
