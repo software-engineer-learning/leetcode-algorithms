@@ -43,7 +43,7 @@
 
 ## Complexity
 
-- Time complexity: $O(n \cdot \log(\max(\text{nums}))).$, where `n` is the length of the array nums.
+- Time complexity: $O(n \cdot \log(\max(\text{nums})))$, where `n` is the length of the array nums.
 - Space complexity: $O(1)$,
 
 ## Code
