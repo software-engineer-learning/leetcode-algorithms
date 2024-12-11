@@ -21,8 +21,7 @@ This involves maintaining a range with a left and a right boundary that dynamica
 
 - Time complexity: $O(NLogN)$ with `N` is the length of input array `nums` where:
   - $O(NLogN)$ is for sorting the input array `nums`.
-  - $O(N)$ for find the maximum beauty possible with sliding windows technique.
-  -
+  - $O(N)$ is for finding the maximum beauty possible with sliding windows technique.
 - Space complexity: $O(N)$ with space of the input array `nums` and without some constants space for `left`, `right`, and `ans`.
 
 ## Code
