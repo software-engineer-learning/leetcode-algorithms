@@ -12,9 +12,6 @@
 - For this kind of problem, you would intuitively think about using a frequency map/array to store the `count` of each characters in string, but the problem would be how to correctly access characters.
 - As we discussed above in the intuition section, we can greedily take the lexicographically largest char until reaching limit, so we need a way to access the largest available char quickly. For this we can use a max heap to store a `pair<int, int>` with the first element the ASCII value of the character, that way the largest char will always bubble top.
 
-## Explanation:
-starting from the head.
-
 ## Complexity
 - Time complexity: $O(nlog(k))$ with `k` is the number of unique characters (at most 26), each push/pop operation takes $log(k)$ time and can repeat at most `n` times
 - Space complexity: $O(26)$ without counting the return `res` string the size of the heap and frequency array can be at worse 26.
