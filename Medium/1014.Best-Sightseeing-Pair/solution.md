@@ -4,15 +4,13 @@ To solve the problem of finding the maximum score for a pair of sightseeing spot
 
 The score is given by:
 
-$
-\text{score}(i, j) = \text{values}[i] + \text{values}[j] + i - j
-$
+$$ \text{score}(i, j) = \text{values}[i] + \text{values}[j] + i - j $$
 
 This can be rearranged as:
 
-$
+$$
 \text{score}(i, j) = (\text{values}[i] + i) + (\text{values}[j] - j)
-$
+$$
 
 the term $(\text{values}[i] + i)$ depends only on `i`, and $(\text{values}[j] - j)$ depends only on `j`. This allows us to use a greedy approach to compute the maximum score efficiently.
 
@@ -67,6 +65,11 @@ impl Solution {
     }
 }
 ```
+
+$$
+
+
+$$
 
 $$
 $$
