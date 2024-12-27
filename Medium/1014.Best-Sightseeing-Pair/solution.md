@@ -24,13 +24,9 @@ the term $(\text{values}[i] + i)$ depends only on `i`, and $(\text{values}[j] - 
 
 2. Calculate Scores:
 
-- For each index i (starting from 1), compute the potential score using:
+- For each index i (starting from 1), compute the potential score using: `prev_max_score + values[i] - i`
 
-$$
-\text{prev\_max\_score} = \text{ans} + (\text{values}[i] - i)
-$$
-
-1. Update `ans`:
+1. Update `prev_max_score`:
    Update the maximum value of $(\text{values}[i] + i)$ as you iterate through the array.
 
 # Complexity:
@@ -42,16 +38,18 @@ $$
 
 ## Go
 
+```go
 func maxScoreSightseeingPair(values []int) int {
-n := len(values)
-ans := 0
-prevMaxValue := values[0]
-for i := 1; i < n; i++ {
-ans = max(ans, prevMaxValue + values[i] - i)
-prevMaxValue = max(prevMaxValue, values[i] + i)
+    n := len(values)
+    ans := 0
+    prevMaxValue := values[0]
+    for i := 1; i < n; i++ {
+        ans = max(ans, prevMaxValue + values[i] - i)
+        prevMaxValue = max(prevMaxValue, values[i] + i)
+    }
+    return ans
 }
-return ans
-}
+```
 
 ## Rust
 
