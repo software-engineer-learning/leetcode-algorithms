@@ -4,15 +4,13 @@ To solve the problem of finding the maximum score for a pair of sightseeing spot
 
 The score is given by:
 
-$
-\text{score}(i, j) = \text{values}[i] + \text{values}[j] + i - j
-$
+$$ \text{score}(i, j) = \text{values}[i] + \text{values}[j] + i - j $$
 
 This can be rearranged as:
 
-$
+$$
 \text{score}(i, j) = (\text{values}[i] + i) + (\text{values}[j] - j)
-$
+$$
 
 the term $(\text{values}[i] + i)$ depends only on `i`, and $(\text{values}[j] - j)$ depends only on `j`. This allows us to use a greedy approach to compute the maximum score efficiently.
 
@@ -24,13 +22,9 @@ the term $(\text{values}[i] + i)$ depends only on `i`, and $(\text{values}[j] - 
 
 2. Calculate Scores:
 
-- For each index i (starting from 1), compute the potential score using:
+- For each index i (starting from 1), compute the potential score using: `prev_max_score + values[i] - i`
 
-$$
-\text{prev\_max\_score} = \text{ans} + (\text{values}[i] - i)
-$$
-
-1. Update `ans`:
+1. Update `prev_max_score`:
    Update the maximum value of $(\text{values}[i] + i)$ as you iterate through the array.
 
 # Complexity:
@@ -42,16 +36,18 @@ $$
 
 ## Go
 
+```go
 func maxScoreSightseeingPair(values []int) int {
-n := len(values)
-ans := 0
-prevMaxValue := values[0]
-for i := 1; i < n; i++ {
-ans = max(ans, prevMaxValue + values[i] - i)
-prevMaxValue = max(prevMaxValue, values[i] + i)
+    n := len(values)
+    ans := 0
+    prevMaxValue := values[0]
+    for i := 1; i < n; i++ {
+        ans = max(ans, prevMaxValue + values[i] - i)
+        prevMaxValue = max(prevMaxValue, values[i] + i)
+    }
+    return ans
 }
-return ans
-}
+```
 
 ## Rust
 
@@ -69,6 +65,3 @@ impl Solution {
     }
 }
 ```
-
-$$
-$$
