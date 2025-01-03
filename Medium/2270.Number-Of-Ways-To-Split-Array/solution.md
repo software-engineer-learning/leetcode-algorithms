@@ -13,7 +13,7 @@
   equiqvalent to:
   $$2 * prefixSum \ge totalSum$$
 
-1. **Count valid Splits:**
+3. **Count valid Splits:**
 
 - Increment the count whenever the above condition is true.
 
