@@ -10,7 +10,7 @@
 - Iterate through the array from index `0` to `n-2`.
 - For each i, check if:
   $$prefixSum \ge suffixSum$$
-  equiqvalent to:
+  equivalent to:
   $$2 * prefixSum \ge totalSum$$
 
 3. **Count valid Splits:**
