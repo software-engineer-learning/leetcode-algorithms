@@ -27,6 +27,7 @@ The key observation is that for each partition, we must ensure that all occurren
     - The result list stores partition sizes, which takes O(N) in the worst case.
     - Overall, the solution uses O(N) space.
 # Code
+## Python3
 ```python3
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
@@ -42,6 +43,7 @@ class Solution:
                 size = 0
         return res
 ```
+## C++
 ```c++
 class Solution {
 public:
