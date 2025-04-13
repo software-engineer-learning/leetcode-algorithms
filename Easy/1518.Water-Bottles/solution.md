@@ -31,7 +31,7 @@ The problem involves determining the maximum number of water bottles you can dri
 
 5. **Formula Derivation**:
    - Substitute $r = \frac{1}{x}$ into the geometric series formula:
-        - ### $S = \frac{a}{1 - \frac{1}{x}} = \frac{a}{\frac{x-1}{x}} = \frac{a \cdot x}{x - 1}$
+        - ### $S = \frac{a}{1 - \frac{1}{x} } = \frac{a}{\frac{x-1}{x} } = \frac{a \cdot x}{x - 1}$
    - However, since we are dealing with integer bottles, we adjust the formula to account for integer division:
         - ### $S = \frac{a \cdot x - 1}{x - 1}$
 

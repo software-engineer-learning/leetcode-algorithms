@@ -62,7 +62,7 @@ func spiralMatrix(m int, n int, head *ListNode) [][]int {
             matrix[i][j] = -1 
         } 
     } 
-    directions := [][]int{{0, 1}, {1, 0}, {0, -1}, {-1, 0}} 
+    directions := [][]int{ {0, 1}, {1, 0}, {0, -1}, {-1, 0} } 
     sx, sy := 0, 0 
     matrix[sx][sy] = head.Val 
     head = head.Next 
