@@ -22,7 +22,7 @@
 - Time complexity: O(log n) due to the efficient modular exponentiation
 - Space complexity: O(log n) due to recursion stack in modular exponentiation
 
-# Code
+# Solution
 
 ## Rust
 
