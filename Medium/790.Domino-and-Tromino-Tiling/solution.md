@@ -17,7 +17,8 @@ We define two arrays:
 
    * `f[1] = 1`: Only one way using a vertical domino.
    * `f[2] = 2`: Either two vertical dominos or two horizontal dominos.
-   * `g[1] = 1`, `g[2] = 2`: Similar logic for incomplete board edges.
+   * `g[1] = 1`: Only one way using a tromino.
+   * `g[2] = 2`: Either one vertical dominos + one tromino or one tromino + one horizontal dominos.
 
 2. **Transition for `f[i]`**:
 
