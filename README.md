@@ -2,51 +2,196 @@
 
 Group leetcode-algorithms Tele: <https://t.me/+ST0unit9nTRkYjhl>
 
-## Contribution's guide
+## Contribution guide
 
-- Create an directory with name `<problem_id>.<Name-To-Directory>`.
-- Create a solution file with name `solution.md` in `<problem_id>.<Name-To-Directory>`. For example:
+- Create a directory named `<problem_id>.<Name-To-Directory>` under `Easy/`, `Medium/`, or `Hard/`.
+- Add a `solution.md` file inside that directory. Optional files: `description.md`, `solution-go.md`, `solution-rust.md`, `solution-cpp.md`.
+- Example layout:
 
-```md
-350.Intersection-Of-Two-Arrays-II
----- solution.md
----- description.md
-...
+```text
+Easy/350.Intersection-of-Two-Arrays-II/
+├── solution.md
+└── description.md
 ```
 
-- If you are new with markdown, follow these guidelines: <https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/Rules.md>
+- Markdown style guide: <https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/Rules.md>
+- When adding a new solution, add a row to the matching difficulty table below.
 
-## Data structures
+## Solutions index
 
-The following section contains list of basic problems categorized based on their data structures usage along with the solution 
+Total: **158** problems with at least one solution file.
 
-## Hash Map
+Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-| Problem                        | Leetcode | Solution |
-|--------------------------------|----------|----------|
-| 219. Contains Duplicate II | [Link](https://leetcode.com/problems/contains-duplicate-ii/description/)         | [Link](Easy/219.Contains-Duplicate-II/solution-hashmap.md)         |
-|                                |          |          |
+### Easy (35)
 
-## Stack
+| Problem | LeetCode | Solution |
+|---------|----------|----------|
+| 100. Same Tree | [Link](https://leetcode.com/problems/same-tree/) | [main](Easy/100.Same-Tree/solution.md) |
+| 101. Symmetric Tree | [Link](https://leetcode.com/problems/symmetric-tree/) | [main](Easy/101.Symmetric-Tree/solution.md) |
+| 136. Single Number | [Link](https://leetcode.com/problems/single-number/) | [main](Easy/136.Single-Number/solution.md) |
+| 145. Binary Tree Postorder Traversal | [Link](https://leetcode.com/problems/binary-tree-postorder-traversal/) | [main](Easy/145.Binary-Tree-Postorder-Traversal/solution.md) |
+| 155. Min Stack | [Link](https://leetcode.com/problems/min-stack/) | [hashmap](Easy/155.Min-Stack/solution-hashmap.md) |
+| 219. Contains Duplicate II | [Link](https://leetcode.com/problems/contains-duplicate-ii/) | [hashmap](Easy/219.Contains-Duplicate-II/solution-hashmap.md) · [slidingwindow](Easy/219.Contains-Duplicate-II/solution-slidingwindow.md) |
+| 222. Count Complete Tree Nodes | [Link](https://leetcode.com/problems/count-complete-tree-nodes/) | [main](Easy/222.Count-Complete-Tree-Nodes/solution.md) |
+| 350. Intersection of Two Arrays II | [Link](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | [main](Easy/350.Intersection-of-Two-Arrays-II/solution.md) |
+| 590. N-ary Tree Postorder Traversal | [Link](https://leetcode.com/problems/n-ary-tree-postorder-traversal/) | [main](Easy/590.N-ary-Tree-Postorder-Traversal/solution.md) |
+| 594. Longest Harmonious Subsequence | [Link](https://leetcode.com/problems/longest-harmonious-subsequence/) | [main](Easy/594.Longest-Harmonious-Subsequence/solution.md) |
+| 860. Lemonade Change | [Link](https://leetcode.com/problems/lemonade-change/) | [main](Easy/860.Lemonade-Change/solution.md) |
+| 884. Uncommon Words from Two Sentences | [Link](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | [main](Easy/884.Uncommon-Words-from-Two-Sentences/solution.md) |
+| 1331. Rank Transform of an Array | [Link](https://leetcode.com/problems/rank-transform-of-an-array/) | [main](Easy/1331.Rank-Transform-of-an-Array/solution.md) |
+| 1399. Count Largest Group | [Link](https://leetcode.com/problems/count-largest-group/) | [main](Easy/1399.Count-Largest-Group/solution.md) |
+| 1455. Check If A Word Occurs As A Prefix Of Any Word In A Sentence | [Link](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | [main](Easy/1455.Check-If-A-Word-Occurs-As-A-Prefix-Of-Any-Word-In-A-Sentence/solution.md) |
+| 1475. Final Prices With A Special Discount In A Shop | [Link](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | [main](Easy/1475.Final-Prices-With-A-Special-Discount-In-A-Shop/solution.md) |
+| 1486. XOR Operation in an Array | [Link](https://leetcode.com/problems/xor-operation-in-an-array/) | [main](Easy/1486.XOR-Operation-in-an-Array/solution.md) |
+| 1518. Water Bottles | [Link](https://leetcode.com/problems/water-bottles/) | [main](Easy/1518.Water-Bottles/solution.md) |
+| 1539. Kth Missing Positive Number | [Link](https://leetcode.com/problems/kth-missing-positive-number/) | [main](Easy/1539.Kth-Missing-Positive-Number/solution.md) |
+| 1550. Three Consecutive Odds | [Link](https://leetcode.com/problems/three-consecutive-odds/) | [main](Easy/1550.Three-Consecutive-Odds/solution.md) |
+| 1598. Crawler Log Folder | [Link](https://leetcode.com/problems/crawler-log-folder/) | [cpp](Easy/1598.Crawler-Log-Folder/solution-cpp.md) |
+| 1636. Sort Array By Increasing Frequency | [Link](https://leetcode.com/problems/sort-array-by-increasing-frequency/) | [main](Easy/1636.Sort-Array-By-Increasing-Frequency/solution.md) |
+| 1684. Count The Number Of Consistent Strings | [Link](https://leetcode.com/problems/count-the-number-of-consistent-strings/) | [main](Easy/1684.Count-The-Number-Of-Consistent-Strings/solution.md) |
+| 1945. Sum of Digits of String After Convert | [Link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) | [main](Easy/1945.Sum-of-Digits-of-String-After-Convert/solution.md) |
+| 2022. Convert 1D Array Into 2D Array | [Link](https://leetcode.com/problems/convert-1d-array-into-2d-array/) | [main](Easy/2022.Convert-1D-Array-Into-2D-Array/solution.md) |
+| 2053. Kth Distinct String in an Array | [Link](https://leetcode.com/problems/kth-distinct-string-in-an-array/) | [main](Easy/2053.Kth-Distinct-String-in-an-Array/solution.md) |
+| 2191. Sort the Jumbled Numbers | [Link](https://leetcode.com/problems/sort-the-jumbled-numbers/) | [main](Easy/2191.Sort-the-Jumbled-Numbers/solution.md) |
+| 2418. Sort the People | [Link](https://leetcode.com/problems/sort-the-people/) | [main](Easy/2418.Sort-the-People/solution.md) |
+| 2558. Take Gifts From The Richest Pile | [Link](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) | [main](Easy/2558.Take-Gifts-From-The-Richest-Pile/solution.md) |
+| 2582. Passing The Pillow | [Link](https://leetcode.com/problems/passing-the-pillow/) | [rust](Easy/2582.Passing-The-Pillow/solution-rust.md) |
+| 2696. Minimum String Length After Removing Substrings | [Link](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | [main](Easy/2696.Minimum-String-Length-After-Removing-Substrings/solution.md) |
+| 3216. Lexicographically Smallest String After a Swap | [Link](https://leetcode.com/problems/lexicographically-smallest-string-after-a-swap/) | [main](Easy/3216.Lexicographically-Smallest-String-After-a-Swap/solution.md) |
+| 3314. Construct the Minimum Bitwise Array I | [Link](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/) | [main](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md) |
+| 3375. Minimum Operations to Make Array Values Equal to k | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/) | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md) |
+| 3637. Trionic Array I | [Link](https://leetcode.com/problems/trionic-array-i/) | [main](Easy/3637.Trionic-Array-I/solution.md) |
 
-| Problem                        | Leetcode | Solution |
-|--------------------------------|----------|----------|
-| 155. Min Stack | [Link](https://leetcode.com/problems/min-stack/solutions/1294983/implementing-stack-from-scratch/)         | [Link](Easy/155.Min-Stack/solution-hashmap.md)         |
-| 242. Valid Palindrome | [Link](https://leetcode.com/problems/valid-palindrome/description/)         | [TBA](#)         |
-| 217. Contains Duplicate | [Link](https://leetcode.com/problems/contains-duplicate/description/)         | [TBA](#)         |
-| 242. Valid Anagram | [Link](https://leetcode.com/problems/valid-anagram/description/)         | [TBA](#)         |
-|                                |          |          |
+### Medium (96)
 
-### Segment tree
+| Problem | LeetCode | Solution |
+|---------|----------|----------|
+| 33. Search in rotated sorted array | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [main](Medium/33.Search-in-rotated-sorted-array/solution.md) |
+| 40. Combination Sum II | [Link](https://leetcode.com/problems/combination-sum-ii/) | [main](Medium/40.Combination-Sum-II/solution.md) |
+| 63. Unique Paths II | [Link](https://leetcode.com/problems/unique-paths-ii/) | [main](Medium/63.Unique-Paths-II/solution.md) |
+| 81. Search In Rotated Sorted Array | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [main](Medium/81.Search-In-Rotated-Sorted-Array/solution.md) |
+| 122. Best Time to Buy and Sell Stock II | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [main](Medium/122-Best-Time-to-Buy-and-Sell-Stock-II/solution.md) |
+| 128. Longest Consecutive Sequence | [Link](https://leetcode.com/problems/longest-consecutive-sequence/) | [main](Medium/128. Longest-Consecutive-Sequence/solution.md) |
+| 155. Min Stack | [Link](https://leetcode.com/problems/min-stack/) | [main](Medium/155.Min-Stack/solution.md) |
+| 179. Largest number | [Link](https://leetcode.com/problems/largest-number/) | [main](Medium/179.Largest-number/solution.md) |
+| 208. Implement trie (prefix tree) | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/) | [main](Medium/208.Implement-trie-(prefix-tree)/solution.md) |
+| 209. Minimum Size Subarray Sum | [Link](https://leetcode.com/problems/minimum-size-subarray-sum/) | [main](Medium/209.Minimum-Size-Subarray-Sum/solution.md) |
+| 238. Product of Array Except Self | [Link](https://leetcode.com/problems/product-of-array-except-self/) | [main](Medium/238.Product-of-Array-Except-Self/solution.md) |
+| 241. Different Ways to Add Parentheses | [Link](https://leetcode.com/problems/different-ways-to-add-parentheses/) | [main](Medium/241.Different-Ways-to-Add-Parentheses/solution.md) |
+| 264. Ugly Number II | [Link](https://leetcode.com/problems/ugly-number-ii/) | [main](Medium/264.Ugly-Number-II/solution.md) |
+| 300. Longest Increasing Subsequence | [Link](https://leetcode.com/problems/longest-increasing-subsequence/) | [bottomup](Medium/300. Longest-Increasing-Subsequence/solution-bottomup.md) · [greedy-patience-sort](Medium/300. Longest-Increasing-Subsequence/solution-greedy-patience-sort.md) · [topdown](Medium/300. Longest-Increasing-Subsequence/solution-topdown.md) |
+| 307. Range sum query Mutable | [Link](https://leetcode.com/problems/range-sum-query-mutable/) | [main](Medium/307.Range-sum-query-Mutable/solution.md) |
+| 539. Minimum Time Difference | [Link](https://leetcode.com/problems/minimum-time-difference/) | [main](Medium/539.Minimum-Time-Difference/solution.md) |
+| 567. Permutation in String | [Link](https://leetcode.com/problems/permutation-in-string/) | [main](Medium/567.Permutation-in-String/solution.md) |
+| 624. Maximum Distance in Arrays | [Link](https://leetcode.com/problems/maximum-distance-in-arrays/) | [main](Medium/624.Maximum-Distance-in-Arrays/solution.md) |
+| 654. Maximum Binary Tree | [Link](https://leetcode.com/problems/maximum-binary-tree/) | [main](Medium/654.Maximum-Binary-Tree/solution.md) |
+| 725. Split Linked List in Parts | [Link](https://leetcode.com/problems/split-linked-list-in-parts/) | [main](Medium/725.Split-Linked-List-in-Parts/solution.md) |
+| 729. My Calendar I | [Link](https://leetcode.com/problems/my-calendar-i/) | [main](Medium/729.My-Calendar-I/solution.md) |
+| 739. Daily Temperatures | [Link](https://leetcode.com/problems/daily-temperatures/) | [main](Medium/739.Daily-Temperatures/solution.md) |
+| 763. Partition Labels | [Link](https://leetcode.com/problems/partition-labels/) | [main](Medium/763.Partition-Labels/solution.md) |
+| 790. Domino and Tromino Tiling | [Link](https://leetcode.com/problems/domino-and-tromino-tiling/) | [main](Medium/790.Domino-and-Tromino-Tiling/solution.md) |
+| 807. Max Increase to Keep City Skyline | [Link](https://leetcode.com/problems/max-increase-to-keep-city-skyline/) | [main](Medium/807.Max-Increase-to-Keep-City-Skyline/solution.md) |
+| 826. Most Profit Assigning Work | [Link](https://leetcode.com/problems/most-profit-assigning-work/) | [main](Medium/826.Most-Profit-Assigning-Work/solution.md) |
+| 840. Magic Squares In Grid | [Link](https://leetcode.com/problems/magic-squares-in-grid/) | [main](Medium/840.Magic-Squares-In-Grid/solution.md) |
+| 853. Car Fleet | [Link](https://leetcode.com/problems/car-fleet/) | [main](Medium/853.Car-Fleet/solution.md) |
+| 874. Walking Robot Simulation | [Link](https://leetcode.com/problems/walking-robot-simulation/) | [main](Medium/874.Walking-Robot-Simulation/solution.md) |
+| 875. KoKo Eating Bananas | [Link](https://leetcode.com/problems/koko-eating-bananas/) | [main](Medium/875.KoKo-Eating-Bananas/solution.md) |
+| 885. Spiral Matrix III | [Link](https://leetcode.com/problems/spiral-matrix-iii/) | [main](Medium/885.Spiral-Matrix-III/solution.md) |
+| 921. Minimum Add To Make Parentheses Valid | [Link](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [main](Medium/921.Minimum-Add-To-Make-Parentheses-Valid/solution.md) |
+| 947. Most Stones Removed with Same Row or Column | [Link](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) | [main](Medium/947.Most-Stones-Removed-with-Same-Row-or-Column/solution.md) |
+| 959. Regions Cut By Slashes | [Link](https://leetcode.com/problems/regions-cut-by-slashes/) | [main](Medium/959.Regions-Cut-By-Slashes/solution.md) |
+| 981. Time Based Key Value Store | [Link](https://leetcode.com/problems/time-based-key-value-store/) | [main](Medium/981.Time-Based-Key-Value-Store/solution.md) |
+| 1014. Best Sightseeing Pair | [Link](https://leetcode.com/problems/best-sightseeing-pair/) | [main](Medium/1014.Best-Sightseeing-Pair/solution.md) |
+| 1038. Binary Search Tree to Greater Sum Tree | [Link](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | [main](Medium/1038.Binary-Search-Tree-to-Greater-Sum-Tree/solution.md) |
+| 1052. Grumpy Bookstore Owner | [Link](https://leetcode.com/problems/grumpy-bookstore-owner/) | [main](Medium/1052.Grumpy-Bookstore-Owner/solution.md) |
+| 1110. Delete Nodes And Return Forest | [Link](https://leetcode.com/problems/delete-nodes-and-return-forest/) | [main](Medium/1110.Delete-Nodes-And-Return-Forest/solution.md) |
+| 1140. Stone Game II | [Link](https://leetcode.com/problems/stone-game-ii/) | [main](Medium/1140.Stone-Game-II/solution.md) |
+| 1190. Reverse Substrings Between Each Pair Of Parentheses | [Link](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | [main](Medium/1190.Reverse-Substrings-Between-Each-Pair-Of-Parentheses/solution.md) |
+| 1261. Find Elements in a Contaminated Binary Tree | [Link](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | [main](Medium/1261.Find-Elements-in-a-Contaminated-Binary-Tree/solution.md) |
+| 1310. XOR Queries of a Subarray | [Link](https://leetcode.com/problems/xor-queries-of-a-subarray/) | [main](Medium/1310.XOR-Queries-of-a-Subarray/solution.md) |
+| 1371. Find the Longest Substring Containing Vowels in Even Counts | [Link](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/) | [main](Medium/1371.Find-the-Longest-Substring-Containing-Vowels-in-Even-Counts/solution.md) |
+| 1382. Balance A Binary Search Tree | [Link](https://leetcode.com/problems/balance-a-binary-search-tree/) | [main](Medium/1382. Balance-A-Binary-Search-Tree/solution.md) |
+| 1395. Count Number of Teams | [Link](https://leetcode.com/problems/count-number-of-teams/) | [main](Medium/1395.Count-Number-of-Teams/solution.md) |
+| 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit | [Link](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | [main](Medium/1438.Longest-Continuous-Subarray-With-Absolute-Diff-Less-Than-or-Equal-to-Limit/solution.md) |
+| 1482. Minimum number of days to make m bouquets | [Link](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | [main](Medium/1482.Minimum-number-of-days-to-make-m-bouquets/solution.md) |
+| 1497. Check If Array Pairs Are Divisible by k | [Link](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) | [main](Medium/1497.Check-If-Array-Pairs-Are-Divisible-by-k/solution.md) |
+| 1530. Number of Good Leaf Nodes Pairs | [Link](https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/) | [main](Medium/1530.Number-of-Good-Leaf-Nodes-Pairs/solution.md) |
+| 1552. Magnetic Force Between Two Balls | [Link](https://leetcode.com/problems/magnetic-force-between-two-balls/) | [main](Medium/1552.Magnetic-Force-Between-Two-Balls/solution.md) |
+| 1593. Split a String Into the Max Number of Unique Substrings | [Link](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/) | [main](Medium/1593.Split-a-String-Into-the-Max-Number-of-Unique-Substrings/solution.md) |
+| 1605. Find Valid Matrix Given Row and Column Sums | [Link](https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/) | [main](Medium/1605.Find-Valid -Matrix-Given-Row-and-Column-Sums/solution.md) |
+| 1653. Minimum Deletions to Make String Balanced | [Link](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/) | [main](Medium/1653.Minimum-Deletions-to-Make-String-Balanced/solution.md) |
+| 1701. Average Waiting Time | [Link](https://leetcode.com/problems/average-waiting-time/) | [main](Medium/1701.Average-Waiting-Time/solution.md) |
+| 1717. Maximum Score From Removing Substrings | [Link](https://leetcode.com/problems/maximum-score-from-removing-substrings/) | [main](Medium/1717.Maximum-Score-From-Removing-Substrings/solution.md) |
+| 1760. Minimum Limit Of Balls In A Bag | [Link](https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/) | [main](Medium/1760.Minimum-Limit-Of-Balls-In-A-Bag/solution.md) |
+| 1823. Find The Winner Of The Circular Game | [Link](https://leetcode.com/problems/find-the-winner-of-the-circular-game/) | [main](Medium/1823.Find-The-Winner-Of-The-Circular-Game/solution.md) |
+| 1833. Maximum Ice Cream Bars | [Link](https://leetcode.com/problems/maximum-ice-cream-bars/) | [main](Medium/1833.Maximum-Ice-Cream-Bars/solution.md) |
+| 1894. Find the Student that Will Replace the Chalk | [Link](https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/) | [main](Medium/1894.Find-the-Student-that-Will-Replace-the-Chalk/solution.md) |
+| 1905. Count Sub Islands | [Link](https://leetcode.com/problems/count-sub-islands/) | [cpp](Medium/1905.Count-Sub-Islands/solution-cpp.md) · [go](Medium/1905.Count-Sub-Islands/solution-go.md) · [java](Medium/1905.Count-Sub-Islands/solution-java.md) |
+| 1922. Count Good Numbers | [Link](https://leetcode.com/problems/count-good-numbers/) | [main](Medium/1922.Count-Good-Numbers/solution.md) |
+| 1942. The Number of the Smallest Unoccupied Chair | [Link](https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/) | [main](Medium/1942.The-Number-of-the-Smallest-Unoccupied-Chair/solution.md) |
+| 1963. Minimum Number of Swaps to Make the String Balanced | [Link](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/) | [main](Medium/1963.Minimum-Number-of-Swaps-to-Make-the-String-Balanced/solution.md) |
+| 1975. Maxium Matrix Sum | [Link](https://leetcode.com/problems/maxium-matrix-sum/) | [main](Medium/1975.Maxium-Matrix-Sum/solution.md) |
+| 2028. Find Missing Observations | [Link](https://leetcode.com/problems/find-missing-observations/) | [main](Medium/2028.Find-Missing-Observations/solution.md) |
+| 2058. Find the Minimum and Maximum Number of Nodes Between Critical Points | [Link](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | [main](Medium/2058.Find-the-Minimum-and-Maximum-Number-of-Nodes-Between-Critical-Points/solution.md) |
+| 2070. Most Beautiful Item for Each Query | [Link](https://leetcode.com/problems/most-beautiful-item-for-each-query/) | [main](Medium/2070.Most-Beautiful-Item-for-Each-Query/solution.md) |
+| 2096. Step By Step Directions From A Binary Tree Node To Another | [Link](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/) | [go](Medium/2096.Step-By-Step-Directions-From-A-Binary-Tree-Node-To-Another/solution-go.md) |
+| 2109. Adding Spaces To A String | [Link](https://leetcode.com/problems/adding-spaces-to-a-string/) | [main](Medium/2109.Adding-Spaces-To-A-String/solution.md) |
+| 2161. Partition Array According to Given Pivot | [Link](https://leetcode.com/problems/partition-array-according-to-given-pivot/) | [main](Medium/2161.Partition-Array-According-to-Given-Pivot/solution.md) |
+| 2181. Merge Nodes in Between Zeros | [Link](https://leetcode.com/problems/merge-nodes-in-between-zeros/) | [main](Medium/2181.Merge-Nodes-in-Between-Zeros/solution.md) |
+| 2182. Construct string with repeat limit | [Link](https://leetcode.com/problems/construct-string-with-repeat-limit/) | [main](Medium/2182.Construct-string-with-repeat-limit/solution.md) |
+| 2192. All Ancestor of a Node in a Directed Acyclic Graph | [Link](https://leetcode.com/problems/all-ancestor-of-a-node-in-a-directed-acyclic-graph/) | [main](Medium/2192.All-Ancestor-of-a-Node-in-a-Directed-Acyclic-Graph/solution.md) |
+| 2196. Create Binary Tree From Descriptions | [Link](https://leetcode.com/problems/create-binary-tree-from-descriptions/) | [cpp](Medium/2196.Create-Binary-Tree-From-Descriptions/solution-cpp.md) · [go](Medium/2196.Create-Binary-Tree-From-Descriptions/solution-go.md) · [java](Medium/2196.Create-Binary-Tree-From-Descriptions/solution-java.md) · [rust](Medium/2196.Create-Binary-Tree-From-Descriptions/solution-rust.md) |
+| 2226. Maximum candies allocate to K children | [Link](https://leetcode.com/problems/maximum-candies-allocate-to-k-children/) | [main](Medium/2226. Maximum-candies-allocate-to-K-children/solution.md) |
+| 2270. Number Of Ways To Split Array | [Link](https://leetcode.com/problems/number-of-ways-to-split-array/) | [main](Medium/2270.Number-Of-Ways-To-Split-Array/solution.md) |
+| 2285. Maximum Total Importance of Roads | [Link](https://leetcode.com/problems/maximum-total-importance-of-roads/) | [main](Medium/2285.Maximum-Total-Importance-of-Roads/solution.md) |
+| 2326. Spiral Matrix IV | [Link](https://leetcode.com/problems/spiral-matrix-iv/) | [main](Medium/2326.Spiral-Matrix-IV/solution.md) |
+| 2337. Move Pieces to Obtain a String | [Link](https://leetcode.com/problems/move-pieces-to-obtain-a-string/) | [main](Medium/2337.Move-Pieces-to-Obtain-a-String/solution.md) |
+| 2419. Longest Subarray With Maximum Bitwise AND | [Link](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/) | [main](Medium/2419.Longest-Subarray-With-Maximum-Bitwise-AND/solution.md) |
+| 2461. Maximum Sum of Distinct Subarrays With Length K | [Link](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/) | [main](Medium/2461.Maximum-Sum-of-Distinct-Subarrays-With-Length-K/solution.md) |
+| 2491. Divide Players Into Teams of Equal Skill | [Link](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/) | [main](Medium/2491.Divide-Players-Into-Teams-of-Equal-Skill/solution.md) |
+| 2501. Longest Square Streak in an Array | [Link](https://leetcode.com/problems/longest-square-streak-in-an-array/) | [main](Medium/2501.Longest-Square-Streak-in-an-Array/solution.md) |
+| 2583. Kth Largest Sum in a Binary Tree | [Link](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/) | [main](Medium/2583.Kth-Largest-Sum-in-a-Binary-Tree/solution.md) |
+| 2601. Prime Subtraction Operation | [Link](https://leetcode.com/problems/prime-subtraction-operation/) | [main](Medium/2601.Prime-Subtraction-Operation/solution.md) |
+| 2707. Extra Characters In A String | [Link](https://leetcode.com/problems/extra-characters-in-a-string/) | [main](Medium/2707.Extra-Characters-In-A-String/solution.md) |
+| 2779. Maximum Beauty Of An Array After Applying Operation | [Link](https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-operation/) | [main](Medium/2779.Maximum-Beauty-Of-An-Array-After-Applying-Operation/solution.md) |
+| 2825. Make String a Subsequence Using Cyclic Increments | [Link](https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/) | [main](Medium/2825.Make-String-a-Subsequence-Using-Cyclic-Increments/solution.md) |
+| 2924. Find Champion II | [Link](https://leetcode.com/problems/find-champion-ii/) | [main](Medium/2924.Find-Champion-II/solution.md) |
+| 3016. Minimum Number of Pushes to Type Word II | [Link](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/) | [main](Medium/3016.Minimum-Number-of-Pushes-to-Type-Word-II/solution.md) |
+| 3043. Find the Length of the Longest Common Prefix | [Link](https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/) | [main](Medium/3043.Find-the-Length-of-the-Longest-Common-Prefix/solution.md) |
+| 3097. Shortest Subarray With OR at Least K II | [Link](https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/) | [main](Medium/3097.Shortest-Subarray-With-OR-at-Least-K-II/solution.md) |
+| 3217. Delete Nodes From Linked List Present in Array | [Link](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) | [main](Medium/3217.Delete-Nodes-From-Linked-List-Present-in-Array/solution.md) |
+| 3218. Minimum Cost for Cutting Cake I | [Link](https://leetcode.com/problems/minimum-cost-for-cutting-cake-i/) | [main](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md) |
+| 3254. Find the Power of K Size Subarrays I | [Link](https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/) | [main](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md) |
 
-| Problem                        | Leetcode | Solution |
-|--------------------------------|----------|----------|
-| 303. Range Sum Query - Immutable | [Link](https://leetcode.com/problems/range-sum-query-immutable/)         | [Link](Medium/307.Range-sum-query-Mutable/solution.md)         |
-| 307. Range Sum query (Mutable) | [Link](https://leetcode.com/problems/range-sum-query-mutable/)     | [Link](Medium/307.Range-sum-query-Mutable/solution.md)     |
-|                                |          |          |
+### Hard (27)
 
-### Trie
-
-| Problem                        | Leetcode | Solution |
-|--------------------------------|----------|----------|
-| 208. Implement Trie (prefix tree) | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/description/)         | [Link](Medium/208.Implement-trie-(prefix-tree)/solution.md)         |
+| Problem | LeetCode | Solution |
+|---------|----------|----------|
+| 11. Container With Most Water | [Link](https://leetcode.com/problems/container-with-most-water/) | [main](Hard/11.Container-With-Most-Water/solution.md) |
+| 23. Merge k Sorted Lists | [Link](https://leetcode.com/problems/merge-k-sorted-lists/) | [main](Hard/23.Merge-k-Sorted-Lists/solution.md) |
+| 37. Sudoku Solver | [Link](https://leetcode.com/problems/sudoku-solver/) | [main](Hard/37. Sudoku Solver/solution.md) |
+| 41. First Missing Positive | [Link](https://leetcode.com/problems/first-missing-positive/) | [main](Hard/41.First-Missing-Positive/solution.md) |
+| 188. Best Time to Buy and Sell Stock IV | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/) | [main](Hard/188.Best-Time-to-Buy-and-Sell-Stock-IV/solution.md) |
+| 212. Word Search II | [Link](https://leetcode.com/problems/word-search-ii/) | [main](Hard/212.Word-Search-II/solution.md) |
+| 214. Shortest Palindrome | [Link](https://leetcode.com/problems/shortest-palindrome/) | [main](Hard/214.Shortest-Palindrome/solution.md) |
+| 239. Sliding Window Maximum | [Link](https://leetcode.com/problems/sliding-window-maximum/) | [main](Hard/239.Sliding-Window-Maximum/solution.md) |
+| 295. Find Median from Data Stream | [Link](https://leetcode.com/problems/find-median-from-data-stream/) | [main](Hard/295.Find-Median-from-Data-Stream/solution.md) |
+| 502. IPO | [Link](https://leetcode.com/problems/ipo/) | [main](Hard/502.IPO/solution.md) |
+| 664. Strange Printer | [Link](https://leetcode.com/problems/strange-printer/) | [main](Hard/664.Strange-Printer/solution.md) |
+| 719. Find K th Smallest Pair Distance | [Link](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) | [java](Hard/719.Find-K-th-Smallest-Pair-Distance/solution-java.md) · [main](Hard/719.Find-K-th-Smallest-Pair-Distance/solution.md) |
+| 726. Number of Atoms | [Link](https://leetcode.com/problems/number-of-atoms/) | [go](Hard/726.Number-of-Atoms/solution-go.md) · [main](Hard/726.Number-of-Atoms/solution.md) |
+| 773. Sliding Puzzle | [Link](https://leetcode.com/problems/sliding-puzzle/) | [main](Hard/773.Sliding-Puzzle/solution.md) |
+| 862. Shortest Subarray with Sum at Least K | [Link](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | [main](Hard/862.Shortest-Subarray-with-Sum-at-Least-K/solution.md) |
+| 995. Minimum Number of K Consecutive Bit Flips | [Link](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/) | [main](Hard/995.Minimum-Number-of-K-Consecutive-Bit-Flips/solution.md) |
+| 1106. Parsing A Boolean Expression | [Link](https://leetcode.com/problems/parsing-a-boolean-expression/) | [main](Hard/1106.Parsing-A-Boolean-Expression/solution.md) |
+| 1579. Remove Max Number of Edges to Keep Graph Fully Traversable | [Link](https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) | [go](Hard/1579.Remove-Max-Number-of-Edges-to-Keep-Graph-Fully-Traversable/solution-go.md) · [rust](Hard/1579.Remove-Max-Number-of-Edges-to-Keep-Graph-Fully-Traversable/solution-rust.md) · [main](Hard/1579.Remove-Max-Number-of-Edges-to-Keep-Graph-Fully-Traversable/solution.md) |
+| 2071. Maximum Number of Tasks You Can Assign | [Link](https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign/) | [main](Hard/2071.Maximum-Number-of-Tasks-You-Can-Assign/solution.md) |
+| 2302. Count Subarrays With Score Less Than K | [Link](https://leetcode.com/problems/count-subarrays-with-score-less-than-k/) | [main](Hard/2302.Count-Subarrays-With-Score-Less-Than-K/solution.md) |
+| 2392. Build a Matrix With Conditions | [Link](https://leetcode.com/problems/build-a-matrix-with-conditions/) | [main](Hard/2392.Build-a-Matrix-With-Conditions/solution.md) |
+| 2416. Sum of Prefix Scores of Strings | [Link](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/) | [main](Hard/2416.Sum-of-Prefix-Scores-of-Strings/solution.md) |
+| 2503. Maximum Number of Points From Grid Queries | [Link](https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/) | [main](Hard/2503.Maximum-Number-of-Points-From-Grid-Queries/solution.md) |
+| 2551. Put Marbles in Bags | [Link](https://leetcode.com/problems/put-marbles-in-bags/) | [main](Hard/2551.Put-Marbles-in-Bags/solution.md) |
+| 2751. Robot Collisions | [Link](https://leetcode.com/problems/robot-collisions/) | [main](Hard/2751.Robot-Collisions/solution.md) |
+| 3219. Minimum Cost for Cutting Cake II | [Link](https://leetcode.com/problems/minimum-cost-for-cutting-cake-ii/) | [main](Hard/3219.Minimum-Cost-for-Cutting-Cake-II/solution.md) |
+| 3363. Find the Maximum Number of Fruits Collected | [Link](https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/) | [main](Hard/3363. Find-the-Maximum-Number-of-Fruits-Collected/solution.md) |
