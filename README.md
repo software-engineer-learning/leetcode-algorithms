@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **160** problems with at least one solution file.
+Total: **161** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -64,7 +64,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3375. Minimum Operations to Make Array Values Equal to k | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/) | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md) |
 | 3637. Trionic Array I | [Link](https://leetcode.com/problems/trionic-array-i/) | [main](Easy/3637.Trionic-Array-I/solution.md) |
 
-### Medium (96)
+### Medium (97)
 
 | Problem | LeetCode | Solution |
 |---------|----------|----------|
@@ -159,6 +159,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 2825. Make String a Subsequence Using Cyclic Increments | [Link](https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments/) | [main](Medium/2825.Make-String-a-Subsequence-Using-Cyclic-Increments/solution.md) |
 | 2924. Find Champion II | [Link](https://leetcode.com/problems/find-champion-ii/) | [main](Medium/2924.Find-Champion-II/solution.md) |
 | 3016. Minimum Number of Pushes to Type Word II | [Link](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/) | [main](Medium/3016.Minimum-Number-of-Pushes-to-Type-Word-II/solution.md) |
+| 3020. Find the Maximum Number of Elements in Subset | [Link](https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset/) | [main](Medium/3020.Find-the-Maximum-Number-of-Elements-in-Subset/solution.md) |
 | 3043. Find the Length of the Longest Common Prefix | [Link](https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/) | [main](Medium/3043.Find-the-Length-of-the-Longest-Common-Prefix/solution.md) |
 | 3097. Shortest Subarray With OR at Least K II | [Link](https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/) | [main](Medium/3097.Shortest-Subarray-With-OR-at-Least-K-II/solution.md) |
 | 3217. Delete Nodes From Linked List Present in Array | [Link](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) | [main](Medium/3217.Delete-Nodes-From-Linked-List-Present-in-Array/solution.md) |
