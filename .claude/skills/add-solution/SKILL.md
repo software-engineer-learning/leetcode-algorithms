@@ -111,7 +111,22 @@ exponents (e.g. `10^5`).
 Also update the count in `CLAUDE.md` ("The index currently lists **N** problems.")
 if you bump the README total.
 
-## 6. Git (only if the user asks)
+## 6. Regenerate the GitBook table of contents
+
+The repo is published as a GitBook space synced from `main` (`.gitbook.yaml` →
+`SUMMARY.md`). After creating the folder and solution file(s), regenerate the
+table of contents so the new problem appears in the nav:
+
+```bash
+./tools/gen-summary.sh
+```
+
+This rewrites `SUMMARY.md` from the current folder layout (grouped by difficulty,
+sorted by id, variant files nested). Commit the updated `SUMMARY.md` alongside the
+solution so GitBook picks it up on the next push. (If the Docsify sidebar is also
+in use, run `./tools/gen-sidebar.sh` to refresh `_sidebar.md` as well.)
+
+## 7. Git (only if the user asks)
 
 Do not commit or open a PR unless asked. When asked:
 
@@ -126,3 +141,5 @@ Do not commit or open a PR unless asked. When asked:
       stated complexity.
 - [ ] README row added in id order with working relative links.
 - [ ] README difficulty count and total incremented; CLAUDE.md count synced.
+- [ ] `SUMMARY.md` regenerated via `./tools/gen-summary.sh` so the GitBook nav
+      includes the new problem.
