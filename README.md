@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **161** problems with at least one solution file.
+Total: **162** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -64,7 +64,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3375. Minimum Operations to Make Array Values Equal to k | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/) | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md) |
 | 3637. Trionic Array I | [Link](https://leetcode.com/problems/trionic-array-i/) | [main](Easy/3637.Trionic-Array-I/solution.md) |
 
-### Medium (97)
+### Medium (98)
 
 | Problem | LeetCode | Solution |
 |---------|----------|----------|
@@ -127,6 +127,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 1760. Minimum Limit Of Balls In A Bag | [Link](https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/) | [main](Medium/1760.Minimum-Limit-Of-Balls-In-A-Bag/solution.md) |
 | 1823. Find The Winner Of The Circular Game | [Link](https://leetcode.com/problems/find-the-winner-of-the-circular-game/) | [main](Medium/1823.Find-The-Winner-Of-The-Circular-Game/solution.md) |
 | 1833. Maximum Ice Cream Bars | [Link](https://leetcode.com/problems/maximum-ice-cream-bars/) | [main](Medium/1833.Maximum-Ice-Cream-Bars/solution.md) |
+| 1846. Maximum Element After Decreasing and Rearranging | [Link](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/) | [main](Medium/1846.Maximum-Element-After-Decreasing-and-Rearranging/solution.md) |
 | 1894. Find the Student that Will Replace the Chalk | [Link](https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/) | [main](Medium/1894.Find-the-Student-that-Will-Replace-the-Chalk/solution.md) |
 | 1905. Count Sub Islands | [Link](https://leetcode.com/problems/count-sub-islands/) | [cpp](Medium/1905.Count-Sub-Islands/solution-cpp.md) · [go](Medium/1905.Count-Sub-Islands/solution-go.md) · [java](Medium/1905.Count-Sub-Islands/solution-java.md) |
 | 1922. Count Good Numbers | [Link](https://leetcode.com/problems/count-good-numbers/) | [main](Medium/1922.Count-Good-Numbers/solution.md) |
