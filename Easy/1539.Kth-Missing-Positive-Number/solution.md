@@ -14,9 +14,9 @@
 - Adjust the search range based on whether the count is greater than or equal to `k` or less than `k`.
 # Complexity
 
-- Time complexity: $O(logn)$
+- Time complexity: O(logn)
 
-- Space complexity: $O(1)$ 
+- Space complexity: O(1) 
 
 # Code
 

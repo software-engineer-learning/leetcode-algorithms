@@ -23,8 +23,8 @@ We iterate through the list of customers, updating the finish time for each orde
    - Return the total waiting time divided by the number of customers.
 
 ## Complexity
-- Time complexity: $O(n)$, where n is the number of customers. We only iterate through the list once.
-- Space complexity: $O(1)$, as we use a constant amount of extra space.
+- Time complexity: O(n), where n is the number of customers. We only iterate through the list once.
+- Space complexity: O(1), as we use a constant amount of extra space.
 
 ## Code 
 ```cpp

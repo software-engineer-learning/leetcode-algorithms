@@ -15,8 +15,8 @@ This is counting sort in spirit: we sort by price without an explicit comparison
 
 # Complexity
 
-- Time complexity: $O(n + C)$, where $n$ is the length of `costs` and $C = 10^5$ is the maximum cost.
-- Space complexity: $O(C)$ for the frequency array.
+- Time complexity: O(n + C), where n is the length of `costs` and C = 10⁵ is the maximum cost.
+- Space complexity: O(C) for the frequency array.
 
 # Code
 

@@ -13,8 +13,8 @@ This is a pretty straight forward problem, as the timestamp is strictly increasi
   - If query value is out of left bound, we need to return empty string (stated in the description but might still throw people up when implementing code)
 
 ## Complexity
-- Time complexity: $O(log{n})$
-- Space complexity: $O(n)$
+- Time complexity: O(logn)
+- Space complexity: O(n)
 
 ## Code
 ```cpp []

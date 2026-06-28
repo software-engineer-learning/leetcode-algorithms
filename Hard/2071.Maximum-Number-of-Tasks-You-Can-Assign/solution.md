@@ -32,15 +32,13 @@ The problem asks us to determine the maximum number of tasks that can be assigne
 
 # Complexity
 
-- **Time Complexity:**
-  - Sorting the `tasks` and `workers` arrays takes $O(n \log n)$, where `n` is the number of tasks (or workers, whichever is larger).
-  - The binary search over the number of tasks requires checking the feasibility of $O(\log n)$ values of `mid`.
-  - For each binary search step, the `canComplete` function processes up to `n` tasks and `n` workers, making it $O(n)$ per check.
+- **Time Complexity:** Sorting the `tasks` and `workers` arrays takes O(n log n), where `n` is the number of tasks (or workers, whichever is larger).
+  - The binary search over the number of tasks requires checking the feasibility of O(log n) values of `mid`.
+  - For each binary search step, the `canComplete` function processes up to `n` tasks and `n` workers, making it O(n) per check.
 
-  Overall, the time complexity is $O(n \log n)$.
+  Overall, the time complexity is O(n log n).
 
-- **Space Complexity:**
-  - The space complexity is $O(n)$, as we use a deque to track worker assignments, which stores up to `n` workers in the worst case.
+- **Space Complexity:** The space complexity is O(n), as we use a deque to track worker assignments, which stores up to `n` workers in the worst case.
 
 # Code
 

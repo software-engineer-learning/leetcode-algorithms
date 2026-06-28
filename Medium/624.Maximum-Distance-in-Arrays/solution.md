@@ -13,8 +13,8 @@ The problem likely asks to find the maximum distance between elements in differe
 
 ## Complexity
 
-- **Time Complexity**: The algorithm processes each element in each array exactly once. So, if there are `n` arrays, each of length `m`, the time complexity is $O(n)$ (assuming the length of each array is constant or negligible compared to the number of arrays).
-- **Space Complexity**: The space complexity is $O(1)$ since only a few variables are used to keep track of the minimum, maximum, and the result.
+- **Time Complexity**: The algorithm processes each element in each array exactly once. So, if there are `n` arrays, each of length `m`, the time complexity is O(n) (assuming the length of each array is constant or negligible compared to the number of arrays).
+- **Space Complexity**: The space complexity is O(1) since only a few variables are used to keep track of the minimum, maximum, and the result.
 
 ## Code
 

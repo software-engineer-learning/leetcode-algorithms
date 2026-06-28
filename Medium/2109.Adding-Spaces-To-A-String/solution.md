@@ -30,10 +30,10 @@ Using two pointers, we can:
 
 ## Complexity
 
-- Time complexity: $O(n + m)$ where:
+- Time complexity: O(n + m) where:
   - n is the length of the string `s`.
   - m is the length of the `spaces` array.
-- Space complexity: $O(n + m)$ where `n + m` is the length of `ans` array.
+- Space complexity: O(n + m) where `n + m` is the length of `ans` array.
 
 ## Code
 

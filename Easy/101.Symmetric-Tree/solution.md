@@ -16,8 +16,8 @@ To determine if a binary tree is symmetric, we need to check if it is a mirror o
    - Call the `isMirrorTree` function recursively to check if `p->left` is a mirror of `q->right` and if `p->right` is a mirror of `q->left`.
 
 ## Complexity
-- Time complexity: $O(n)$, where $n$ is the number of nodes in the tree.
-- Space complexity: $O(h)$, where $h$ is the height of the tree.
+- Time complexity: O(n), where n is the number of nodes in the tree.
+- Space complexity: O(h), where h is the height of the tree.
 
 ## Code
 
@@ -54,8 +54,8 @@ public:
      - Add their children to the queue in the correct order to maintain the mirror check.
 
 ## Complexity
-- Time complexity: $O(n)$, where $n$ is the number of nodes in the tree.
-- Space complexity: $O(n)$
+- Time complexity: O(n), where n is the number of nodes in the tree.
+- Space complexity: O(n)
 
 ## Code
 

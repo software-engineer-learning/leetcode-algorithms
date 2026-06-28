@@ -5,24 +5,24 @@ time. Replace every `target` with `+1` and every other value with `-1`. Then a
 subarray has `target` as its majority element exactly when the sum of its `±1`
 values is **strictly positive** (more `+1`s than `-1`s).
 
-Using prefix sums $P_0, P_1, \dots, P_n$ (with $P_0 = 0$), the subarray
-`(i, j]` is valid iff $P_j - P_i > 0$, i.e. $P_i < P_j$. So the answer is the
-number of index pairs $i < j$ with $P_i < P_j$.
+Using prefix sums P₀, P₁, …, P_n (with P₀ = 0), the subarray
+`(i, j]` is valid iff P_j - P_i > 0, i.e. P_i < P_j. So the answer is the
+number of index pairs i < j with P_i < P_j.
 
 # Approach: Prefix Sum + Running Count of Smaller Prefixes
 
 We sweep `j` from left to right and, for each `j`, add the number of earlier
-prefixes (including the empty prefix $P_0$) that are strictly smaller than the
-current prefix $P_j$.
+prefixes (including the empty prefix P₀) that are strictly smaller than the
+current prefix P_j.
 
 Naively counting "how many earlier prefixes are smaller" looks like it needs a
 Fenwick tree, but the prefix sum changes by exactly `±1` at each step, so we can
-maintain that count incrementally in $O(1)$:
+maintain that count incrementally in O(1):
 
 - Shift prefix values by `n` so they fit into an array of size `2n + 1`.
   `count` tracks the current prefix sum (shifted), starting at `n` (value `0`).
 - `prefix[v]` = how many prefixes seen so far equal the value `v`.
-  Seed `prefix[n] = 1` for the empty prefix $P_0 = 0$.
+  Seed `prefix[n] = 1` for the empty prefix P₀ = 0.
 - `sum` = how many earlier prefixes are strictly smaller than the current one.
 
 Transitions when the prefix value moves:
@@ -38,8 +38,8 @@ precede `j`, this directly sums the valid `(i, j]` subarrays ending at each `j`.
 
 # Complexity
 
-- Time complexity: $O(n)$ — one pass with $O(1)$ work per element.
-- Space complexity: $O(n)$ — the `prefix` frequency array of size $2n + 1$.
+- Time complexity: O(n) — one pass with O(1) work per element.
+- Space complexity: O(n) — the `prefix` frequency array of size 2n + 1.
 
 # Code
 

@@ -28,8 +28,8 @@ Using two pointers, `slow` and `fast`, we can traverse the list while merging th
    - Return the modified list starting from the head.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(1)$
+- Time complexity: O(n)
+- Space complexity: O(1)
 
 ## Code 
 

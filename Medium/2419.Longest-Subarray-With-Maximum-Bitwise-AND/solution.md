@@ -10,11 +10,9 @@
 5. Return the result at the end of the traversal.
 
 # Complexity
-- **Time complexity:**  
-  The solution involves a single pass over the array, so the time complexity is $O(n)$ where `n` is the number of elements in the input array.
+- **Time complexity:** The solution involves a single pass over the array, so the time complexity is O(n) where `n` is the number of elements in the input array.
 
-- **Space complexity:**  
-  The space complexity is $O(1)$ because only a few integer variables are used for tracking state.
+- **Space complexity:** The space complexity is O(1) because only a few integer variables are used for tracking state.
 
 # Code
 ```java

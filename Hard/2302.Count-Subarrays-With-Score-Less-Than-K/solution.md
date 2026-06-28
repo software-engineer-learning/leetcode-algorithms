@@ -10,7 +10,7 @@ The problem asks us to determine the number of non-empty subarrays of nums whose
   - sum increases as we add more elements.
   - product increases as we add more elements.
 
-- We want an efficient method, not $O(n²)$ brute-force.
+- We want an efficient method, not O(n²) brute-force.
 
 # Approach (Sliding window)
 
@@ -22,13 +22,9 @@ The problem asks us to determine the number of non-empty subarrays of nums whose
 
 # Complexity
 
-**Time Complexity:**
+**Time Complexity:** O(N) where N is the number of elements in array.
 
-- O(N) where N is the number of elements in array.
-
-**Space Complexity:**
-
-- O(1) for extra space.
+**Space Complexity:** O(1) for extra space.
 
 # Code
 

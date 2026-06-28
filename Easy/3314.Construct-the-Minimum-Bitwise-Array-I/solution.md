@@ -20,14 +20,14 @@ The Go solution uses a straightforward approach:
 # Complexity
 
 ## Rust Solution (Bit Manipulation)
-- Time complexity: $O(N)$, where `N` is the length of the array. Each element is processed in constant time using bit operations.
+- Time complexity: O(N), where `N` is the length of the array. Each element is processed in constant time using bit operations.
 
-- Space complexity: $O(1)$ excluding the output array, as we only use constant extra space for the computation.
+- Space complexity: O(1) excluding the output array, as we only use constant extra space for the computation.
 
 ## Go Solution (Brute Force)
-- Time complexity: $O(N \cdot M)$, where `N` is the length of the array and `M` is the maximum value in the array. In the worst case, we iterate through all values up to each element.
+- Time complexity: O(N · M), where `N` is the length of the array and `M` is the maximum value in the array. In the worst case, we iterate through all values up to each element.
 
-- Space complexity: $O(N)$ for the output array.
+- Space complexity: O(N) for the output array.
 
 # Code
 

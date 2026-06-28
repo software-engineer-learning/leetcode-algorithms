@@ -35,8 +35,8 @@ This approach uses binary search on the possible distances and a sliding window 
 
 ## Complexity
 
-- Time complexity: $O(n \log d + n \log n)$, where $d$ is the range of the possible distances and $n$ is the size of the array.
-- Space complexity: $O(1)$, as we only use a few additional variables for the binary search and sliding window.
+- Time complexity: O(n log d + n log n), where d is the range of the possible distances and n is the size of the array.
+- Space complexity: O(1), as we only use a few additional variables for the binary search and sliding window.
 
 ## Code
 

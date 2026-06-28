@@ -40,8 +40,8 @@
 
 ## Complexity
 
-- Time Complexity: $O(N * M)$, where `N` is the length of `words` array, M is maximum length of all words
-- Space Complexity: $O(26)$ where 26 is the number of English lowercase characters.
+- Time Complexity: O(N * M), where `N` is the length of `words` array, M is maximum length of all words
+- Space Complexity: O(26) where 26 is the number of English lowercase characters.
 - Space Complexity (bitmask): O(1) as the valid chars are hashed into `mask` variable
 
 ## Code

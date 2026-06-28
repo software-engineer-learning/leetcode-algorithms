@@ -17,13 +17,11 @@ The key observation is that for each partition, we must ensure that all occurren
     - Reset size for the next partition.
 
 # Complexity
-- **Time complexity:**  
-    - Building the last dictionary takes O(N), where N is the length of the string.
+- **Time complexity:** Building the last dictionary takes O(N), where N is the length of the string.
     - The traversal of the string takes O(N).
     - Overall, the solution runs in O(N) time.
 
-- **Space complexity:**  
-    - The last dictionary stores at most 26 keys (for lowercase English letters), which is O(1).
+- **Space complexity:** The last dictionary stores at most 26 keys (for lowercase English letters), which is O(1).
     - The result list stores partition sizes, which takes O(N) in the worst case.
     - Overall, the solution uses O(N) space.
 # Code

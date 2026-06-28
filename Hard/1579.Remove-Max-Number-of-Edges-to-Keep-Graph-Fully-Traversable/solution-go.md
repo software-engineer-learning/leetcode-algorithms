@@ -32,8 +32,8 @@ We use a Union-Find data structure to keep track of the connected components as 
 
 ## Complexity
 
-- Time complexity: $O((m + n) * \alpha (n))$, where $m$ is the number of edges and $α(n)$ is the inverse Ackermann function (nearly constant time).
-- Space complexity: $O(n)$
+- Time complexity: O((m + n) * α (n)), where m is the number of edges and α(n) is the inverse Ackermann function (nearly constant time).
+- Space complexity: O(n)
 
 ```go
 type UnionFind struct {

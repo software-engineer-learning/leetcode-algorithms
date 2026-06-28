@@ -19,10 +19,10 @@ This problem can be solved by splitting the sentence into words, iterating throu
 
 # Complexity
 
-- Time Complexity: $O(n \cdot m)$ where:
+- Time Complexity: O(n · m) where:
   - `n` is the number of words in the sentence.
   - `m` is the average length of words in the sentence.
-- Space Complexity: $O(n)$ where:
+- Space Complexity: O(n) where:
   - Splitting the sentence into words requires O(n) additional space.
 
 # Code

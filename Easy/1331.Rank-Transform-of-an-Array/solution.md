@@ -8,9 +8,9 @@ The problem asks to transform an array such that each element is replaced with i
 4. Return the transformed array with ranks.
 
 # Complexity
-- Time complexity: $O(N \log N)$, where `N` is the length of the array. This is due to the sorting step, while the map operations and final array transformation take linear time $O(N)$.
+- Time complexity: O(N log N), where `N` is the length of the array. This is due to the sorting step, while the map operations and final array transformation take linear time O(N).
 
-- Space complexity: $O(N)$, for storing the sorted array and the rank map.
+- Space complexity: O(N), for storing the sorted array and the rank map.
 
 # Code
 ```java

@@ -11,8 +11,8 @@
 
 # Complexity
 
-- Time complexity: $O(N^2)$.
-- Space complexity: $O(N)$.
+- Time complexity: O(N²).
+- Space complexity: O(N).
 
 # Solution
 
@@ -97,8 +97,8 @@ We use a stack to identify matching parentheses and a vector to store the telepo
      - Otherwise, append the current character to `res`.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(n)$
+- Time complexity: O(n)
+- Space complexity: O(n)
 
 ## Code 
 ```cpp

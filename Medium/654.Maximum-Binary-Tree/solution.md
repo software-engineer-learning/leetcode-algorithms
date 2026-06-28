@@ -1,11 +1,11 @@
 # Intuition
 
-- This is a simple divide and conquer problem, you can easily solve this using recursive for $O(n^2)$ time and $O(1)$ space.
-- Another solution can be achieved in $O(n)$ time with a trade off of $O(n)$ space.  key insight is that you need to find out the `peak` of a consecutive elements inside the input array.
+- This is a simple divide and conquer problem, you can easily solve this using recursive for O(n²) time and O(1) space.
+- Another solution can be achieved in O(n) time with a trade off of O(n) space.  key insight is that you need to find out the `peak` of a consecutive elements inside the input array.
 
 ## Approach
 
-### Using extra space for $O(n) time complexity$
+### Using extra space for O(n) time complexity
 
 - We can use a monotonic stack to keep track of consecutively increasing elements (choosing an increasing or decreasing monotonic stack is up to you, this implementation use a monotonic decreasing stack).
 - If the current `node->val` is bigger than the top of the stack, we found that the current `node->val` a root node and all the elements inside the stack is its left childs. We can start building the tree then.
@@ -16,8 +16,8 @@
 
 ## Complexity
 
-- **Time complexity**: $O(n)$ - Every node is guaranteed to be added to the stack only once. 
-- **Space complexity**: $O(n)$ - The stack can be as big as the input tree.
+- **Time complexity**: O(n) - Every node is guaranteed to be added to the stack only once. 
+- **Space complexity**: O(n) - The stack can be as big as the input tree.
 
 ## Code
 

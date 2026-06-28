@@ -16,9 +16,9 @@
 - Otherwise, return `min_length`, which contains the length of the smallest valid subarray.
 # Complexity
 
-- Time complexity: $O(n)$
+- Time complexity: O(n)
 
-- Space complexity: $O(1)$ 
+- Space complexity: O(1) 
 
 # Code
 

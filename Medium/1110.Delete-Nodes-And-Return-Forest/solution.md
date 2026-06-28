@@ -24,8 +24,8 @@ We use a depth-first search (DFS) approach to traverse the tree. A bitset is emp
    - The node marked for deletion is effectively removed by setting its reference to `nullptr`.
 
 ## Complexity
-- Time complexity: $O(n)$, where `n` is the number of nodes in the tree. Each node is visited once.
-- Space complexity: $O(n)$ for the recursion stack and the result list.
+- Time complexity: O(n), where `n` is the number of nodes in the tree. Each node is visited once.
+- Space complexity: O(n) for the recursion stack and the result list.
 
 ## Code 
 ```cpp

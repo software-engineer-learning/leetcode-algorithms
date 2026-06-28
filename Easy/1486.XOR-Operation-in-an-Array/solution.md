@@ -28,8 +28,8 @@ The solution leverages patterns in the XOR operation of specific sequences withi
    - The final XOR result is then computed by XOR-ing `res` with `n % 4`, following the pattern.
 
 ## Complexity
-- **Time complexity**: $O(1)$, since the computation involves a fixed number of steps.
-- **Space complexity**: $O(1)$, as only a few variables are used.
+- **Time complexity**: O(1), since the computation involves a fixed number of steps.
+- **Space complexity**: O(1), as only a few variables are used.
 
 ## Code 
 ```cpp []

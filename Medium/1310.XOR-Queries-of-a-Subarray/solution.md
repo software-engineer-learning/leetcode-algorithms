@@ -5,7 +5,7 @@ The problem asks for the XOR of elements between two indices for each query. Cal
 1. **Prefix XOR Array**: 
    - Construct a prefix XOR array where each element at index `i` represents the XOR of all elements from the start of the array to index `i-1`.
    - Using the prefix XOR array, the XOR of a subarray between indices `start` and `end` can be computed as:
-     $\text{XOR}(arr[start..end]) = \text{prefixXor}[end+1] \oplus \text{prefixXor}[start]$
+     XOR(arr[start..end]) = prefixXor[end+1] ⊕ prefixXor[start]
    - This allows each query to be processed in O(1) time.
    
 2. **Query Processing**:
@@ -14,9 +14,9 @@ The problem asks for the XOR of elements between two indices for each query. Cal
 # Complexity
 - **Time complexity**: Building the prefix XOR array takes O(n), where `n` is the size of the input array.
   - Each query is processed in O(1), so for `m` queries, the total time for query processing is O(m).
-  - Therefore, the overall time complexity is $O(n + m)$.
+  - Therefore, the overall time complexity is O(n + m).
 
-- **Space complexity**: We use an additional array `prefixXor` of size `n+1` to store the XOR of elements up to each index, so the space complexity is $O(n)$.
+- **Space complexity**: We use an additional array `prefixXor` of size `n+1` to store the XOR of elements up to each index, so the space complexity is O(n).
 
 # Code
 ```java

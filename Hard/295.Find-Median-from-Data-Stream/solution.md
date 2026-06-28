@@ -21,8 +21,8 @@
 
 ## Complexity
 
-- Time complexity: $O(\log n)$ The median will always be at the top node of either heap (left in this implementation) and both in even-length data stream
-- Space complexity: $O(n)$ The combined size of both heaps is equal the size of input stream
+- Time complexity: O(log n) The median will always be at the top node of either heap (left in this implementation) and both in even-length data stream
+- Space complexity: O(n) The combined size of both heaps is equal the size of input stream
 
 ## Code
 

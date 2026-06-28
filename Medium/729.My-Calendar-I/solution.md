@@ -10,11 +10,9 @@ The problem involves booking events in a calendar without overlapping intervals.
 6. The `MyCalendar` class acts as a wrapper that manages the root of the calendar tree.
 
 # Complexity
-- **Time complexity:**  
-  The time complexity for inserting a new interval depends on the height of the binary tree. In the worst case, the tree becomes skewed (i.e., all intervals lie either to the left or the right), leading to a time complexity of $O(n)$, where `n` is the number of booked intervals.
+- **Time complexity:** The time complexity for inserting a new interval depends on the height of the binary tree. In the worst case, the tree becomes skewed (i.e., all intervals lie either to the left or the right), leading to a time complexity of O(n), where `n` is the number of booked intervals.
 
-- **Space complexity:**  
-  Each node in the tree represents an interval, so the space complexity is also $O(n)$, where `n` is the number of nodes (intervals).
+- **Space complexity:** Each node in the tree represents an interval, so the space complexity is also O(n), where `n` is the number of nodes (intervals).
 
 # Code
 ```java

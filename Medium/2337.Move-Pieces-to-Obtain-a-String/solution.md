@@ -13,8 +13,8 @@
 - If there are a mismatch, that mean no mater how you move a piece you are still unable to convert `start` into `target`
 
 ## Complexity
-- Time complexity: $O(n)$ We only travel both start and target string only once so it technically $O(2*n)$ but after asymptote it is $O(n)$.
-- Space complexity: $O(1)$ No extra buffer used, we only utilize 2 pointers to track the progress.
+- Time complexity: O(n) We only travel both start and target string only once so it technically O(2*n) but after asymptote it is O(n).
+- Space complexity: O(1) No extra buffer used, we only utilize 2 pointers to track the progress.
 
 ## Code 
 

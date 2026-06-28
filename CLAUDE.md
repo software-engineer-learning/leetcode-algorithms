@@ -54,8 +54,8 @@ Step-by-step algorithm description.
 
 # Complexity
 
-- Time complexity: ...
-- Space complexity: ...
+- Time complexity: $$O(...)$$
+- Space complexity: $$O(...)$$
 
 # Code
 
@@ -74,7 +74,12 @@ Step-by-step algorithm description.
 
 Notes:
 
-- Use `$...$` for inline math in complexity sections when helpful.
+- Use `$$...$$` (KaTeX) for all complexity/math expressions, e.g.
+  `$$O(n \log n)$$`. GitBook's Git sync only renders double-dollar math; single
+  `$...$` shows up as literal text there. GitHub renders `$$...$$` too, so this
+  works on both. Plain text loses real typesetting (`\frac`, `\lceil`, ...).
+- Run `./tools/mathfix.py` on new solution files to convert any `$...$` to
+  `$$...$$` (it skips code blocks, inline code, and currency).
 - Keep explanations concise and focused on why the approach works.
 - Match the documentation style of nearby problems in the same folder/difficulty.
 - Optional `description.md` can contain the LeetCode problem statement, examples, and constraints.

@@ -16,7 +16,7 @@ Will be come
 - [[3] [1,2,3,4,5,100] [50] [25] [1]]
 
 
-Then our results is $99$ for this case.
+Then our results is 99 for this case.
 
 # Pseudo code
 

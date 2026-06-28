@@ -38,8 +38,8 @@ The solution employs a custom data structure, `BitOrQueue`, which keeps track of
      - After examining all subarrays, `res` contains the length of the shortest subarray with OR at least `k`, or `-1` if none exists.
 
 ## Complexity
-- **Time complexity**: $O(n)$, where `n` is the size of `nums`.
-- **Space complexity**: $O(1)$
+- **Time complexity**: O(n), where `n` is the size of `nums`.
+- **Space complexity**: O(1)
 
 ## Code
 

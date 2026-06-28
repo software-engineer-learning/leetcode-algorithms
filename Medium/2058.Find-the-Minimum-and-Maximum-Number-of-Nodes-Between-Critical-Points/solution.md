@@ -18,8 +18,8 @@
 ## 5.Return Results:
 - Return the computed minimum and maximum distances.
 # Complexity
-- Time complexity: $O(N)$
-- Space complexity: $O(1)$
+- Time complexity: O(N)
+- Space complexity: O(1)
 # Code
 ```cpp
 class Solution {

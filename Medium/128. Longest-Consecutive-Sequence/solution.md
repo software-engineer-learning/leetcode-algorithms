@@ -15,9 +15,9 @@
 - Keep track of the maximum length of all sequences found during this process.
 # Complexity
 
-- Time complexity: $O(N)$
+- Time complexity: O(N)
 
-- Space complexity: $O(N)$
+- Space complexity: O(N)
 
 # Code
 ```java

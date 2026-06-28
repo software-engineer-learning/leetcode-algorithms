@@ -11,7 +11,7 @@
      - Number of even positions: `(n + 1) / 2` (ceiling division)
      - Number of odd positions: `n / 2` (floor division)
    - Result
-     = $5^{(n+1)/2} * 4^{n/2}$
+     = 5<sup>(n+1)/2</sup> * 4<sup>n/2</sup>
 
 3. **Modular Exponentiation**:
    - Since numbers can be very large, we use modular exponentiation

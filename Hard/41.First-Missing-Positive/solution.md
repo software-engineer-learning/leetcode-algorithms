@@ -22,9 +22,9 @@ The goal is to find the smallest positive integer missing from an unsorted array
    - If all indices contain their correct values, then the smallest missing positive integer is `n + 1`.
 
 ## Complexity
-- Time complexity: $O(n)$
+- Time complexity: O(n)
   - Each element is processed at most twice (once during the initial placement and once during the final check), resulting in linear time complexity.
-- Space complexity: $O(1)$
+- Space complexity: O(1)
   - The algorithm uses a constant amount of extra space.
 
 ## Code

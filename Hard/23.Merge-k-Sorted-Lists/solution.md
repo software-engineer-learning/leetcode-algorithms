@@ -18,8 +18,8 @@
 
 ## Complexity
 
-- Time complexity: $O(nlogn)$ - We use heap sort here
-- Space complexity: $O(n)$ - The additional heap is of length n-number of nodes
+- Time complexity: O(nlogn) - We use heap sort here
+- Space complexity: O(n) - The additional heap is of length n-number of nodes
 
 ## Code
 

@@ -22,8 +22,8 @@ The problem asks to find the single number in an array where every other number 
    - After processing all elements, `res` will hold the value of the single number.
 
 ## Complexity
-- **Time complexity**: $O(n)$, where `n` is the number of elements in the array. We only make one pass through the array.
-- **Space complexity**: $O(1)$, as we only use a single integer variable to store the result.
+- **Time complexity**: O(n), where `n` is the number of elements in the array. We only make one pass through the array.
+- **Space complexity**: O(1), as we only use a single integer variable to store the result.
 
 ## Code 
 ```cpp

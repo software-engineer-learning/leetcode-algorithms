@@ -7,12 +7,12 @@ This is a standard backtracking problem, it is advised you should do Combination
 # Approach: Backtracking
 
 - Similar to combination sum 1, we can recursively try every combinations using elements from the input array, but the problem is it would be very inefficient and will definitely get us a TLE.
-- We will need a way to "prune" unecessary combination, we can observe that if we sort the input array, we can easily prune the algorithm as soon as the current sum of our tries exceed $target$
-- As the question forbid we use duplicates index, we will need a way to cover that. We can see that after sort for example $candidates = [2,2,2,2,3,6,7]; target = 4$, we will run the algo about 7 times this is pretty inefficient so we need someway to work around that.
+- We will need a way to "prune" unecessary combination, we can observe that if we sort the input array, we can easily prune the algorithm as soon as the current sum of our tries exceed target
+- As the question forbid we use duplicates index, we will need a way to cover that. We can see that after sort for example candidates = [2,2,2,2,3,6,7]; target = 4, we will run the algo about 7 times this is pretty inefficient so we need someway to work around that.
 
 ## Complexity
-- Time complexity: $O(2^n)$ as in worst case, the combination will run for every element inside the input array.
-- Space complexity: $O(n)$ in worse case, our inner array length can go up to n elements.
+- Time complexity: O(2^n) as in worst case, the combination will run for every element inside the input array.
+- Space complexity: O(n) in worse case, our inner array length can go up to n elements.
 
 ## Code 
 

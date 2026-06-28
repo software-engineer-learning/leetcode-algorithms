@@ -29,8 +29,8 @@ We maintain a frequency array (`freq[26]`) that tracks the difference in charact
 
 ## Complexity
 
-- **Time complexity**: $O(m)$, where `m` is the length of `s2`. We perform constant-time updates on the frequency array for each character in `s2`.
-- **Space complexity**: $O(d)$, where `d` is the number of distinct characters (in this case, `d = 26` for lowercase English letters).
+- **Time complexity**: O(m), where `m` is the length of `s2`. We perform constant-time updates on the frequency array for each character in `s2`.
+- **Space complexity**: O(d), where `d` is the number of distinct characters (in this case, `d = 26` for lowercase English letters).
 
 ## Code 
 ```cpp

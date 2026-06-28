@@ -21,8 +21,8 @@ To solve this problem, we can use dynamic programming. The idea is to iterate th
 3. **Calculate Total Points**:
 
 ## Complexity
-- Time complexity: $O(n)$, where `n` is the length of the string `s`.
-- Space complexity: $O(n)$ for storing the `countA` array.
+- Time complexity: O(n), where `n` is the length of the string `s`.
+- Space complexity: O(n) for storing the `countA` array.
 
 ## Code 
 ```cpp
@@ -77,8 +77,8 @@ The idea is to traverse the string once while keeping track of the number of 'b'
    - After the traversal, `res` will hold the minimum number of deletions required to make the string balanced.
 
 ## Complexity
-- Time complexity: $O(n)$, where `n` is the length of the string.
-- Space complexity: $O(1)$, since we use a constant amount of extra space.
+- Time complexity: O(n), where `n` is the length of the string.
+- Space complexity: O(1), since we use a constant amount of extra space.
 
 ## Code 
 ```cpp

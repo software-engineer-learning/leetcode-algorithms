@@ -26,8 +26,8 @@ To find the number of good leaf node pairs in a binary tree, we can use Depth-Fi
    - Return `distanceList` for use in the parent node's computations.
 
 ## Complexity
-- Time complexity: $O(n^2)$, where `n` is the number of nodes in the tree.
-- Space complexity: $O(n)$
+- Time complexity: O(n²), where `n` is the number of nodes in the tree.
+- Space complexity: O(n)
 
 ## Code 
 ```cpp

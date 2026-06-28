@@ -25,9 +25,9 @@
 
 # Complexity
 
-- Time complexity: $O(n)$
+- Time complexity: O(n)
 
-- Space complexity: $O(min(n,k))$
+- Space complexity: O(min(n,k))
 
 # Code
 

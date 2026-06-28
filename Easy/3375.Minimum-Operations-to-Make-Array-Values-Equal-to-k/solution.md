@@ -16,8 +16,8 @@
 <p>&nbsp;</p>
 
 ## Complexity
-- Time complexity: $O(n + 101)$, where `n` is the length of the string as we have to iterate the string to hash the occurences into bitset.
-- Space complexity: $O(1)$, we only use a bitset of size 101, so its basically constant space.
+- Time complexity: O(n + 101), where `n` is the length of the string as we have to iterate the string to hash the occurences into bitset.
+- Space complexity: O(1), we only use a bitset of size 101, so its basically constant space.
 <p>&nbsp;</p>
 
 ## Code 

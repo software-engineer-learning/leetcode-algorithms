@@ -12,8 +12,8 @@
 
 # Complexity
 
-- Time complexity: $O(N + MLogM)$.
-- Space complexity: $O(N + M * D)$.
+- Time complexity: O(N + MLogM).
+- Space complexity: O(N + M * D).
 
 Where:
 

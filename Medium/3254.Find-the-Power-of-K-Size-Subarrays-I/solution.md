@@ -13,9 +13,9 @@ The problem requires identifying subarrays of length `k` where the elements form
    - Store the last number of the streak in the result array for valid indices.
 
 # Complexity
-- **Time complexity**: $O(n)$, where `n` is the length of the input array. A single pass is sufficient to calculate the streaks and update the result.
+- **Time complexity**: O(n), where `n` is the length of the input array. A single pass is sufficient to calculate the streaks and update the result.
   
-- **Space complexity**: $O(n)$, for the result array.
+- **Space complexity**: O(n), for the result array.
 
 # Code
 ```java

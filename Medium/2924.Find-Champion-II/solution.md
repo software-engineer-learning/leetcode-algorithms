@@ -13,13 +13,11 @@ The problem revolves around identifying a "champion" in a `Directed Acyclic Grap
    - If all teams have been defeated, champion remains -1, and the function `returns -1`.
 
 # Complexity
-- **Time complexity:**  
-  $O(m+n)$ 
-  - Marking defeated teams $O(m)$, where `m` is the number of edges (size of edges).
-  - Checking all teams $O(n)$, where `n` is the number of teams.
+- **Time complexity:** O(m+n)
+  - Marking defeated teams O(m), where `m` is the number of edges (size of edges).
+  - Checking all teams O(n), where `n` is the number of teams.
 
-- **Space complexity:**  
-  $O(n)$  
+- **Space complexity:** O(n)
 # Code
 ```c++
 class Solution {

@@ -28,8 +28,8 @@ The problem requires us to find the maximum value in each sliding window of size
    - Resize the array `nums` to contain only the results of the maximum values for each window.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(k)$
+- Time complexity: O(n)
+- Space complexity: O(k)
 
 ## Code
 

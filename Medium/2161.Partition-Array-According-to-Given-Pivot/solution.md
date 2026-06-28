@@ -25,14 +25,10 @@ gap is left in the middle must be filled with `pivot` values.
 
 # Complexity
 
-**Time Complexity:**
-
-- O(N) where N is the number of elements in `nums`. We make a single combined pass
+**Time Complexity:** O(N) where N is the number of elements in `nums`. We make a single combined pass
   to place the non-pivot elements and one pass to fill the pivot values.
 
-**Space Complexity:**
-
-- O(1) extra space, excluding the O(N) output array that we must return.
+**Space Complexity:** O(1) extra space, excluding the O(N) output array that we must return.
 
 # Code
 

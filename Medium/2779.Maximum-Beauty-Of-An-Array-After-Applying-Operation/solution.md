@@ -19,10 +19,10 @@ This involves maintaining a range with a left and a right boundary that dynamica
 
 ## Complexity
 
-- Time complexity: $O(NLogN)$ with `N` is the length of input array `nums` where:
-  - $O(NLogN)$ is for sorting the input array `nums`.
-  - $O(N)$ is for finding the maximum beauty possible with sliding windows technique.
-- Space complexity: $O(N)$ with space of the input array `nums` and without some constants space for `left`, `right`, and `ans`.
+- Time complexity: O(NLogN) with `N` is the length of input array `nums` where:
+  - O(NLogN) is for sorting the input array `nums`.
+  - O(N) is for finding the maximum beauty possible with sliding windows technique.
+- Space complexity: O(N) with space of the input array `nums` and without some constants space for `left`, `right`, and `ans`.
 
 ## Code
 
@@ -57,8 +57,8 @@ func maximumBeauty(nums []int, k int) int {
 
 ## Complexity
 
-- Time complexity: $O(NLogN)$ as we need to sort the `nums` array
-- Space complexity: $O(1)$ for extra memory and $O(N)$ if we factor in the input array
+- Time complexity: O(NLogN) as we need to sort the `nums` array
+- Space complexity: O(1) for extra memory and O(N) if we factor in the input array
 
 ## Code
 
@@ -110,8 +110,8 @@ public:
 
 ## Complexity
 
-- Time complexity: $O(N + M)$ with M is the value of the max element inside `nums` array, as we dont need to sort but need to populate the `pref` array of size `max_element+1`
-- Space complexity: $O(M)$ it is actually $O(M+1)$ asymptote to $O(M)$
+- Time complexity: O(N + M) with M is the value of the max element inside `nums` array, as we dont need to sort but need to populate the `pref` array of size `max_element+1`
+- Space complexity: O(M) it is actually O(M+1) asymptote to O(M)
 
 ## Code
 

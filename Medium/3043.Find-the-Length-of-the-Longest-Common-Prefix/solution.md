@@ -54,11 +54,11 @@ This solution uses a Trie (prefix tree) to efficiently find the longest common p
 
 ## Complexity
 
-- **Time complexity**: $O(n \cdot \log_{10}(x) + m \cdot \log_{10}(x))$, where `n` is the size of `arr1` and `m` is the size of `arr2`. 
-  - Inserting each number into the Trie takes $O(log_{10}(x))$, where `x` is the number of digits in the number (since `x` is at most `10^8`, it has at most 9 digits).
-  - Querying the longest prefix also takes $O(log_{10}(x))$.
+- **Time complexity**: O(n · log<sub>10</sub>(x) + m · log<sub>10</sub>(x)), where `n` is the size of `arr1` and `m` is the size of `arr2`. 
+  - Inserting each number into the Trie takes O(log<sub>10</sub>(x)), where `x` is the number of digits in the number (since `x` is at most `10^8`, it has at most 9 digits).
+  - Querying the longest prefix also takes O(log<sub>10</sub>(x)).
 
-- **Space complexity**: $O(n \cdot \log_{10}(x))$, due to the space needed to store the digits of the numbers in the Trie.
+- **Space complexity**: O(n · log<sub>10</sub>(x)), due to the space needed to store the digits of the numbers in the Trie.
 
 ## Code
 

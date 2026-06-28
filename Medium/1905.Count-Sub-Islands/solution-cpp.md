@@ -28,8 +28,8 @@ This approach uses DFS to explore each cell in `grid2`. When an island (group of
    - The function returns the count of sub-islands found.
 
 ## Complexity
-- Time complexity: $O(n \times m)$, where `n` is the number of rows and `m` is the number of columns in the grids. Every cell is visited once during the DFS.
-- Space complexity: $O(n \times m)$ in the worst case due to the recursive stack.
+- Time complexity: O(n × m), where `n` is the number of rows and `m` is the number of columns in the grids. Every cell is visited once during the DFS.
+- Space complexity: O(n × m) in the worst case due to the recursive stack.
 
 ## Code 
 ### C++

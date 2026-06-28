@@ -12,10 +12,10 @@ The problem requires efficiently processing queries to count the number of reach
 
 # Complexity
 
-- **Time Complexity**: $O(mn \log(mn) + q \log q)$ where $m, n$ are the grid dimensions and $q$ is the number of queries.
-  - Sorting queries takes $O(q \log q)$.
-  - Each cell is pushed and popped from the heap once, which takes $O(mn \log(mn))$.
-- **Space Complexity**: $O(mn + q)$ due to the grid and query storage.
+- **Time Complexity**: O(mn log(mn) + q log q) where m, n are the grid dimensions and q is the number of queries.
+  - Sorting queries takes O(q log q).
+  - Each cell is pushed and popped from the heap once, which takes O(mn log(mn)).
+- **Space Complexity**: O(mn + q) due to the grid and query storage.
 
 # Code
 

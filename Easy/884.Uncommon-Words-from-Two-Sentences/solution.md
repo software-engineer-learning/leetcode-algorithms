@@ -9,9 +9,9 @@ The problem asks to find uncommon words from two sentences. An uncommon word is 
 5. Convert the result list to an array and return it.
 
 # Complexity
-- Time complexity: The time complexity is $O(n)$, where $n$ is the total number of words in both sentences combined. This includes the time for splitting the sentences and traversing them to update the map and filter the result.
+- Time complexity: The time complexity is O(n), where n is the total number of words in both sentences combined. This includes the time for splitting the sentences and traversing them to update the map and filter the result.
   
-- Space complexity: The space complexity is $O(n)$, as we need space for the word frequency map and the result list.
+- Space complexity: The space complexity is O(n), as we need space for the word frequency map and the result list.
 
 # Code
 ```java

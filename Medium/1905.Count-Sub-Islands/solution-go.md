@@ -12,8 +12,8 @@ The goal is to determine the number of islands in `grid2` that are considered `s
 
 ## Complexity
 
-- Time complexity: $O(m * n)$, where $m$ is the number of rows, and $n$ is the number of columns in the grids. Each cell is visited at most once.
-- Space complexity: $O(m * n)$.
+- Time complexity: O(m * n), where m is the number of rows, and n is the number of columns in the grids. Each cell is visited at most once.
+- Space complexity: O(m * n).
 
 ## Code
 

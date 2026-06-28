@@ -26,8 +26,8 @@ The idea is to use a two-pointer technique combined with a stack-like approach t
    - Calculate the total points by multiplying the count of removed substrings by their respective points.
 
 ## Complexity
-- Time complexity: $O(n)$, where `n` is the length of the string `s`.
-- Space complexity: $O(1)$, as the modifications are done in-place and the stack usage is implicit in the string itself.
+- Time complexity: O(n), where `n` is the length of the string `s`.
+- Space complexity: O(1), as the modifications are done in-place and the stack usage is implicit in the string itself.
 
 ## Code 
 ```cpp

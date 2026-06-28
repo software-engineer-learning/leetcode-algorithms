@@ -11,7 +11,7 @@ This problem can be solved efficiently using a monotonic stack. The stack helps 
 
 ## Discount Logic:
 
-- The stack ensures that items are processed in non-decreasing price order. For the current price, any item on the stack that satisfies $\text{prices[j]} \leq \text{prices[i]}$ can receive a discount.
+- The stack ensures that items are processed in non-decreasing price order. For the current price, any item on the stack that satisfies prices[j] ≤ prices[i] can receive a discount.
 
 ## Calculate Final Prices:
 
@@ -19,8 +19,8 @@ This problem can be solved efficiently using a monotonic stack. The stack helps 
 
 # Complexity
 
-- Time Complexity: $O(n)$ where n is the length of the array.
-- Space Complexity: $O(n)$ for the stack.
+- Time Complexity: O(n) where n is the length of the array.
+- Space Complexity: O(n) for the stack.
 
 # Code
 

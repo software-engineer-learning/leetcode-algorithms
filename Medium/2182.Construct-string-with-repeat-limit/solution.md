@@ -13,8 +13,8 @@
 - As we discussed above in the intuition section, we can greedily take the lexicographically largest char until reaching limit, so we need a way to access the largest available char quickly. For this we can use a max heap to store a `pair<int, int>` with the first element the ASCII value of the character, that way the largest char will always bubble top.
 
 ## Complexity
-- Time complexity: $O(nlog(k))$ with `k` is the number of unique characters (at most 26), each push/pop operation takes $log(k)$ time and can repeat at most `n` times
-- Space complexity: $O(26)$ without counting the return `res` string the size of the heap and frequency array can be at worse 26.
+- Time complexity: O(nlog(k)) with `k` is the number of unique characters (at most 26), each push/pop operation takes log(k) time and can repeat at most `n` times
+- Space complexity: O(26) without counting the return `res` string the size of the heap and frequency array can be at worse 26.
 
 ## Code
 

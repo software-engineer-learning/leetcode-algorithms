@@ -10,9 +10,9 @@ The initial thought is to split the linked list into `k` parts, ensuring each pa
 
 # Complexity
 
-- **Time complexity**: The time complexity is $O(n)$, where `n` is the total number of nodes in the linked list. This accounts for traversing the entire list to determine its length and then splitting the list.
+- **Time complexity**: The time complexity is O(n), where `n` is the total number of nodes in the linked list. This accounts for traversing the entire list to determine its length and then splitting the list.
 
-- **Space complexity**: The space complexity is $O(k)$ for storing the resulting array of linked list parts.
+- **Space complexity**: The space complexity is O(k) for storing the resulting array of linked list parts.
 
 # Code
 

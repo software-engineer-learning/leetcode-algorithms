@@ -16,8 +16,8 @@
 
 ## Complexity
 
-- Time complexity: $O(n \log n)$ as we need to sort the `project` to group out possible decisions together.
-- Space complexity: $O(n)$
+- Time complexity: O(n log n) as we need to sort the `project` to group out possible decisions together.
+- Space complexity: O(n)
 
 ## Code
 

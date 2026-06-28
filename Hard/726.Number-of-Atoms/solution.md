@@ -34,8 +34,8 @@ To solve the problem of counting atoms in a chemical formula, we can use a stack
    - Append each element and its count (if greater than 1) to the result string.
 
 ## Complexity
-- Time complexity: $O(n \log n)$, where `n` is the length of the formula.
-- Space complexity: $O(n)$
+- Time complexity: O(n log n), where `n` is the length of the formula.
+- Space complexity: O(n)
 
 ## Code 
 ```cpp

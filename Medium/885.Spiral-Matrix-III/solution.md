@@ -35,10 +35,10 @@ The idea is to simulate the spiral traversal by following a specific order of di
 
 ## Complexity
 
-- Time complexity: $O(\text{rows} \times \text{cols})$
+- Time complexity: O(rows × cols)
   - We visit each cell in the grid exactly once.
 
-- Space complexity: $O(\text{rows} \times \text{cols})$
+- Space complexity: O(rows × cols)
   - We store the coordinates of all cells in the `res` vector.
 
 ## Code

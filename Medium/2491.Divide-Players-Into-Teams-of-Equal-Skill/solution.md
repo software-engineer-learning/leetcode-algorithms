@@ -25,8 +25,8 @@ The goal is to divide players into teams where each team's total skill is equal.
    - Once all pairs have been processed, we return the total sum of chemistry.
 
 ## Complexity
-- Time complexity: $O(n)$, where `n` is the length of the `skill` array.
-- Space complexity: $O(n)$.
+- Time complexity: O(n), where `n` is the length of the `skill` array.
+- Space complexity: O(n).
 
 ## Code 
 

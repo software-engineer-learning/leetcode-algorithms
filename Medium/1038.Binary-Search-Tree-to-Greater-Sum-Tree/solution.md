@@ -7,8 +7,8 @@ To convert a Binary Search Tree (BST) to a Greater Tree, we need to transform ea
 # Approach 1: Recursive
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(n)$
+- Time complexity: O(n)
+- Space complexity: O(n)
 
 ## Code
 ```cpp []
@@ -70,8 +70,8 @@ This solution uses a non-recursive approach based on Morris Traversal. This tech
    - After completing the traversal, return the modified root node.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(1)$
+- Time complexity: O(n)
+- Space complexity: O(1)
 
 ## Code
 ```cpp []

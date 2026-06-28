@@ -27,8 +27,8 @@ We use an array to count the occurrences of each element in the first array. The
 
 ## Complexity
 
-- Time complexity: $O(n + m)$
-- Space complexity: $O(min(n, m))$
+- Time complexity: O(n + m)
+- Space complexity: O(min(n, m))
 
 ## Code
 
@@ -117,8 +117,8 @@ The two pointers technique allows us to traverse both sorted arrays in linear ti
 
 ## Complexity
 
-- Time complexity: $O(n + m)$
-- Space complexity: $O(1)$
+- Time complexity: O(n + m)
+- Space complexity: O(1)
 
 ## Code
 

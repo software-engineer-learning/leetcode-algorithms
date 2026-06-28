@@ -89,8 +89,8 @@ bool startsWith(string prefix) {
 
 ## Complexity
 
-- Time complexity: $O(n)$ where n is length of the input words
-- Space complexity: $O(n)$ where n is length of the input words, trie can store multiple words/string
+- Time complexity: O(n) where n is length of the input words
+- Space complexity: O(n) where n is length of the input words, trie can store multiple words/string
 
 ## Code
 

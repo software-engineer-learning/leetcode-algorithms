@@ -41,12 +41,12 @@ We define two arrays:
    ```
 
 4. **Modulo Operation**:
-   Since the result can be large, all operations are done modulo $10^9 + 7$.
+   Since the result can be large, all operations are done modulo 10⁹ + 7.
 
 ## Complexity
 
-* Time complexity: $O(n)$ — We compute each state up to `n`.
-* Space complexity: $O(n)$ — Arrays `f` and `g` are of size `n + 1`.
+* Time complexity: O(n) — We compute each state up to `n`.
+* Space complexity: O(n) — Arrays `f` and `g` are of size `n + 1`.
 
 ## Code
 
@@ -106,8 +106,8 @@ Then, in each iteration from `i = 3` to `n`, we:
 
 ## Complexity
 
-* Time complexity: $O(n)$ — Still iterating from 3 to `n`.
-* Space complexity: $O(1)$ — We only use constant space (`f[3]` and `g[3]`).
+* Time complexity: O(n) — Still iterating from 3 to `n`.
+* Space complexity: O(1) — We only use constant space (`f[3]` and `g[3]`).
 
 ## Code
 
@@ -138,7 +138,7 @@ public:
 
 # Approach 3: Matrix Exponentiation
 
-This approach treats the tiling recurrence as a **linear recurrence**, and solves it using **matrix exponentiation**. This is much faster for large `n`, reducing time complexity from linear to logarithmic: $O(\log n)$.
+This approach treats the tiling recurrence as a **linear recurrence**, and solves it using **matrix exponentiation**. This is much faster for large `n`, reducing time complexity from linear to logarithmic: O(log n).
 
 We encode the recurrence:
 
@@ -194,7 +194,7 @@ Because we know:
     ```
 
 3. **Matrix Exponentiation**:
-   We compute `A^(n-2)` in $O(\log n)$ time using exponentiation by squaring.
+   We compute `A^(n-2)` in O(log n) time using exponentiation by squaring.
 
 4. **Final Result**:
    Multiply the powered matrix with the base vector:
@@ -206,8 +206,8 @@ Because we know:
 
 ## Complexity
 
-* Time complexity: $O(\log n)$ — from matrix exponentiation.
-* Space complexity: $O(1)$ — constant space for fixed 4x4 matrices.
+* Time complexity: O(log n) — from matrix exponentiation.
+* Space complexity: O(1) — constant space for fixed 4x4 matrices.
 
 ## Code
 

@@ -15,9 +15,9 @@
 
 ## Complexity
 
-- **Time complexity**: $O(n)$ as we iterate the whole input string
+- **Time complexity**: O(n) as we iterate the whole input string
 
-- **Space complexity**: $O(n)$ for stack impl and $O(1)$ for count impl. In worst case, stack size will equal input size
+- **Space complexity**: O(n) for stack impl and O(1) for count impl. In worst case, stack size will equal input size
 
 ## Code
 

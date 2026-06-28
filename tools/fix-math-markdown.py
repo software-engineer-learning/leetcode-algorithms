@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
-"""Normalize inline math in solution markdown files.
+"""Normalize math notation in solution markdown for GitBook/plain markdown.
 
-Fixes common KaTeX/GitBook rendering issues:
-- Spaces inside $ delimiters ($ O(n) $ -> $O(n)$)
-- Split complexity bullets (label on one line, math on the next)
-- Big-O notation in backticks (`O(n)` -> $O(n)$)
-- Display math used for short inline vars ($$n$$ -> $n$)
-- Orphan / broken math lines in # Complexity sections
-- Bare O(...) on complexity lines without math delimiters
+GitBook in this repo does not reliably render $...$ / $$...$$ (KaTeX). This
+tool converts LaTeX-style math to plain text, Unicode symbols, and HTML
+<sup>/<sub> tags that render everywhere.
+
+Examples:
+  $O(n \\log n)$     -> O(n log n)
+  $O(n^2)$           -> O(n²)
+  $10^5$             -> 10⁵
+  $$m, n$$           -> m, n
+  `O(n)`             -> O(n)
+
+Also merges split complexity bullets and removes orphan math lines.
 
 Usage:
   ./tools/fix-math-markdown.py              # fix all solution*.md
@@ -24,93 +29,131 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+_COMPLEXITY_NAME = (
+    r"(?:"
+    r"\*\*(?:Time|Space)\s+[Cc]omplexity:\*\*"
+    r"|\*\*(?:Time|Space)\s+[Cc]omplexity\*\*"
+    r"|(?:Time|Space)\s+[Cc]omplexity"
+    r")"
+)
 COMPLEXITY_LABEL = re.compile(
-    r"^(\s*(?:[-*]\s+)?(?:\*\*)?(?:Time|Space)\s+[Cc]omplexity(?:\*\*)?\s*:)\s*$",
+    rf"^(\s*(?:[-*]\s+)?{_COMPLEXITY_NAME}\s*:?)\s*$",
     re.IGNORECASE,
 )
 HEADING = re.compile(r"^#\s+")
 COMPLEXITY_HEADING = re.compile(r"^#\s+Complexity\b", re.IGNORECASE)
 COMPLEXITY_LINE = re.compile(
-    r"^(\s*(?:[-*]\s+)?(?:\*\*)?(?:Time|Space)\s+[Cc]omplexity(?:\*\*)?\s*:)",
+    rf"^(\s*(?:[-*]\s+)?{_COMPLEXITY_NAME}\s*:?)",
     re.IGNORECASE,
 )
-ORPHAN_MATH = re.compile(r"^\s*\$O\([^)]*\)\s*$")
+ORPHAN_MATH = re.compile(r"^\s*\$[^$]*$")
 BACKTICK_O = re.compile(r"`(O\([^`]*?\))\.?`")
-SPACED_INLINE = re.compile(r"(?<!\$)\$\s+([^$]+?)\s+\$(?!\$)")
-DISPLAY_INLINE = re.compile(r"\$\$([^$\n]+?)\$\$")
-BARE_O_AFTER_LABEL = re.compile(
-    r"^(\s*(?:[-*]\s+)?(?:\*\*)?(?:Time|Space)\s+[Cc]omplexity(?:\*\*)?\s*:\s*)"
-    r"(O\([^$\n]+?\))(\s*[,.]|$|\s+[-—])",
-    re.IGNORECASE,
-)
-UNCLOSED_O = re.compile(r"^\s*\$O\([^)]*\)\s*$")
 DOUBLE_COMPLEXITY_DASH = re.compile(
-    r"^(\s*(?:[-*]\s+)?(?:\*\*)?(?:Time|Space)\s+[Cc]omplexity(?:\*\*)?\s*:\s*)-\s+",
+    rf"^(\s*(?:[-*]\s+)?{_COMPLEXITY_NAME}\s*:?\s*)-\s+",
     re.IGNORECASE,
 )
-STANDALONE_MATH = re.compile(r"^\s*(?:[-*]\s+)?(\$[^$]+\$.*)$")
+STANDALONE_MATH = re.compile(r"^\s*(?:[-*]\s+)?(O\([^)]+\).*)$")
+INLINE_MATH = re.compile(r"(?<!\$)\$([^$\n]+?)\$(?!\$)")
+DISPLAY_MATH = re.compile(r"\$\$([^$]+?)\$\$", re.DOTALL)
+
+SUPERSCRIPT = str.maketrans("0123456789+-=()", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+SUBSCRIPT = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+
+LATEX_COMMANDS: dict[str, str] = {
+    r"\log": "log",
+    r"\cdot": "·",
+    r"\times": "×",
+    r"\oplus": "⊕",
+    r"\alpha": "α",
+    r"\dots": "…",
+    r"\ldots": "…",
+    r"\leq": "≤",
+    r"\le": "≤",
+    r"\geq": "≥",
+    r"\ge": "≥",
+    r"\ne": "≠",
+    r"\neq": "≠",
+    r"\infty": "∞",
+    r"\sum": "∑",
+    r"\min": "min",
+    r"\max": "max",
+}
 
 
-def is_display_math(content: str) -> bool:
-    stripped = content.strip()
-    if not stripped:
-        return True
-    if "\n" in content:
-        return True
-    if any(token in stripped for token in (r"\begin", r"\frac", r"\text", r"\sum", r"\cdot")):
-        return True
-    if stripped.startswith("O(") or stripped.startswith("O\\"):
-        return len(stripped) > 80
-    return False
+def to_superscript(exp: str) -> str:
+    exp = exp.strip()
+    if exp and all(ch in "0123456789+-=()" for ch in exp):
+        return exp.translate(SUPERSCRIPT)
+    return f"<sup>{exp}</sup>"
 
 
-MATH_INNER = re.compile(
-    r"^(?:O\(|\\|[0-9]|[A-Za-z][\w\\^]*(?:\(|\^|_|\\|log|alpha|sum|cdot|times|cdot|frac))"
-)
+def to_subscript(sub: str) -> str:
+    sub = sub.strip()
+    if len(sub) == 1 and sub.isdigit():
+        return sub.translate(SUBSCRIPT)
+    return f"<sub>{sub}</sub>"
 
 
-def looks_like_math(inner: str) -> bool:
-    stripped = inner.strip()
-    if not stripped:
-        return False
-    return bool(MATH_INNER.match(stripped))
+def replace_latex_commands(expr: str) -> str:
+    for command, plain in sorted(LATEX_COMMANDS.items(), key=lambda item: -len(item[0])):
+        expr = expr.replace(command, plain)
+    return expr
 
 
-def normalize_spaced_inline(text: str) -> str:
-    def repl(match: re.Match[str]) -> str:
-        inner = match.group(1).strip()
-        if not looks_like_math(inner):
-            return match.group(0)
-        return f"${inner}$"
+def replace_exponents(expr: str) -> str:
+    while True:
+        updated = re.sub(
+            r"([0-9A-Za-z)\]])\^\{([^}]+)\}",
+            lambda match: match.group(1) + to_superscript(match.group(2)),
+            expr,
+        )
+        updated = re.sub(
+            r"([0-9A-Za-z)\]])\^([0-9]+)",
+            lambda match: match.group(1) + to_superscript(match.group(2)),
+            updated,
+        )
+        if updated == expr:
+            return expr
+        expr = updated
 
-    return SPACED_INLINE.sub(repl, text)
+
+def replace_subscripts(expr: str) -> str:
+    expr = re.sub(
+        r"_\{([^}]+)\}",
+        lambda match: to_subscript(match.group(1)),
+        expr,
+    )
+    return re.sub(
+        r"_([0-9]+)",
+        lambda match: to_subscript(match.group(1)),
+        expr,
+    )
 
 
-def normalize_display_inline(text: str) -> str:
-    def repl(match: re.Match[str]) -> str:
-        content = match.group(1)
-        if is_display_math(content):
-            return match.group(0)
-        inner = content.strip()
-        return f"${inner}$"
+def latex_to_plain(expr: str) -> str:
+    text = expr.strip()
+    if not text:
+        return text
 
-    return DISPLAY_INLINE.sub(repl, text)
+    text = re.sub(r"\\text\{([^}]*)\}", r"\1", text)
+    text = re.sub(r"\\frac\{([^}]*)\}\{([^}]*)\}", r"\1/\2", text)
+    text = replace_latex_commands(text)
+    text = replace_exponents(text)
+    text = replace_subscripts(text)
+    text = re.sub(r"\\([a-zA-Z]+)", r"\1", text)
+    text = text.replace("{", "").replace("}", "")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def strip_math(text: str) -> str:
+    text = DISPLAY_MATH.sub(lambda match: latex_to_plain(match.group(1)), text)
+    text = INLINE_MATH.sub(lambda match: latex_to_plain(match.group(1)), text)
+    return text
 
 
 def normalize_backtick_o(text: str) -> str:
-    def repl(match: re.Match[str]) -> str:
-        expr = match.group(1).rstrip(".")
-        return f"${expr}$"
-
-    return BACKTICK_O.sub(repl, text)
-
-
-def normalize_bare_o(text: str) -> str:
-    def repl(match: re.Match[str]) -> str:
-        prefix, expr, suffix = match.group(1), match.group(2), match.group(3)
-        return f"{prefix}${expr.rstrip('.')}${suffix}"
-
-    return BARE_O_AFTER_LABEL.sub(repl, text)
+    return BACKTICK_O.sub(lambda match: match.group(1).rstrip("."), text)
 
 
 def continuation_body(line: str) -> str | None:
@@ -122,7 +165,7 @@ def continuation_body(line: str) -> str | None:
     list_match = re.match(r"^-\s+(.+)$", stripped)
     if list_match:
         return list_match.group(1).strip()
-    if line[:1].isspace() or stripped.startswith("$") or stripped.startswith("O("):
+    if line[:1].isspace() or stripped.startswith("O("):
         return stripped
     return None
 
@@ -139,8 +182,10 @@ def merge_complexity_lines(lines: list[str]) -> list[str]:
             if j < len(lines):
                 body = continuation_body(lines[j])
                 if body:
-                    prefix = line.rstrip().rstrip(":")
-                    merged.append(f"{prefix}: {body}")
+                    prefix = line.rstrip()
+                    if not re.search(r":\s*$", prefix):
+                        prefix = f"{prefix}:"
+                    merged.append(f"{prefix} {body}")
                     i = j + 1
                     continue
         merged.append(line)
@@ -149,7 +194,6 @@ def merge_complexity_lines(lines: list[str]) -> list[str]:
 
 
 def collapse_standalone_math_lines(lines: list[str]) -> list[str]:
-    """Merge orphan `$O(n)$` lines into the preceding complexity label."""
     collapsed: list[str] = []
     i = 0
     while i < len(lines):
@@ -160,8 +204,10 @@ def collapse_standalone_math_lines(lines: list[str]) -> list[str]:
             and STANDALONE_MATH.match(lines[i + 1])
         ):
             body = STANDALONE_MATH.match(lines[i + 1]).group(1).strip()
-            prefix = line.rstrip().rstrip(":")
-            collapsed.append(f"{prefix}: {body}")
+            prefix = line.rstrip()
+            if not re.search(r":\s*$", prefix):
+                prefix = f"{prefix}:"
+            collapsed.append(f"{prefix} {body}")
             i += 2
             continue
         collapsed.append(line)
@@ -191,8 +237,7 @@ def drop_orphan_math_in_complexity(lines: list[str]) -> list[str]:
     drop: set[int] = set()
     for start, end in ranges:
         for idx in range(start, end):
-            line = lines[idx].strip()
-            if ORPHAN_MATH.match(line) or UNCLOSED_O.match(line):
+            if ORPHAN_MATH.match(lines[idx].strip()):
                 drop.add(idx)
 
     if not drop:
@@ -200,35 +245,47 @@ def drop_orphan_math_in_complexity(lines: list[str]) -> list[str]:
     return [line for idx, line in enumerate(lines) if idx not in drop]
 
 
-def normalize_line(line: str, in_complexity: bool) -> str:
+def normalize_line(line: str) -> str:
     line = normalize_backtick_o(line)
-    line = normalize_display_inline(line)
-    line = normalize_spaced_inline(line)
+    line = strip_math(line)
     line = DOUBLE_COMPLEXITY_DASH.sub(r"\1", line)
-    if in_complexity or COMPLEXITY_LINE.match(line):
-        line = normalize_bare_o(line)
+    line = re.sub(
+        r"(\*\*(?:Time|Space)\s+[Cc]omplexity:\*\*):",
+        r"\1",
+        line,
+        flags=re.IGNORECASE,
+    )
+    line = re.sub(
+        r"((?:Time|Space)\s+[Cc]omplexity):+(?=\s)",
+        r"\1:",
+        line,
+        flags=re.IGNORECASE,
+    )
     return line
+
+
+def normalize_outside_code(text: str) -> str:
+    parts = re.split(r"(```.*?```)", text, flags=re.DOTALL)
+    normalized: list[str] = []
+    for index, part in enumerate(parts):
+        if index % 2 == 1:
+            normalized.append(part)
+        else:
+            normalized.append(normalize_line(part) if part else part)
+    return "".join(normalized)
 
 
 def normalize_content(text: str) -> str:
     lines = text.splitlines()
-    lines = drop_orphan_math_in_complexity(lines)
     lines = merge_complexity_lines(lines)
     lines = collapse_standalone_math_lines(lines)
+    lines = drop_orphan_math_in_complexity(lines)
 
-    ranges = complexity_section_ranges(lines)
-    complexity_indices: set[int] = set()
-    for start, end in ranges:
-        complexity_indices.update(range(start, end))
-
-    normalized: list[str] = []
-    for idx, line in enumerate(lines):
-        normalized.append(normalize_line(line, idx in complexity_indices))
-
-    result = "\n".join(normalized)
+    body = "\n".join(lines)
     if text.endswith("\n"):
-        result += "\n"
-    return result
+        body += "\n"
+
+    return normalize_outside_code(body)
 
 
 def iter_solution_files(paths: list[Path]) -> list[Path]:

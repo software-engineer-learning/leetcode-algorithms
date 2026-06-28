@@ -54,8 +54,8 @@ Step-by-step algorithm description.
 
 # Complexity
 
-- Time complexity: ...
-- Space complexity: ...
+- Time complexity: $$O(...)$$
+- Space complexity: $$O(...)$$
 
 # Code
 
@@ -78,11 +78,16 @@ Rules:
   when documenting multiple languages. Use a single language-specific file
   (`solution-go.md`, `solution-rust.md`, `solution-cpp.md`) only when the user
   asks for that layout or just one language with extra context.
-- Use `$...$` for inline math in the complexity section when helpful.
-- Write complexity on one line: `- Time complexity: $O(n)$, where $n$ is ...`
-- Do not put spaces inside delimiters (`$O(n)$`, not `$ O(n) $`).
-- Use `$O(n)$` for big-O notation, not backticks or bare `O(n)`.
-- Keep display equations (`$$...$$`) only for multi-line or long formulas.
+- Use `$$...$$` (KaTeX) for **all** math, including big-O. GitBook's Git sync only
+  renders double-dollar math; single `$...$` shows up as literal text there.
+  GitHub renders `$$...$$` too, so it works on both. Do **not** use single `$...$`
+  or plain text for formulas.
+- Write complexity on one line, e.g. `- Time complexity: $$O(n \log n)$$, where `n`
+  is the array length.` (prose variables can stay in backticks; formulas go in `$$`).
+- Use LaTeX inside the math: `\log`, `\frac{a}{b}`, `\lceil x \rceil`, `\cdot`,
+  `\times`, `\le`, `\alpha(n)`, exponents `x^2` / `10^5`, subscripts `a_i`.
+- After writing, run `./tools/mathfix.py <file>` to convert any stray `$...$` to
+  `$$...$$` (it skips code blocks, inline code, and currency, and is idempotent).
 - Keep explanations concise and focused on **why** the approach works.
 - Paste the user's code verbatim (only fix obvious formatting); do not invent a
   different algorithm than what they provided.
@@ -117,13 +122,15 @@ if you bump the README total.
 
 ## 6. Normalize math in markdown
 
-Run the formatter so complexity math renders correctly in GitBook:
+Convert any single-dollar `$...$` to GitBook-compatible `$$...$$` (KaTeX) so the
+math renders on both GitBook and GitHub:
 
 ```bash
-./tools/fix-math-markdown.py
+./tools/mathfix.py <new-solution-file>   # or no args to scan Easy/ Medium/ Hard
 ```
 
 Pass a specific file path to limit the scope. Use `--check` to preview changes.
+The script skips code blocks, inline code, and currency, and is idempotent.
 
 ## 7. Regenerate the GitBook table of contents
 
@@ -157,4 +164,4 @@ Do not commit or open a PR unless asked. When asked:
 - [ ] README difficulty count and total incremented; CLAUDE.md count synced.
 - [ ] `SUMMARY.md` regenerated via `./tools/gen-summary.sh` so the GitBook nav
       includes the new problem.
-- [ ] `./tools/fix-math-markdown.py` run on new/changed solution files.
+- [ ] All math written as `$$...$$`; `./tools/mathfix.py` run on new/changed files.

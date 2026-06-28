@@ -32,10 +32,10 @@ of odd length).
 
 # Complexity
 
-- Time complexity: $O(n \log \log V)$ — each element is counted once, and each
-  squaring chain has at most $O(\log \log V)$ levels since the value squares
+- Time complexity: O(n log log V) — each element is counted once, and each
+  squaring chain has at most O(log log V) levels since the value squares
   every step.
-- Space complexity: $O(n)$ for the frequency map.
+- Space complexity: O(n) for the frequency map.
 
 # Code
 

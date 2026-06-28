@@ -4,8 +4,8 @@ Sort with comparator.
 
 # Complexity
 
-- Time complexity: $O(NlogN)$.
-- Space complexity: $O(N)$.
+- Time complexity: O(NlogN).
+- Space complexity: O(N).
 
 # Code
 

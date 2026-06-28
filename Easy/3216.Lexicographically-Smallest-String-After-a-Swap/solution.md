@@ -22,8 +22,8 @@ To find the lexicographically smallest string by swapping adjacent digits with t
    - Return the modified string `s` after the swap.
 
 ## Complexity
-- Time complexity: $O(n)$, where `n` is the length of the string.
-- Space complexity: $O(1)$, as we are modifying the string in place and using only a constant amount of extra space.
+- Time complexity: O(n), where `n` is the length of the string.
+- Space complexity: O(1), as we are modifying the string in place and using only a constant amount of extra space.
 
 ## Code 
 ```cpp

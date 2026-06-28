@@ -5,11 +5,9 @@ The problem involves determining whether a set of islands in one grid `grid2` ar
 The approach involves iterating over each cell in grid2. When a land cell `1` is encountered, we perform a DFS to check if all the land cells connected to it form a sub-island within grid1. During the DFS, we mark the visited cells in grid2 to avoid revisiting them. If the entire island in grid2 corresponds to land cells in grid1, it is counted as a sub-island. We continue this process until all cells have been checked.
 
 # Complexity
-- **Time complexity:**  
-  The time complexity is $O(m \times n)$, where `m` is the number of rows and $n$ is the number of columns in the grids. This is because each cell in grid2 is visited at most once during the DFS.
+- **Time complexity:** The time complexity is O(m × n), where `m` is the number of rows and n is the number of columns in the grids. This is because each cell in grid2 is visited at most once during the DFS.
 
-- **Space complexity:**  
-  The space complexity is $O(m \times n)$, mainly due to the recursion stack used during the DFS. In the worst case, the stack depth can be equal to the number of cells in the grid.
+- **Space complexity:** The space complexity is O(m × n), mainly due to the recursion stack used during the DFS. In the worst case, the stack depth can be equal to the number of cells in the grid.
 
 # Code
 ```java

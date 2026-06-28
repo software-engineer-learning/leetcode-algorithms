@@ -14,11 +14,11 @@
 ### 2. Helper Function
 
 - Write a function to calculate the number of operations required to ensure no bag exceeds a given size `x`.
-- If a bag has `k` balls, and `k > x`, the number of splits needed is: $operations = \lceil\frac{k}{x}\rceil - 1$
+- If a bag has `k` balls, and `k > x`, the number of splits needed is: operations = lceilk/xrceil - 1
 
 ### 3. Optimal `x`:
 
-- Perform binary search over the range $\lceil 1, \max(\text{nums}) \rceil$.
+- Perform binary search over the range lceil 1, max(nums) rceil.
 - For each `x`, calculate the total operations needed using the helper function.
 - If the total operations are within `maxOperations`, update the result and try smaller `x`.
 
@@ -26,14 +26,14 @@
 
 ### 1. Binary Search
 
-- Start with the range $[1, \max(\text{nums})]$.
+- Start with the range [1, max(nums)].
 - For each midpoint (`x`), check if it is possible to split the bags such that no bag exceeds size `x` within `maxOperations`.
 
 ### 2. Helper function
 
 - For each bag, calculate the required operations:
   - If k > x, the number of splits needed is:
-    $\lceil \frac{k}{x} \rceil - 1 = (k-1) / x$
+    lceil k/x rceil - 1 = (k-1) / x
 - If the total operations exceed `maxOperations`, `x` is invalid.
 
 ### 3. Result update
@@ -43,8 +43,8 @@
 
 ## Complexity
 
-- Time complexity: $O(n \cdot \log(\max(\text{nums})))$, where `n` is the length of the array nums.
-- Space complexity: $O(1)$,
+- Time complexity: O(n · log(max(nums))), where `n` is the length of the array nums.
+- Space complexity: O(1),
 
 ## Code
 

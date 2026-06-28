@@ -19,13 +19,13 @@ The problem requires checking if we can make a strictly increasing sequence by s
    - This ensures we use the smallest possible prime number for each subtraction
 
 # Complexity
-- Time complexity: $O(n \log p)$
+- Time complexity: O(n log p)
   - n is array length
   - p is number of primes ≤ 1000
   - Sieve initialization is O(m log log m) where m = 1000, but done once
   - Each element requires at most one binary search: O(log p)
 
-- Space complexity: $O(1)$
+- Space complexity: O(1)
   - Fixed size boolean array (1001) for Sieve
   - Fixed size list for storing primes up to 1000
   - Space doesn't depend on input array size

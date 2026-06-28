@@ -30,8 +30,8 @@ The solution involves scanning every possible 3x3 subgrid in the grid and verify
      - Finally, the function returns the total count of magic squares found.
 
 ## Complexity
-- **Time complexity**: $O(n \times m)$, where `n` and `m` are the dimensions of the grid. The function checks each 3x3 subgrid, and there are $(n-2) \times (m-2)$ such subgrids.
-- **Space complexity**: $O(1)$, since the additional space used by the function is constant.
+- **Time complexity**: O(n × m), where `n` and `m` are the dimensions of the grid. The function checks each 3x3 subgrid, and there are (n-2) × (m-2) such subgrids.
+- **Space complexity**: O(1), since the additional space used by the function is constant.
 
 ## Code 
 cpp

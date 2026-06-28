@@ -25,8 +25,8 @@ We will create a helper function to convert each number in the array based on th
     - Transform the sorted pairs back to the original values in `res` using their stored indices.
 
 ## Complexity
-- Time complexity: $O(n \log n)$, where $n$ is the length of `nums`.
-- Space complexity: $O(n)$
+- Time complexity: O(n log n), where n is the length of `nums`.
+- Space complexity: O(n)
 
 ## Code 
 ```cpp

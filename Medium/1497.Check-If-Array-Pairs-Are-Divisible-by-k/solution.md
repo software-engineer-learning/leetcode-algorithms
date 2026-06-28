@@ -10,9 +10,9 @@ The problem asks to check whether the array can be arranged into pairs such that
 4. If all conditions are met, return `true`. Otherwise, return `false`.
 
 # Complexity
-- Time complexity: $O(n)$ where `n` is the number of elements in the array since we only make two passes over the array.
+- Time complexity: O(n) where `n` is the number of elements in the array since we only make two passes over the array.
 
-- Space complexity: $O(k)$ for the remainder counts array, where `k` is the given divisor.
+- Space complexity: O(k) for the remainder counts array, where `k` is the given divisor.
 
 # Code
 ```java

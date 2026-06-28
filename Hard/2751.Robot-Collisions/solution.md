@@ -20,8 +20,8 @@ Here’s a step-by-step explanation and the corresponding solution:
 
 # Complexity
 
-- Time Complexity: $O(NLogN)$.
-- Space Complexity: $O(N)$.
+- Time Complexity: O(NLogN).
+- Space Complexity: O(N).
 
 # Code
 

@@ -21,7 +21,7 @@ Mapping moves
 Use a precomputed mapping of valid moves for each position of 0 in the 2x3 board to simplify calculations.
 # Complexity
 
-Time complexity: $O(N!) where N is the number of unique states for a 2 x 3 board is 6! (720 state)$.
+Time complexity: O(N!) where N is the number of unique states for a 2 x 3 board is 6! (720 state).
 
 Space complexity: O(N!) for the visited set and queue.
 

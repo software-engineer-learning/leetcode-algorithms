@@ -30,8 +30,8 @@ This approach utilizes a sliding window in combination with a balanced binary se
    - After iterating through the array, `res` will contain the length of the longest subarray that satisfies the condition.
 
 ## Complexity
-- Time complexity: $O(n*log(n))$
-- Space complexity: $O(n)$
+- Time complexity: O(n*log(n))
+- Space complexity: O(n)
 
 ## Code 
 
@@ -88,8 +88,8 @@ This optimized solution uses a sliding window in combination with two monotonic 
    - After iterating through the array, `res` will contain the length of the longest subarray that satisfies the condition.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(n)$
+- Time complexity: O(n)
+- Space complexity: O(n)
 
 ## Code 
 ```cpp

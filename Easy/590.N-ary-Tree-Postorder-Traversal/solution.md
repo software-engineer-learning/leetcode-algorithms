@@ -11,11 +11,9 @@ The approach involves a depth-first search (DFS) strategy:
 This approach naturally lends itself to a recursive implementation.
 
 # Complexity
-- **Time complexity:**  
-  The time complexity is $O(n)$, where `n` is the total number of nodes in the tree. This is because each node is visited exactly once during the traversal.
+- **Time complexity:** The time complexity is O(n), where `n` is the total number of nodes in the tree. This is because each node is visited exactly once during the traversal.
 
-- **Space complexity:**  
-  The space complexity is $O(h)$, where `h` is the height of the tree. This space is required for the recursion stack in the worst case, where `h` can be as large as `n` in the case of a skewed tree.
+- **Space complexity:** The space complexity is O(h), where `h` is the height of the tree. This space is required for the recursion stack in the worst case, where `h` can be as large as `n` in the case of a skewed tree.
 
 # Code
 ```java

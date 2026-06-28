@@ -9,8 +9,8 @@
 
 ## Complexity
 
-- Time complexity: $O(1)$ as all the operation is performed on the last element of the array list
-- Space complexity: $O(n)$ because in the worst case, every new val put into the stack can be the new minimum i.e **minStack.length == stack.length == 2n**
+- Time complexity: O(1) as all the operation is performed on the last element of the array list
+- Space complexity: O(n) because in the worst case, every new val put into the stack can be the new minimum i.e **minStack.length == stack.length == 2n**
 
 ## Code
 

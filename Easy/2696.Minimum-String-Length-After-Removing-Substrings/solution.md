@@ -17,8 +17,8 @@
 
 ## Complexity
 
-- Time complexity: $O(n)$, as we iterate the whole input string.
-- Space complexity: $O(n)$ for stack impl and $O(1)$ for two pointers impl. In worse case the stack size is equal the input string size.
+- Time complexity: O(n), as we iterate the whole input string.
+- Space complexity: O(n) for stack impl and O(1) for two pointers impl. In worse case the stack size is equal the input string size.
 
 ## Code
 

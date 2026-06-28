@@ -17,7 +17,7 @@
 
 ### Counting
 
-- You can achieve $O(1)$ space complexity for this problem by using 2 variables. Lets call them `open` and `close`.
+- You can achieve O(1) space complexity for this problem by using 2 variables. Lets call them `open` and `close`.
 - A key insight is that when you encounter a closing bracket, you need to remove 1 open bracket before because it makes a complete parenthesis and no longer contribute to our result.
 - Iterate the input string, at every character you:
   - Check if current char is '(' or not. If it is just increase `open`
@@ -28,9 +28,9 @@
 
 ## Complexity
 
-- **Time complexity:**  $O(n)$ as you iterate the whole string to compute the count or construct the stack
+- **Time complexity:**  O(n) as you iterate the whole string to compute the count or construct the stack
 
-- **Space complexity:**  $O(n)$ for stack implementation and $O(1)$ for pointers/count implementation. In worse case the stack size will be the same as the length of the input string
+- **Space complexity:**  O(n) for stack implementation and O(1) for pointers/count implementation. In worse case the stack size will be the same as the length of the input string
 
 ## Code
 

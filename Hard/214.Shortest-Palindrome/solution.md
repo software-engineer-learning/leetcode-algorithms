@@ -8,9 +8,9 @@ To find the shortest palindrome by adding characters only at the beginning, the 
 4. Based on the longest palindrome prefix, append the non-palindromic suffix (from the reverse) to the original string.
 
 # Complexity
-- Time complexity: The time complexity is $O(n)$, where `n` is the length of the string, due to the linear time required to compute the Z-function.
+- Time complexity: The time complexity is O(n), where `n` is the length of the string, due to the linear time required to compute the Z-function.
 
-- Space complexity: The space complexity is $O(n)$, required for storing the reversed string, the combined string, and the Z-function array.
+- Space complexity: The space complexity is O(n), required for storing the reversed string, the combined string, and the Z-function array.
 
 # Code
 ```java
@@ -88,8 +88,8 @@ To solve this problem efficiently, the algorithm leverages a double hashing tech
    - The string is resized to accommodate the additional characters, and the characters from the reverse of the unmatched suffix are prepended to the string.
 
 ## Complexity
-- **Time complexity**: $O(n)$, where `n` is the length of the string.
-- **Space complexity**: $O(n)$
+- **Time complexity**: O(n), where `n` is the length of the string.
+- **Space complexity**: O(n)
 
 ## Code 
 ```cpp

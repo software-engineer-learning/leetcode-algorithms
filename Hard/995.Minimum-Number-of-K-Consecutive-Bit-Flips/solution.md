@@ -33,8 +33,8 @@ This approach uses a queue to efficiently manage the flips in a sliding window.
    - After traversing the entire array, return the total count of k-bit flips performed.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(k)$
+- Time complexity: O(n)
+- Space complexity: O(k)
 
 ## Code
 ```cpp []
@@ -97,8 +97,8 @@ Instead of using a queue, we can modify the input array in place to save memory
    - After traversing the entire array, return the total count of k-bit flips performed.
 
 ## Complexity
-- Time complexity: $O(n)$
-- Space complexity: $O(1)$
+- Time complexity: O(n)
+- Space complexity: O(1)
 
 ## Code
 ```cpp []
@@ -141,8 +141,8 @@ public:
 - If the loop completes, return `cnt` the count of flips.
 
 # Complexity
-- Time complexity: $O(N)$
-- Space complexity: $O(1)$
+- Time complexity: O(N)
+- Space complexity: O(1)
 
 # Code
 ```cpp

@@ -8,11 +8,9 @@ The solution involves the following steps:
 3. After processing all stones, count the number of unique components. The result will be the total number of stones minus the number of components, as each component can have all but one stone removed.
 
 # Complexity
-- **Time complexity:**  
-  The time complexity is $O(N \log^* N)$, where `N` is the number of stones. This is due to the near-constant time complexity of the Union-Find operations with path compression and union by rank.
+- **Time complexity:** The time complexity is O(N log^* N), where `N` is the number of stones. This is due to the near-constant time complexity of the Union-Find operations with path compression and union by rank.
 
-- **Space complexity:**  
-  The space complexity is $O(N)$, where `N` is the number of stones. This is due to the storage required for the Union-Find parent, rank, and size arrays, as well as the hash maps used to store row and column mappings.
+- **Space complexity:** The space complexity is O(N), where `N` is the number of stones. This is due to the storage required for the Union-Find parent, rank, and size arrays, as well as the hash maps used to store row and column mappings.
 
 # Code
 ```java

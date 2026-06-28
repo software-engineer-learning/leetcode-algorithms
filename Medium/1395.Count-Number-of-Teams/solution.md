@@ -33,8 +33,8 @@ We use two BITs to keep track of the counts of elements that are less than the c
      - Calculate the number of valid teams by combining the counts from `leftBIT` and `rightBIT`.
 
 ## Complexity
-- Time complexity: $O(n \log n)$
-- Space complexity: $O(n)$
+- Time complexity: O(n log n)
+- Space complexity: O(n)
 
 ## Code 
 ### C++

@@ -12,9 +12,9 @@ The problem requires finding which chair the target friend will sit in when they
    - Check if the current friend is the target friend. If so, return the assigned chair number immediately.
 
 # Complexity
-- Time complexity: Sorting the array takes $O(n \log n)$, and processing each friend's arrival and departure with priority queue operations also takes $O(\log n)$. Thus, the overall time complexity is $O(n \log n)$.
+- Time complexity: Sorting the array takes O(n log n), and processing each friend's arrival and departure with priority queue operations also takes O(log n). Thus, the overall time complexity is O(n log n).
 
-- Space complexity: We are using two priority queues, each storing at most `n` elements, leading to a space complexity of $O(n)$.
+- Space complexity: We are using two priority queues, each storing at most `n` elements, leading to a space complexity of O(n).
 
 # Code
 ```java

@@ -19,8 +19,8 @@ The recursive approach is straightforward for this problem. We will traverse bot
    - If the current nodes are the same, recursively check their left and right children to ensure the entire subtrees are identical.
 
 ## Complexity
-- Time complexity: $O(n)$, where $n$ is the number of nodes in the trees.
-- Space complexity: $O(h)$, where $h$ is the height of the trees.
+- Time complexity: O(n), where n is the number of nodes in the trees.
+- Space complexity: O(h), where h is the height of the trees.
 
 ## Code
 

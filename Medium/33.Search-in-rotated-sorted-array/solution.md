@@ -19,8 +19,8 @@ This is a modified version of a binary search problem, doing this is highly reco
         - Else we shrink to left.
 
 ## Complexity
-- Time complexity: $O(logn)$
-- Space complexity: $O(1)$
+- Time complexity: O(logn)
+- Space complexity: O(1)
 
 ## Code 
 

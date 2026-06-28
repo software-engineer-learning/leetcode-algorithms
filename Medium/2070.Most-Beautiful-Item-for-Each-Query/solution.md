@@ -17,13 +17,13 @@ For each query price, we need to find the maximum beauty among all items with pr
    - No items with price <= query price
 
 # Complexity
-- Time complexity: $O(n\log n + m\log n)$
+- Time complexity: O(nlog n + mlog n)
   - n log n for sorting items array
   - O(n) for preprocessing beauty values
   - m log n for performing binary search for m queries
   where n is the length of items array and m is the length of queries array
 
-- Space complexity: $O(1)$ (not counting output array)
+- Space complexity: O(1) (not counting output array)
   - We modify items array in-place for beauty values
   - Binary search uses constant extra space
   - Only extra space used is for the output array

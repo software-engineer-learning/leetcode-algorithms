@@ -5,9 +5,9 @@
 - You can store the sum of each number inside a hashmap or array for efficient query.
 
 # Complexity
-- Time complexity: $O(N \log N)$, where `N` is the length of the array.
+- Time complexity: O(N log N), where `N` is the length of the array.
 
-- Space complexity: $O(N)$, for storing the sum of each group.
+- Space complexity: O(N), for storing the sum of each group.
 
 # Code
 ```cpp

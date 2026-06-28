@@ -3,15 +3,15 @@
 1. **Prefix and suffix sums:**
 
 - Use a prefix sum array to calculate the sum of the first `i + 1` elements.
-- Use the total sum of the array to calculate the suffix sum dynamically: $suffixSum = totalSum - prefixSum$.
+- Use the total sum of the array to calculate the suffix sum dynamically: suffixSum = totalSum - prefixSum.
 
 2. **Check valid Splits:**
 
 - Iterate through the array from index `0` to `n-2`.
 - For each i, check if:
-  $prefixSum \ge suffixSum$
+  prefixSum ≥ suffixSum
   equivalent to:
-  $2 * prefixSum \ge totalSum$
+  2 * prefixSum ≥ totalSum
 
 3. **Count valid Splits:**
 
@@ -19,9 +19,9 @@
 
 # Complexity
 
-- Time complexity: $O(N)$ where N is the length of the given array.
+- Time complexity: O(N) where N is the length of the given array.
 
-- Space complexity: $O(1)$ extra space.
+- Space complexity: O(1) extra space.
 
 # Code
 

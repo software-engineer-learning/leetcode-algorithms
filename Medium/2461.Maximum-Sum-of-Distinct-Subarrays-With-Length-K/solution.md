@@ -10,12 +10,10 @@ The problem can be approached by leveraging the sliding window technique. The go
 6. Return the maximum sum found during the process.
 
 # Complexity
-- **Time complexity:**  
-  $O(n)$ 
+- **Time complexity:** O(n)
   Each element is processed at most twice (once when expanding the window and once when shrinking it), resulting in a linear time complexity.
 
-- **Space complexity:**  
-  $O(u)$  
+- **Space complexity:** O(u)
   Where `u` is the range of numbers in `nums` (here, up to 100,000 due to the size of `freq`).
 
 # Code

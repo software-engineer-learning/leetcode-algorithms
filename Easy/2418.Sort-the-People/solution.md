@@ -21,8 +21,8 @@ The task is to sort names based on the heights in descending order. The given so
    - Return the reordered `names` vector.
 
 ## Complexity
-- Time complexity: $O(n \log n)$, where $n$ is the number of people.
-- Space complexity: $O(n)$
+- Time complexity: O(n log n), where n is the number of people.
+- Space complexity: O(n)
 
 ## Code
 ```cpp

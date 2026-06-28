@@ -11,8 +11,8 @@ We may rearrange freely and only decrease values, so the best order is non-decre
 
 # Complexity
 
-- Time complexity: $O(n \log n)$ for sorting.
-- Space complexity: $O(\log n)$ for the sort stack (in-place sort).
+- Time complexity: O(n log n) for sorting.
+- Space complexity: O(log n) for the sort stack (in-place sort).
 
 # Code
 

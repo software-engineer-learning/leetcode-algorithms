@@ -32,8 +32,8 @@ The approach involves two main steps: first, expanding the grid into a finer gri
    - After traversing the entire expanded grid and counting all connected regions, the total number of regions is returned.
 
 ## Complexity
-- **Time complexity**: $O(n^2)$, where `n` is the size of the original grid. The expansion creates a grid of size `3n x 3n`, and DFS explores each cell once.
-- **Space complexity**: $O(n^2)$ for the expanded grid.
+- **Time complexity**: O(n²), where `n` is the size of the original grid. The expansion creates a grid of size `3n x 3n`, and DFS explores each cell once.
+- **Space complexity**: O(n²) for the expanded grid.
 
 ## Code 
 ```cpp
@@ -122,8 +122,8 @@ Instead of treating each cell as being divided into smaller sub-cells, this appr
    - After processing all cells, the total count of distinct regions is returned.
 
 ## Complexity
-- **Time complexity**: $O(n^2 \cdot \alpha(n^2))$, where $\alpha(n^2)$ is the inverse Ackermann function, which is nearly constant.
-- **Space complexity**: $O(n^2)$
+- **Time complexity**: O(n² · α(n²)), where α(n²) is the inverse Ackermann function, which is nearly constant.
+- **Space complexity**: O(n²)
 
 ## Code 
 ```cpp

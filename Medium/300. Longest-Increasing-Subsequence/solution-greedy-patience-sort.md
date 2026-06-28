@@ -34,8 +34,8 @@
 
 ### Complexity analysis
 
-- Time complexity: $O(nlog(n))$ - standard sorting complexity, in worst case, we have to run the `find_stack()` function for every element, hence nlogn
-- Space complexity: $O(n)$ - `vector<int> push_back` is of length `n`.
+- Time complexity: O(nlog(n)) - standard sorting complexity, in worst case, we have to run the `find_stack()` function for every element, hence nlogn
+- Space complexity: O(n) - `vector<int> push_back` is of length `n`.
 
 ## 3. Implementation
 

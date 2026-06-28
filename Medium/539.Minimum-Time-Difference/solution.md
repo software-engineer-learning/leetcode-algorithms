@@ -9,9 +9,9 @@ The problem involves finding the minimum time difference between multiple time p
 5. If the number of time points exceeds 1440 (the total number of minutes in a day), return 0 early, since there must be a duplicate.
 
 # Complexity
-- **Time complexity**: The time complexity is $O(n \log n)$ due to the sorting step, where $n$ is the number of time points. The subsequent operations (parsing and iterating through the sorted list) are linear, i.e., $O(n)$.
+- **Time complexity**: The time complexity is O(n log n) due to the sorting step, where n is the number of time points. The subsequent operations (parsing and iterating through the sorted list) are linear, i.e., O(n).
 
-- **Space complexity**: The space complexity is $O(n)$, since we store the time points in minutes in an array of size `n`.
+- **Space complexity**: The space complexity is O(n), since we store the time points in minutes in an array of size `n`.
 
 # Code
 ```java

@@ -11,8 +11,8 @@
 
 # Complexity
 
-- Time complexity: $O(nlogn)$ standard sorting complexity
-- Space complexity: $O(n)$ using 1 extra vector to store the converted string list
+- Time complexity: O(nlogn) standard sorting complexity
+- Space complexity: O(n) using 1 extra vector to store the converted string list
 
 # Code
 

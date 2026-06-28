@@ -12,8 +12,8 @@
 
 # Complexity
 
-- Time complexity: $O(N)$ Every node of the linked-list is visited only once
-- Space complexity: $O(1)$ It actually O(N) if you count the call stack
+- Time complexity: O(N) Every node of the linked-list is visited only once
+- Space complexity: O(1) It actually O(N) if you count the call stack
 
 ## Code
 

@@ -1,6 +1,6 @@
 # Intuition
 
-The goal is to cut a cake into $1 \times 1$ pieces with the minimum cost. Each cut has a cost associated with it, and the cost is fixed regardless of the size of the piece being cut. The key to minimizing the total cost is to make the most expensive cuts first when they will affect the largest number of subsequent cuts. This approach leverages a greedy algorithm.
+The goal is to cut a cake into 1 × 1 pieces with the minimum cost. Each cut has a cost associated with it, and the cost is fixed regardless of the size of the piece being cut. The key to minimizing the total cost is to make the most expensive cuts first when they will affect the largest number of subsequent cuts. This approach leverages a greedy algorithm.
 
 <p>&nbsp;</p>
 
@@ -29,8 +29,8 @@ The goal is to cut a cake into $1 \times 1$ pieces with the minimum cost. Each c
    - The accumulated `cost` represents the minimum total cost to cut the entire cake into \(1 \times 1\) pieces.
 
 ## Complexity
-- Time complexity: $O((m + n) \log (m + n))$ due to sorting the cut arrays.
-- Space complexity: $O(1)$ as we are using a constant amount of extra space.
+- Time complexity: O((m + n) log (m + n)) due to sorting the cut arrays.
+- Space complexity: O(1) as we are using a constant amount of extra space.
 
 ## Code
 ```cpp

@@ -11,9 +11,9 @@ The problem asks for the longest substring with an even count of vowels. Each vo
 3. Return the maximum length of the substring found.
 
 # Complexity
-- Time complexity: $O(n)$, where `n` is the length of the string. We traverse the string once, and all operations (map lookups and updates) are $O(1)$.
+- Time complexity: O(n), where `n` is the length of the string. We traverse the string once, and all operations (map lookups and updates) are O(1).
 
-- Space complexity: $O(n)$, as we use a hashmap to store the first occurrence of each unique mask, which could potentially have up to $n$ entries in the worst case.
+- Space complexity: O(n), as we use a hashmap to store the first occurrence of each unique mask, which could potentially have up to n entries in the worst case.
 
 # Code
 ```java

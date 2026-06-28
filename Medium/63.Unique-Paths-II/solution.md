@@ -23,8 +23,8 @@ We use a dynamic programming approach where we update the grid itself to store t
    - The value at the bottom-right corner of the grid (`grid[n-1][m-1]`) will contain the number of unique paths from the top-left to the bottom-right.
 
 ## Complexity
-- Time complexity: $O(m \times n)$, where `m` is the number of rows and `n` is the number of columns.
-- Space complexity: $O(1)$, since we modify the grid in place and do not use extra space.
+- Time complexity: O(m × n), where `m` is the number of rows and `n` is the number of columns.
+- Space complexity: O(1), since we modify the grid in place and do not use extra space.
 
 ## Code 
 

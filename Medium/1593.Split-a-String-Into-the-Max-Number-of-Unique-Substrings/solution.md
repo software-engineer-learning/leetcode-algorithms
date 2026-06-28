@@ -5,11 +5,9 @@ The problem involves finding the maximum number of unique substrings into which 
 The approach is based on backtracking. We iterate over all possible substrings starting from the current position, checking if the substring has already been used. If not, we add it to the set of unique substrings and recursively continue from the next position. After the recursive call, we remove the substring from the set to backtrack and explore other possibilities. This ensures we try every combination and find the one that produces the maximum number of unique splits.
 
 # Complexity
-- **Time complexity:**  
-  The time complexity is approximately $O(n \cdot 2^n)$ where `n` is the length of the string. This arises because at each position, there are two choices: to include the substring or not, leading to exponential growth in the number of possible splits.
+- **Time complexity:** The time complexity is approximately O(n · 2^n) where `n` is the length of the string. This arises because at each position, there are two choices: to include the substring or not, leading to exponential growth in the number of possible splits.
 
-- **Space complexity:**  
-  The space complexity is $O(n)$ due to the recursive stack and the set of unique substrings, where `n` is the length of the input string.
+- **Space complexity:** The space complexity is O(n) due to the recursive stack and the set of unique substrings, where `n` is the length of the input string.
 
 # Code
 ```java

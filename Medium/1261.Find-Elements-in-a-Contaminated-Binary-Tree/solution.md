@@ -7,8 +7,8 @@
 
 # Complexity
 
-- Time complexity: $O(N)$ as we need to travel all nodes to recover the tree to its original form
-- Space complexity: $O(N)$ as the additional set can contain at most all the node values
+- Time complexity: O(N) as we need to travel all nodes to recover the tree to its original form
+- Space complexity: O(N) as the additional set can contain at most all the node values
 
 ## Code 
 ```cpp

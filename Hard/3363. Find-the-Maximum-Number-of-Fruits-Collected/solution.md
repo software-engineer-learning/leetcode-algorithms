@@ -25,9 +25,9 @@
     - The recursive formula is pretty simple, we just try to get max fruits from three choices `dp[r][c] = max({3 choices here})`
 
 # Complexity
-- Time complexity: $O(n^2)$ size of the board
+- Time complexity: O(n²) size of the board
 
-- Space complexity: $O(n^2)$ for the memoize `dp` table
+- Space complexity: O(n²) for the memoize `dp` table
 
 # Code
 ```cpp []

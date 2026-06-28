@@ -19,8 +19,8 @@
 - We can use the int conversion of char to simplify the increamental comparision (`str1[i] - 'a'` and `str1[i]-'a'+1`)
 
 ## Complexity
-- Time complexity: $O(n)$ as in worst case we will travel all the str1, also if `str2.size() > str1.size()` then the result will always be false.
-- Space complexity: $O(1)$ No extra buffer used, we only utilize 2 pointers to track the progress.
+- Time complexity: O(n) as in worst case we will travel all the str1, also if `str2.size() > str1.size()` then the result will always be false.
+- Space complexity: O(1) No extra buffer used, we only utilize 2 pointers to track the progress.
 
 ## Code 
 

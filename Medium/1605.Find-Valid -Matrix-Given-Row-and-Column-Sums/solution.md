@@ -24,8 +24,8 @@ The idea is to construct the matrix by filling in the smallest possible value at
    - After filling all elements, return the constructed matrix `res`.
 
 ## Complexity
-- Time complexity: $O(n \cdot m)$ where `n` is the number of rows and `m` is the number of columns.
-- Space complexity: $O(n \cdot m)$ for storing the result matrix.
+- Time complexity: O(n · m) where `n` is the number of rows and `m` is the number of columns.
+- Space complexity: O(n · m) for storing the result matrix.
 
 ## Code 
 ```cpp

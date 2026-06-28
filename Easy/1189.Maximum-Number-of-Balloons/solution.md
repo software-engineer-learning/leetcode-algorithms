@@ -12,8 +12,8 @@ Count how many times each needed letter appears, halve the counts for `l` and `o
 
 # Complexity
 
-- Time complexity: $O(n)$, where $n$ is the length of `text`.
-- Space complexity: $O(1)$ — at most 26 letters (Go) or 5 tracked letters (Rust).
+- Time complexity: O(n), where n is the length of `text`.
+- Space complexity: O(1) — at most 26 letters (Go) or 5 tracked letters (Rust).
 
 # Code
 

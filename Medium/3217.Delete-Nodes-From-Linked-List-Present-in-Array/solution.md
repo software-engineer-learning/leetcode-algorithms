@@ -28,8 +28,8 @@ To remove nodes from a linked list whose values exist in a given array, we can u
 
 ## Complexity
 
-- Time complexity: $O(n + m)$, where `n` is the length of the linked list and `m` is the length of the array `nums`.
-- Space complexity: $O(m)$.
+- Time complexity: O(n + m), where `n` is the length of the linked list and `m` is the length of the array `nums`.
+- Space complexity: O(m).
 
 ## Code
 

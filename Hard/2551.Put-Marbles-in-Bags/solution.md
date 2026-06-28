@@ -7,9 +7,9 @@ The problem involves dividing marbles into exactly `k` groups, with the cost def
 - Calculate the difference by subtracting the sum of the smallest `(k-1)` pairs from the sum of the largest `(k-1)` pairs.
 
 # Complexity
-- **Time complexity**: $O(n \log n)$ due to sorting `(n - 1)` adjacent pair sums.
+- **Time complexity**: O(n log n) due to sorting `(n - 1)` adjacent pair sums.
 
-- **Space complexity**: $O(n)$ required for storing adjacent pair sums.
+- **Space complexity**: O(n) required for storing adjacent pair sums.
 
 # Code
 ```py

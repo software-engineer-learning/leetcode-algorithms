@@ -8,9 +8,9 @@ When given a mathematical expression containing numbers and operators, one appro
 4. **Combine results**: For each operator, the results from the left and right sub-expressions are combined using the operator. This is done for every possible operator in the expression.
 
 # Complexity
-- Time complexity: The time complexity is $O(n \cdot 2^n)$, where `n` is the number of operators. This is because each operator can lead to multiple recursive splits, and each sub-expression has two possible outcomes based on the recursion.
+- Time complexity: The time complexity is O(n · 2^n), where `n` is the number of operators. This is because each operator can lead to multiple recursive splits, and each sub-expression has two possible outcomes based on the recursion.
   
-- Space complexity: The space complexity is $O(2^n)$ due to the recursion depth and the storage required for storing results of sub-problems.
+- Space complexity: The space complexity is O(2^n) due to the recursion depth and the storage required for storing results of sub-problems.
 
 # Code
 ```java

@@ -29,8 +29,8 @@ Let N be the total characters in the string.
 Let M be the average length of the strings in dictionary.
 Let K be the length of the dictionary.
 
-- **Time complexity**: $O(N^2 +M.K)$. The two nested for loops that are being used for the dynamic programming operation cost $O(N^2)$. Building the trie costs $O(M.K)$.
-- **Space comlexity**: $O(N + M.K)$ The Trie used to store the strings in dictionary will incur a cost of $O(M.K)$. The dp array will incur a cost of $O(N)$.
+- **Time complexity**: O(N² +M.K). The two nested for loops that are being used for the dynamic programming operation cost O(N²). Building the trie costs O(M.K).
+- **Space comlexity**: O(N + M.K) The Trie used to store the strings in dictionary will incur a cost of O(M.K). The dp array will incur a cost of O(N).
 
 ## Solution
 
@@ -107,9 +107,9 @@ The problem is about minimizing the number of extra characters needed to form a 
 We use dynamic programming to solve this problem. The idea is to traverse the string and for each index, try all possible substrings starting from that index. If a substring exists in the dictionary, we recursively check the next index and update our result. Otherwise, we move to the next character and increment the count of extra characters. To avoid redundant calculations, we use a DP array to store results for subproblems (i.e., starting from a given index). The recursion ensures we explore all valid substring partitions, while the DP array optimizes performance by avoiding recomputation.
 
 # Complexity
-- Time complexity: The time complexity is $O(n^2)$, where $n$ is the length of the string. This is because for each starting index, we check all possible substrings and perform dictionary lookups in constant time.
+- Time complexity: The time complexity is O(n²), where n is the length of the string. This is because for each starting index, we check all possible substrings and perform dictionary lookups in constant time.
 
-- Space complexity: The space complexity is $O(n)$, where $n$ is the length of the string. We store the DP array of size `n+1` and a dictionary, but the dictionary size is constant for any input.
+- Space complexity: The space complexity is O(n), where n is the length of the string. We store the DP array of size `n+1` and a dictionary, but the dictionary size is constant for any input.
 
 # Code
 ```java

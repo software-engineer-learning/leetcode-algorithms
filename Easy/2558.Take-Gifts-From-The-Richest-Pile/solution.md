@@ -6,7 +6,7 @@ To solve this problem, we can use a max-heap to efficiently retrieve and modify 
 
 1. **Max-Heap:**
 
-- Use a max-heap (priority queue) to always retrieve the pile with the maximum number of gifts in $O(\log n)$ time.
+- Use a max-heap (priority queue) to always retrieve the pile with the maximum number of gifts in O(log n) time.
 
 2. **Simulation:**
 
@@ -21,10 +21,10 @@ To solve this problem, we can use a max-heap to efficiently retrieve and modify 
 
 ## Complexity
 
-- Time Complexity: Heap initialization: $O(n \log n)$.
-  - `k` heap operation: $O(k \log n)$.
-  - Total: $O((n + k) \log n)$.
-- Space complexity: $O(n)$ for heap.
+- Time Complexity: Heap initialization: O(n log n).
+  - `k` heap operation: O(k log n).
+  - Total: O((n + k) log n).
+- Space complexity: O(n) for heap.
 
 ## Code
 

@@ -22,15 +22,15 @@ We use a Union-Find data structure to keep track of the connected components as 
    - Track the number of edges used by each individually.
 
 4. **Check Full Connectivity**:
-   - Ensure that both Alice's and Bob's graphs are fully connected by checking if the number of edges used in each equals $n-1$ (minimum edges required for a fully connected graph).
+   - Ensure that both Alice's and Bob's graphs are fully connected by checking if the number of edges used in each equals n-1 (minimum edges required for a fully connected graph).
 
 5. **Calculate Removable Edges**:
    - If both graphs are fully connected, calculate the number of removable edges by subtracting the number of used edges from the total number of edges.
    - If either graph is not fully connected, return -1 indicating that it's not possible to maintain full connectivity for both.
 
 ## Complexity
-- Time complexity: $O((m + n) * \alpha (n))$, where $m$ is the number of edges and $α(n)$ is the inverse Ackermann function (nearly constant time).
-- Space complexity: $O(n)$
+- Time complexity: O((m + n) * α (n)), where m is the number of edges and α(n) is the inverse Ackermann function (nearly constant time).
+- Space complexity: O(n)
 
 ## Code 
 

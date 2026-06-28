@@ -43,9 +43,9 @@ public:
 
 
 ## 4. Complexity
-Time: $O( n log (n) + m log (m) + n log (m))$
-    * $O(n log n)$ for sorting
-    * $O(m log n)$ for sorting
-    * $O(n log m)$ for iterated and search through jobs
+Time: O( n log (n) + m log (m) + n log (m))
+    * O(n log n) for sorting
+    * O(m log n) for sorting
+    * O(n log m) for iterated and search through jobs
 
 Space: O(1)

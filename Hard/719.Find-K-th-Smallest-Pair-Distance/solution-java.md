@@ -9,16 +9,12 @@
 
 # Complexity
 
-**Time complexity**
+**Time complexity**: **_Sorting_**: O(nlog n).
+- **_Binary Search_**: The binary search runs in O(log⁡ d), where d is the difference between the maximum and minimum element in the array.
+- **_Counting Pairs_**: Counting pairs takes O(n) for each iteration of the binary search.
+  The overall time complexity is O(n log n + n log d), which is significantly more efficient than generating all pairs and sorting them.
 
-- **_Sorting_**: $O(n\log n)$.
-- **_Binary Search_**: The binary search runs in $O(\log⁡ d)$, where d is the difference between the maximum and minimum element in the array.
-- **_Counting Pairs_**: Counting pairs takes $O(n)$ for each iteration of the binary search.
-  The overall time complexity is $O(n \log n + n \log d)$, which is significantly more efficient than generating all pairs and sorting them.
-
-**Space complexity**
-
-- $O(1)$.
+**Space complexity**: O(1).
 
 # Code
 

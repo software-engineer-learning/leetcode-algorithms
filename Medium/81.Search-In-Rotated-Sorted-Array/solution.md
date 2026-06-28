@@ -11,8 +11,8 @@ This is a very confusing problem if you try solving it with binary search (per t
 - The rest of the implimentation is the same as problem #33.
 
 ## Complexity
-- Time complexity: $O(n)$ The worst case is that every elements inside the array is equal, in which case we need to search the whole arrays.
-- Space complexity: $O(1)$
+- Time complexity: O(n) The worst case is that every elements inside the array is equal, in which case we need to search the whole arrays.
+- Space complexity: O(1)
 
 ## Code 
 

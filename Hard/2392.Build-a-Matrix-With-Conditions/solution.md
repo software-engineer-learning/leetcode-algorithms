@@ -1,6 +1,6 @@
 # Intuition
 
-The goal is to construct a $k \times k$ matrix that satisfies given row and column conditions. These conditions dictate the relative ordering of elements in rows and columns. We can achieve this by performing topological sorts on the conditions to determine a valid sequence for both rows and columns. If a valid topological ordering exists for both conditions, we can then place the elements accordingly in the matrix.
+The goal is to construct a k × k matrix that satisfies given row and column conditions. These conditions dictate the relative ordering of elements in rows and columns. We can achieve this by performing topological sorts on the conditions to determine a valid sequence for both rows and columns. If a valid topological ordering exists for both conditions, we can then place the elements accordingly in the matrix.
 
 <p>&nbsp;</p>
 
@@ -21,8 +21,8 @@ The goal is to construct a $k \times k$ matrix that satisfies given row and colu
    - Ensure each number is placed according to its row and column indices derived from the sorted orders.
 
 ## Complexity
-- **Time complexity**: $O(k^2)$
-- **Space complexity**: $O(k^2)$
+- **Time complexity**: O(k²)
+- **Space complexity**: O(k²)
 
 ## Code 
 ```cpp
