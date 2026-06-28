@@ -110,6 +110,7 @@
 * [1760. Minimum Limit Of Balls In A Bag](Medium/1760.Minimum-Limit-Of-Balls-In-A-Bag/solution.md)
 * [1823. Find The Winner Of The Circular Game](Medium/1823.Find-The-Winner-Of-The-Circular-Game/solution.md)
 * [1833. Maximum Ice Cream Bars](Medium/1833.Maximum-Ice-Cream-Bars/solution.md)
+* [1846. Maximum Element After Decreasing and Rearranging](Medium/1846.Maximum-Element-After-Decreasing-and-Rearranging/solution.md)
 * [1894. Find the Student that Will Replace the Chalk](Medium/1894.Find-the-Student-that-Will-Replace-the-Chalk/solution.md)
 * 1905. Count Sub Islands
   * [cpp](Medium/1905.Count-Sub-Islands/solution-cpp.md)
@@ -150,6 +151,7 @@
 * [2825. Make String a Subsequence Using Cyclic Increments](Medium/2825.Make-String-a-Subsequence-Using-Cyclic-Increments/solution.md)
 * [2924. Find Champion II](Medium/2924.Find-Champion-II/solution.md)
 * [3016. Minimum Number of Pushes to Type Word II](Medium/3016.Minimum-Number-of-Pushes-to-Type-Word-II/solution.md)
+* [3020. Find the Maximum Number of Elements in Subset](Medium/3020.Find-the-Maximum-Number-of-Elements-in-Subset/solution.md)
 * [3043. Find the Length of the Longest Common Prefix](Medium/3043.Find-the-Length-of-the-Longest-Common-Prefix/solution.md)
 * [3097. Shortest Subarray With OR at Least K II](Medium/3097.Shortest-Subarray-With-OR-at-Least-K-II/solution.md)
 * [3217. Delete Nodes From Linked List Present in Array](Medium/3217.Delete-Nodes-From-Linked-List-Present-in-Array/solution.md)
