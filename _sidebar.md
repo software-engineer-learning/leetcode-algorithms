@@ -105,6 +105,7 @@
   - [1760. Minimum Limit Of Balls In A Bag](Medium/1760.Minimum-Limit-Of-Balls-In-A-Bag/solution.md)
   - [1823. Find The Winner Of The Circular Game](Medium/1823.Find-The-Winner-Of-The-Circular-Game/solution.md)
   - [1833. Maximum Ice Cream Bars](Medium/1833.Maximum-Ice-Cream-Bars/solution.md)
+  - [1846. Maximum Element After Decreasing and Rearranging](Medium/1846.Maximum-Element-After-Decreasing-and-Rearranging/solution.md)
   - [1894. Find the Student that Will Replace the Chalk](Medium/1894.Find-the-Student-that-Will-Replace-the-Chalk/solution.md)
   - 1905. Count Sub Islands
     - [cpp](Medium/1905.Count-Sub-Islands/solution-cpp.md)
