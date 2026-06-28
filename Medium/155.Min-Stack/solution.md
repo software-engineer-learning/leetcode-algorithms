@@ -18,9 +18,9 @@
 - Return the current minimum value stored in `min`
 # Complexity
 
-- Time complexity: `O(1)`
+- Time complexity: $O(1)$
 
-- Space complexity: `O(1).`
+- Space complexity: $O(1)$
 
 # Code
 ```java

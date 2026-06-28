@@ -19,10 +19,10 @@
 ## Complexity
 
 - Time complexity: $O(N^2)$ where $N$ is matrix length.
-<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+<!-- Add your time complexity here, e.g. $O(n)$ -->
 
 - Space complexity: $O(1)$ with a few calculation for `sum`, `min_abs` and `count_neg`.
-<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+<!-- Add your space complexity here, e.g. $O(n)$ -->
 
 ## Code
 ```cpp []

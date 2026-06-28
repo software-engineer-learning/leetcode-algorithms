@@ -8,8 +8,8 @@ To solve this problem, you can use a mathematical approach with recursive or ite
 
 # Complexity
 
-- Time complexity: `O(N).`
-- Space complexity: `O(1).`
+- Time complexity: $O(N)$
+- Space complexity: $O(1)$
 
 # Code
 

@@ -15,9 +15,9 @@ The goal is to find the minimum number of `pushes` required to type a given stri
 
 # Complexity
 
-- Time complexity: `O(N).`, where N is the length of the input string `word`.
+- Time complexity: $O(N)$, where N is the length of the input string `word`.
 
-- Space complexity: `O(1).`
+- Space complexity: $O(1)$
 
 # Code
 ```cpp

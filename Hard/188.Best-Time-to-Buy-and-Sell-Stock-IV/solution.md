@@ -24,9 +24,9 @@ The solution uses a 3D DP array `dp[i][canBuy][trans]` where:
 - The recursive function `f` computes the maximum profit for each state using the defined state transitions and memoization.
 # Complexity
 
-- Time complexity: `O(N2*K).`
+- Time complexity: $O(N2*K)$
 
-- Space complexity: `O(N*K).`
+- Space complexity: $O(N*K)$
 
 # Code
 ```cpp
@@ -74,9 +74,9 @@ If the number of identified buy-sell pairs exceeds `k`, reduce the number of tra
 - Return the total profit as the result.
 # Complexity
 
-- Time complexity: `O(N).`
+- Time complexity: $O(N)$
 
-- Space complexity: `O(N).`
+- Space complexity: $O(N)$
 
 # Code
 ```cpp

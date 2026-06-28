@@ -141,8 +141,8 @@ public:
 - If the loop completes, return `cnt` the count of flips.
 
 # Complexity
-- Time complexity: `O(N).`
-- Space complexity: `O(1).`
+- Time complexity: $O(N)$
+- Space complexity: $O(1)$
 
 # Code
 ```cpp

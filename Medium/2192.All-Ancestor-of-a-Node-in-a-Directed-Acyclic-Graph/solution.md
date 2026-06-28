@@ -13,9 +13,9 @@
 
 # Complexity
 
-- Time complexity: `O(N^2 + N*M).`
+- Time complexity: $O(N^2 + N*M)$
 
-- Space complexity: `O(N + M).`
+- Space complexity: $O(N + M)$
 
 # Code
 ```cpp

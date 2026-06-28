@@ -9,11 +9,9 @@
 
 # Complexity
 
-- Time complexity:  
-  The time complexity is $O(m \times n \times 4^l)$, where `m` is the number of rows, `n` is the number of columns, and `l` is the maximum length of a word. The DFS explores up to 4 directions from each cell, and each direction can continue up to `l` steps in the worst case.
+- Time complexity: The time complexity is $O(m \times n \times 4^l)$, where `m` is the number of rows, `n` is the number of columns, and `l` is the maximum length of a word. The DFS explores up to 4 directions from each cell, and each direction can continue up to `l` steps in the worst case.
   
-- Space complexity:  
-  The space complexity is $O(n \times k)$, where `n` is the number of words and `k` is the average length of the words in the Trie. Additional space is required for the recursion stack in DFS, which can be up to the maximum word length.
+- Space complexity: The space complexity is $O(n \times k)$, where `n` is the number of words and `k` is the average length of the words in the Trie. Additional space is required for the recursion stack in DFS, which can be up to the maximum word length.
 
 # Code
 ```java

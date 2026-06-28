@@ -21,9 +21,9 @@
 
 # Complexity
 
-- Time complexity: `O(N).`
+- Time complexity: $O(N)$
 
-- Space complexity: `O(N).`
+- Space complexity: $O(N)$
 
 # Code
 

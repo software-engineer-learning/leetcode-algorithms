@@ -10,11 +10,9 @@ To solve this problem, the goal is to find the longest streak of squares within 
 4. **Result**: Keep track of the maximum streak found for any number, and return this as the result.
 
 # Complexity
-- **Time Complexity**: 
-  - The time complexity is approximately $O(n \log k)$, where `n` is the number of elements in the input array and `k` is the maximum value in the array. This is due to iterating over each element and potentially squaring it until it exceeds `maxRange`.
+- **Time Complexity**: The time complexity is approximately $O(n \log k)$, where `n` is the number of elements in the input array and `k` is the maximum value in the array. This is due to iterating over each element and potentially squaring it until it exceeds `maxRange`.
   
-- **Space Complexity**: 
-  - The space complexity is $O(m)$, where `m = 100001`, to store the boolean array `valid`.
+- **Space Complexity**: The space complexity is $O(m)$, where `m = 100001`, to store the boolean array `valid`.
 
 # Code
 ```java

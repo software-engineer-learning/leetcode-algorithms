@@ -8,11 +8,9 @@ To find the shortest palindrome by adding characters only at the beginning, the 
 4. Based on the longest palindrome prefix, append the non-palindromic suffix (from the reverse) to the original string.
 
 # Complexity
-- Time complexity:
-  The time complexity is $O(n)$, where `n` is the length of the string, due to the linear time required to compute the Z-function.
+- Time complexity: The time complexity is $O(n)$, where `n` is the length of the string, due to the linear time required to compute the Z-function.
 
-- Space complexity:
-  The space complexity is $O(n)$, required for storing the reversed string, the combined string, and the Z-function array.
+- Space complexity: The space complexity is $O(n)$, required for storing the reversed string, the combined string, and the Z-function array.
 
 # Code
 ```java

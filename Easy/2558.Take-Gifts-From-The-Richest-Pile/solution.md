@@ -21,8 +21,7 @@ To solve this problem, we can use a max-heap to efficiently retrieve and modify 
 
 ## Complexity
 
-- Time Complexity:
-  - Heap initialization: $O(n \log n)$.
+- Time Complexity: Heap initialization: $O(n \log n)$.
   - `k` heap operation: $O(k \log n)$.
   - Total: $O((n + k) \log n)$.
 - Space complexity: $O(n)$ for heap.

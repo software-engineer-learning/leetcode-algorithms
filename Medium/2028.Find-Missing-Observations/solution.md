@@ -9,11 +9,9 @@ The problem asks to find missing dice rolls such that the overall average remain
 5. We handle any remainder by incrementing some of the rolls to balance out the total.
 
 # Complexity
-- **Time complexity**:  
-  The time complexity is $O(m + n)$ where `m` is the length of the given `rolls` array and $$n$$ is the number of missing rolls. Calculating the total sum of `rolls` takes $O(m)$ and distributing the remaining sum among the missing rolls takes $O(n)$.
+- **Time complexity**: The time complexity is $O(m + n)$ where `m` is the length of the given `rolls` array and $n$ is the number of missing rolls. Calculating the total sum of `rolls` takes $O(m)$ and distributing the remaining sum among the missing rolls takes $O(n)$.
 
-- **Space complexity**:  
-  The space complexity is $O(n)$ because we need an array to store the missing rolls.
+- **Space complexity**: The space complexity is $O(n)$ because we need an array to store the missing rolls.
 
 # Code
 ```java

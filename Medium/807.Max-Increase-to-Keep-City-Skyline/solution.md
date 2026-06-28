@@ -13,13 +13,11 @@ The height of any building can be increased to the minimum of the maximum height
    - Accumulate the height increases for all buildings into the result.
 
 # Complexity
-- **Time complexity**:  
-  $O(N^2)$, where $$N$$ is the dimension of the grid. This includes:
+- **Time complexity**: $O(N^2)$, where $N$ is the dimension of the grid. This includes:
   - $O(N^2)$ to compute `maxRow` and `maxCol`.
   - $O(N^2)$ to compute the total increase.
   
-- **Space complexity**:  
-  $$O(N)$$, for storing the `maxRow` and `maxCol` arrays.
+- **Space complexity**: $O(N)$, for storing the `maxRow` and `maxCol` arrays.
 
 # Code
 ```java

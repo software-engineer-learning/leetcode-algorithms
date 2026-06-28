@@ -15,11 +15,9 @@ To find the shortest subarray whose sum is at least `k`, the problem can be tran
    - If no subarray with a sum of at least `k` is found, return `-1`. Otherwise, return the minimum length.
 
 # Complexity
-- **Time complexity**:  
-  $O(n)$, where $$n$$ is the length of the input array. Each element is processed at most twice (once when added to and once when removed from the deque).
+- **Time complexity**: $O(n)$, where $n$ is the length of the input array. Each element is processed at most twice (once when added to and once when removed from the deque).
   
-- **Space complexity**:  
-  $O(n)$, for the `prefixSum` array and the deque.
+- **Space complexity**: $O(n)$, for the `prefixSum` array and the deque.
 
 # Code
 ```java

@@ -9,9 +9,9 @@
 
 - Iterate through the array from index `0` to `n-2`.
 - For each i, check if:
-  $$prefixSum \ge suffixSum$$
+  $prefixSum \ge suffixSum$
   equivalent to:
-  $$2 * prefixSum \ge totalSum$$
+  $2 * prefixSum \ge totalSum$
 
 3. **Count valid Splits:**
 
@@ -19,9 +19,9 @@
 
 # Complexity
 
-- Time complexity: `O(N)` where N is the length of the given array.
+- Time complexity: $O(N)$ where N is the length of the given array.
 
-- Space complexity: `O(1)` extra space.
+- Space complexity: $O(1)$ extra space.
 
 # Code
 

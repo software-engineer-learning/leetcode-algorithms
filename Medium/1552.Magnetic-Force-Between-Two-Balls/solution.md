@@ -18,8 +18,8 @@
 ## Notice:
 -   Instead of using `mid = (left + right) / 2;` could causes overflow , we should using `mid = left + (right - left) / 2;` , ensure that the midpoint is safe from overflow.
 # Complexity
-- Time complexity: `O(N * log(N)).`
-- Space complexity: `O(N).`
+- Time complexity: $O(N * log(N))$
+- Space complexity: $O(N)$
 # Code
 ```C++
 class Solution {

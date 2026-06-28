@@ -18,11 +18,9 @@ The problem is to find the nth ugly number, where ugly numbers are positive inte
    - After looping `n` times, the last number popped from the heap is the nth ugly number.
 
 ## Complexity
-- **Time Complexity**:
-  - The time complexity is $O(n log n)$ because each insertion and removal operation in the heap takes $O(log n)$ time, and this operation is repeated `n` times.
+- **Time Complexity**: The time complexity is $O(n log n)$ because each insertion and removal operation in the heap takes $O(log n)$ time, and this operation is repeated `n` times.
 
-- **Space Complexity**:
-  - The space complexity is $O(n)$ because the heap and set can grow up to the size of `n` in the worst case.
+- **Space Complexity**: The space complexity is $O(n)$ because the heap and set can grow up to the size of `n` in the worst case.
 
 ## Code
 ```java
@@ -68,11 +66,9 @@ Ugly numbers are numbers that only have prime factors of 2, 3, and 5. The sequen
    - After filling the array, return the nth ugly number from the array.
 
 ## Complexity
-- **Time Complexity**: 
-  - The time complexity is $O(n)$ since we are iterating `n` times to generate the first `n` ugly numbers.
+- **Time Complexity**: The time complexity is $O(n)$ since we are iterating `n` times to generate the first `n` ugly numbers.
 
-- **Space Complexity**: 
-  - The space complexity is $O(n)$ because we are storing the first `n` ugly numbers in an array.
+- **Space Complexity**: The space complexity is $O(n)$ because we are storing the first `n` ugly numbers in an array.
 
 ## Code
 ```java

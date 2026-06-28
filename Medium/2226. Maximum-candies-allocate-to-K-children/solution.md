@@ -14,9 +14,9 @@
 
 # Complexity
 
-- Time complexity: `O(NlogM)` where N is the length of the given array. M is the range from `[1, largest_pile]`, the constrain of candies[i] is 10,000,000 so in worst case log(M) = 26 round to integer. So the timecomplexity is basically asymtote O(N).
+- Time complexity: $O(NlogM)$ where N is the length of the given array. M is the range from `[1, largest_pile]`, the constrain of candies[i] is 10,000,000 so in worst case log(M) = 26 round to integer. So the timecomplexity is basically asymtote O(N).
 
-- Space complexity: `O(1)` for extra space.
+- Space complexity: $O(1)$ for extra space.
 
 # Code
 

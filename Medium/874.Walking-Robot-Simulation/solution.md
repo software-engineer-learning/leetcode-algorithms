@@ -11,11 +11,9 @@ The problem simulates the movement of a robot on a 2D plane, and the goal is to 
 5. Finally, we return the maximum squared distance achieved.
 
 # Complexity
-- **Time complexity**:  
-  The time complexity is $O(n + m)$ where `n` is the number of commands and `m` is the number of obstacles. This is because we process each command in $O(1)$ time and check obstacles using a set, which provides average $O(1)$ lookup time.
+- **Time complexity**: The time complexity is $O(n + m)$ where `n` is the number of commands and `m` is the number of obstacles. This is because we process each command in $O(1)$ time and check obstacles using a set, which provides average $O(1)$ lookup time.
   
-- **Space complexity**:  
-  The space complexity is $O(m)$ where `m` is the number of obstacles, as we store all obstacles in a set.
+- **Space complexity**: The space complexity is $O(m)$ where `m` is the number of obstacles, as we store all obstacles in a set.
 
 # Code
 ```java

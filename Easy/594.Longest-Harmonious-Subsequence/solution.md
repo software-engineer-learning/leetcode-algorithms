@@ -15,9 +15,9 @@
 - Return the maximum length of the harmonious subsequence
 # Complexity
 
-- Time complexity: `O(n))`
+- Time complexity: $O(n))$
 
-- Space complexity: `O(k)`
+- Space complexity: $O(k)$
 
 # Code
 

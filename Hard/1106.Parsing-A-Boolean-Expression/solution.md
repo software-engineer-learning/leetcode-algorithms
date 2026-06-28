@@ -11,12 +11,10 @@ When parsing a boolean expression consisting of logical operators (`!`, `&`, `|`
 4. **Final result**: Once the entire expression is processed, the remaining value on the stack is the result of the boolean expression.
 
 # Complexity
-- Time complexity:  
-  $O(n)$
+- Time complexity: $O(n)$
   We iterate through each character of the expression once, and stack operations are efficient with a constant time complexity for push and pop operations.
 
-- Space complexity:  
-  $O(n)$ 
+- Space complexity: $O(n)$
   The space used by the stack depends on the size of the expression, with at most one stack frame for each character.
 
 # Code

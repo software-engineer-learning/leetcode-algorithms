@@ -79,6 +79,10 @@ Rules:
   (`solution-go.md`, `solution-rust.md`, `solution-cpp.md`) only when the user
   asks for that layout or just one language with extra context.
 - Use `$...$` for inline math in the complexity section when helpful.
+- Write complexity on one line: `- Time complexity: $O(n)$, where $n$ is ...`
+- Do not put spaces inside delimiters (`$O(n)$`, not `$ O(n) $`).
+- Use `$O(n)$` for big-O notation, not backticks or bare `O(n)`.
+- Keep display equations (`$$...$$`) only for multi-line or long formulas.
 - Keep explanations concise and focused on **why** the approach works.
 - Paste the user's code verbatim (only fix obvious formatting); do not invent a
   different algorithm than what they provided.
@@ -111,7 +115,17 @@ exponents (e.g. `10^5`).
 Also update the count in `CLAUDE.md` ("The index currently lists **N** problems.")
 if you bump the README total.
 
-## 6. Regenerate the GitBook table of contents
+## 6. Normalize math in markdown
+
+Run the formatter so complexity math renders correctly in GitBook:
+
+```bash
+./tools/fix-math-markdown.py
+```
+
+Pass a specific file path to limit the scope. Use `--check` to preview changes.
+
+## 7. Regenerate the GitBook table of contents
 
 The repo is published as a GitBook space synced from `main` (`.gitbook.yaml` →
 `SUMMARY.md`). After creating the folder and solution file(s), regenerate the
@@ -126,7 +140,7 @@ sorted by id, variant files nested). Commit the updated `SUMMARY.md` alongside t
 solution so GitBook picks it up on the next push. (If the Docsify sidebar is also
 in use, run `./tools/gen-sidebar.sh` to refresh `_sidebar.md` as well.)
 
-## 7. Git (only if the user asks)
+## 8. Git (only if the user asks)
 
 Do not commit or open a PR unless asked. When asked:
 
@@ -143,3 +157,4 @@ Do not commit or open a PR unless asked. When asked:
 - [ ] README difficulty count and total incremented; CLAUDE.md count synced.
 - [ ] `SUMMARY.md` regenerated via `./tools/gen-summary.sh` so the GitBook nav
       includes the new problem.
+- [ ] `./tools/fix-math-markdown.py` run on new/changed solution files.

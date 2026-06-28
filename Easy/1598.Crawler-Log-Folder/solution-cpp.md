@@ -11,8 +11,8 @@ For each log entry:
     For any other log entry, increment the count.
 
 # Complexity
-Time complexity: O(n).
-Space complexity: O(1).
+Time complexity: $O(n)$.
+Space complexity: $O(1)$.
 
 ```c++
 class Solution {

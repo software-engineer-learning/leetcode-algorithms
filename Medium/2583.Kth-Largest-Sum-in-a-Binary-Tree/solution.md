@@ -8,11 +8,9 @@ The goal is to find the k-th largest level sum in a binary tree. Since the tree 
 4. At the end of the traversal, the top element of the heap will be the k-th largest level sum. If there are fewer than k levels, return -1.
 
 # Complexity
-- Time complexity:  
-  The time complexity is $O(n \log k)$, where n is the number of nodes in the tree. Each node is processed once, and inserting/removing elements from the min-heap takes $O(\log k)$ time.
+- Time complexity: The time complexity is $O(n \log k)$, where n is the number of nodes in the tree. Each node is processed once, and inserting/removing elements from the min-heap takes $O(\log k)$ time.
 
-- Space complexity:  
-  The space complexity is $O(k + m)$, where k is the number of level sums we are tracking and m is the maximum number of nodes at any level, which determines the size of the queue used in BFS.
+- Space complexity: The space complexity is $O(k + m)$, where k is the number of level sums we are tracking and m is the maximum number of nodes at any level, which determines the size of the queue used in BFS.
 
 # Code
 ```java

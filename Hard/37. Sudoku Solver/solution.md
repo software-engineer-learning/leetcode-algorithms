@@ -5,9 +5,9 @@ Validation: The isValid method checks if placing a number in a specific cell adh
 
 # Complexity
 
-- Time complexity: O(9^m)
+- Time complexity: $O(9^m)$
 
-- Space complexity: O(1)
+- Space complexity: $O(1)$
 
 # Solution
 

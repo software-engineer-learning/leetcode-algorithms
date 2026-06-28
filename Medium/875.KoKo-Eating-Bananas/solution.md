@@ -18,9 +18,9 @@
 
 # Complexity
 
-- Time complexity: `O(nlog(m))`
+- Time complexity: $O(nlog(m))$
 
-- Space complexity: `O(1)`
+- Space complexity: $O(1)$
 
 # Code
 

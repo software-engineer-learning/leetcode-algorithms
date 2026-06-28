@@ -16,11 +16,9 @@ The problem involves finding the minimum number of turns the strange printer nee
    - Then, iterate through possible split points to minimize the number of turns by leveraging the already computed results from the recursive calls.
 
 ## Complexity
-- **Time Complexity**: 
-  - The time complexity is $O(n^3)$ where `n` is the length of the string. This is because for each pair `(left, right)`, the algorithm iterates over all possible splits, which takes $O(n)$ time, and there are $O(n^2)$ subproblems.
+- **Time Complexity**: The time complexity is $O(n^3)$ where `n` is the length of the string. This is because for each pair `(left, right)`, the algorithm iterates over all possible splits, which takes $O(n)$ time, and there are $O(n^2)$ subproblems.
 
-- **Space Complexity**: 
-  - The space complexity is $O(n^2)$ due to the memoization table used to store results for subproblems.
+- **Space Complexity**: The space complexity is $O(n^2)$ due to the memoization table used to store results for subproblems.
 
 ## Code
 ```java

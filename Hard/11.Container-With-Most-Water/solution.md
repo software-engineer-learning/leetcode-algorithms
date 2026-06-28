@@ -40,9 +40,9 @@
 - Keep track of the maximum area found during the iterations.
 # Complexity
 
-- Time complexity: `O(N)`
+- Time complexity: $O(N)$
 
-- Space complexity: `O(1).`
+- Space complexity: $O(1)$
 
 # Code
 ```java

@@ -10,12 +10,9 @@ When given the problem, the first thought is that the large value of `k` may exc
 
 # Complexity
 
-- Time complexity:
+- Time complexity: $O(n)$, where `n` is the number of students. This is because we traverse the array twice, once to calculate the total chalk and once to find the student.
 
-  - $O(n)$, where `n` is the number of students. This is because we traverse the array twice, once to calculate the total chalk and once to find the student.
-
-- Space complexity:
-  - $O(1)$, as no extra space is used other than a few variables.
+- Space complexity: $O(1)$, as no extra space is used other than a few variables.
 
 # Code
 

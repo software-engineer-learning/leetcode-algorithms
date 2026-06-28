@@ -107,11 +107,9 @@ The problem is about minimizing the number of extra characters needed to form a 
 We use dynamic programming to solve this problem. The idea is to traverse the string and for each index, try all possible substrings starting from that index. If a substring exists in the dictionary, we recursively check the next index and update our result. Otherwise, we move to the next character and increment the count of extra characters. To avoid redundant calculations, we use a DP array to store results for subproblems (i.e., starting from a given index). The recursion ensures we explore all valid substring partitions, while the DP array optimizes performance by avoiding recomputation.
 
 # Complexity
-- Time complexity:  
-  The time complexity is $O(n^2)$, where $$n$$ is the length of the string. This is because for each starting index, we check all possible substrings and perform dictionary lookups in constant time.
+- Time complexity: The time complexity is $O(n^2)$, where $n$ is the length of the string. This is because for each starting index, we check all possible substrings and perform dictionary lookups in constant time.
 
-- Space complexity:  
-  The space complexity is $O(n)$, where $$n$$ is the length of the string. We store the DP array of size `n+1` and a dictionary, but the dictionary size is constant for any input.
+- Space complexity: The space complexity is $O(n)$, where $n$ is the length of the string. We store the DP array of size `n+1` and a dictionary, but the dictionary size is constant for any input.
 
 # Code
 ```java

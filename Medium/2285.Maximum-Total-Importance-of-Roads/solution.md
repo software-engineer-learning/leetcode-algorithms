@@ -13,9 +13,9 @@
 
 # Complexity
 
-- Time complexity: `O(NLogN).`
+- Time complexity: $O(NLogN)$
 
-- Space complexity: `O(N).`
+- Space complexity: $O(N)$
 
 # Code
 ```cpp

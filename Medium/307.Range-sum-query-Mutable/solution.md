@@ -143,8 +143,7 @@ void update(int index, int val, int left, int right, int range_l, int range_r) {
 
 ## Complexity
 
-- **Time complexity**:
-  - *Build tree*: $O(n)$ as we use 2 for loop to build the tree.
+- **Time complexity**: *Build tree*: $O(n)$ as we use 2 for loop to build the tree.
   - *Query&update*: $O(logn)$ the query is similar to a binary search, where at each time we going down the tree, the recursion queries are cut down by half.
 - **Space complexity**: $O(n)$ the length of the segment tree is twice the next power of 2 >= n, with n is the length of input array.
 

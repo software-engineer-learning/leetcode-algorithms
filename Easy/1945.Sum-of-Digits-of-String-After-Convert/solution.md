@@ -9,12 +9,10 @@ The problem requires converting each character of a string into its correspondin
 3. **Edge Cases**: Handle cases where the string might be empty (although not explicitly stated, usually strings are assumed non-empty) or when `k` is 1, in which case the sum from the first step is returned directly.
 
 # Complexity
-- **Time complexity**: 
-  - The time complexity of converting each character and summing the digits is $O(n)$, where `n` is the length of the string.
+- **Time complexity**: The time complexity of converting each character and summing the digits is $O(n)$, where `n` is the length of the string.
   - Each subsequent digit sum operation has a time complexity of $O(\log(sum))$, repeated `k-1` times. Since `log(sum)` is relatively small compared to `n`, the overall complexity is approximately $O(n \cdot k)$.
 
-- **Space complexity**: 
-  - The space complexity is $O(1)$ since we are only using a fixed amount of extra space for storing the sum and other temporary variables.
+- **Space complexity**: The space complexity is $O(1)$ since we are only using a fixed amount of extra space for storing the sum and other temporary variables.
 
 # Code
 ```java

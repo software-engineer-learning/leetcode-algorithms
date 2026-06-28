@@ -10,11 +10,9 @@ The problem requires us to construct a 2D array from a 1D array. My initial thou
 4. Return the constructed 2D array.
 
 # Complexity
-- Time complexity:
-  The time complexity is $O(m \times n)$ because we iterate over all elements of the original array exactly once.
+- Time complexity: The time complexity is $O(m \times n)$ because we iterate over all elements of the original array exactly once.
 
-- Space complexity:
-  The space complexity is $O(m \times n)$ as we are creating a new 2D array with `m * n` elements.
+- Space complexity: The space complexity is $O(m \times n)$ as we are creating a new 2D array with `m * n` elements.
 
 # Code
 ```java

@@ -12,13 +12,11 @@ The problem asks for the XOR of elements between two indices for each query. Cal
    - For each query, extract the start and end indices, and use the prefix XOR array to quickly compute the XOR for the subarray.
 
 # Complexity
-- **Time complexity**:  
-  - Building the prefix XOR array takes O(n), where `n` is the size of the input array.
+- **Time complexity**: Building the prefix XOR array takes O(n), where `n` is the size of the input array.
   - Each query is processed in O(1), so for `m` queries, the total time for query processing is O(m).
   - Therefore, the overall time complexity is $O(n + m)$.
 
-- **Space complexity**:  
-  - We use an additional array `prefixXor` of size `n+1` to store the XOR of elements up to each index, so the space complexity is $O(n)$.
+- **Space complexity**: We use an additional array `prefixXor` of size `n+1` to store the XOR of elements up to each index, so the space complexity is $O(n)$.
 
 # Code
 ```java

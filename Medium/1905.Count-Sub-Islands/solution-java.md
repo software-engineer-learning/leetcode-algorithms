@@ -6,7 +6,7 @@ The approach involves iterating over each cell in grid2. When a land cell `1` is
 
 # Complexity
 - **Time complexity:**  
-  The time complexity is $O(m \times n)$, where `m` is the number of rows and $$n$$ is the number of columns in the grids. This is because each cell in grid2 is visited at most once during the DFS.
+  The time complexity is $O(m \times n)$, where `m` is the number of rows and $n$ is the number of columns in the grids. This is because each cell in grid2 is visited at most once during the DFS.
 
 - **Space complexity:**  
   The space complexity is $O(m \times n)$, mainly due to the recursion stack used during the DFS. In the worst case, the stack depth can be equal to the number of cells in the grid.

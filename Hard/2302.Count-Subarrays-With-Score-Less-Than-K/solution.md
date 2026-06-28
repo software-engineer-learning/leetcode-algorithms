@@ -10,7 +10,7 @@ The problem asks us to determine the number of non-empty subarrays of nums whose
   - sum increases as we add more elements.
   - product increases as we add more elements.
 
-- We want an efficient method, not `O(n²)` brute-force.
+- We want an efficient method, not $O(n²)$ brute-force.
 
 # Approach (Sliding window)
 

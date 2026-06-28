@@ -31,9 +31,9 @@
 
 # Complexity
 
-- Time complexity: `O(N * log(max(bloomDay))).`
+- Time complexity: $O(N * log(max(bloomDay)))$
 
-- Space complexity: `O(N).`
+- Space complexity: $O(N)$
 
 # Code
 

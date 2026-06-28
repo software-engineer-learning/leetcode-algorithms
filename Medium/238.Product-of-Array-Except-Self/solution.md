@@ -8,7 +8,7 @@ Be careful with Time Limit Exceeded (TLE) errors, as this problem has lengthy te
 
 By multiplying these two products, we obtain the desired result array, where each element is the product of all other elements in the original array.
 ## Complexity
-- Time complexity: O(n)
+- Time complexity: $O(n)$
 - Space complexity: $O(1)$
 
 ## Code 
