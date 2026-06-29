@@ -33,6 +33,7 @@
 * [1636. Sort Array By Increasing Frequency](Easy/1636.Sort-Array-By-Increasing-Frequency/solution.md)
 * [1684. Count The Number Of Consistent Strings](Easy/1684.Count-The-Number-Of-Consistent-Strings/solution.md)
 * [1945. Sum of Digits of String After Convert](Easy/1945.Sum-of-Digits-of-String-After-Convert/solution.md)
+* [1967. Number of Strings That Appear as Substrings in Word](Easy/1967.Number-of-Strings-That-Appear-as-Substrings-in-Word/solution.md)
 * [2022. Convert 1D Array Into 2D Array](Easy/2022.Convert-1D-Array-Into-2D-Array/solution.md)
 * [2053. Kth Distinct String in an Array](Easy/2053.Kth-Distinct-String-in-an-Array/solution.md)
 * [2191. Sort the Jumbled Numbers](Easy/2191.Sort-the-Jumbled-Numbers/solution.md)

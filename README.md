@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **162** problems with at least one solution file.
+Total: **163** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (36)
+### Easy (37)
 
 | Problem | LeetCode | Solution |
 |---------|----------|----------|
@@ -52,6 +52,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 1636. Sort Array By Increasing Frequency | [Link](https://leetcode.com/problems/sort-array-by-increasing-frequency/) | [main](Easy/1636.Sort-Array-By-Increasing-Frequency/solution.md) |
 | 1684. Count The Number Of Consistent Strings | [Link](https://leetcode.com/problems/count-the-number-of-consistent-strings/) | [main](Easy/1684.Count-The-Number-Of-Consistent-Strings/solution.md) |
 | 1945. Sum of Digits of String After Convert | [Link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) | [main](Easy/1945.Sum-of-Digits-of-String-After-Convert/solution.md) |
+| 1967. Number of Strings That Appear as Substrings in Word | [Link](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/) | [main](Easy/1967.Number-of-Strings-That-Appear-as-Substrings-in-Word/solution.md) |
 | 2022. Convert 1D Array Into 2D Array | [Link](https://leetcode.com/problems/convert-1d-array-into-2d-array/) | [main](Easy/2022.Convert-1D-Array-Into-2D-Array/solution.md) |
 | 2053. Kth Distinct String in an Array | [Link](https://leetcode.com/problems/kth-distinct-string-in-an-array/) | [main](Easy/2053.Kth-Distinct-String-in-an-Array/solution.md) |
 | 2191. Sort the Jumbled Numbers | [Link](https://leetcode.com/problems/sort-the-jumbled-numbers/) | [main](Easy/2191.Sort-the-Jumbled-Numbers/solution.md) |
