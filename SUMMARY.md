@@ -158,6 +158,7 @@
 * [3217. Delete Nodes From Linked List Present in Array](Medium/3217.Delete-Nodes-From-Linked-List-Present-in-Array/solution.md)
 * [3218. Minimum Cost for Cutting Cake I](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md)
 * [3254. Find the Power of K Size Subarrays I](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md)
+* [3286. Find a Safe Walk Through a Grid](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)
 
 ## Hard
 
