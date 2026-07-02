@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **163** problems with at least one solution file.
+Total: **164** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -65,7 +65,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3375. Minimum Operations to Make Array Values Equal to k | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/) | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md) |
 | 3637. Trionic Array I | [Link](https://leetcode.com/problems/trionic-array-i/) | [main](Easy/3637.Trionic-Array-I/solution.md) |
 
-### Medium (98)
+### Medium (99)
 
 | Problem | LeetCode | Solution |
 |---------|----------|----------|
@@ -167,6 +167,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3217. Delete Nodes From Linked List Present in Array | [Link](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) | [main](Medium/3217.Delete-Nodes-From-Linked-List-Present-in-Array/solution.md) |
 | 3218. Minimum Cost for Cutting Cake I | [Link](https://leetcode.com/problems/minimum-cost-for-cutting-cake-i/) | [main](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md) |
 | 3254. Find the Power of K Size Subarrays I | [Link](https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/) | [main](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md) |
+| 3286. Find a Safe Walk Through a Grid | [Link](https://leetcode.com/problems/find-a-safe-walk-through-a-grid/) | [main](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md) |
 
 ### Hard (28)
 
