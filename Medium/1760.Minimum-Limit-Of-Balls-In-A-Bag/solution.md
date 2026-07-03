@@ -1,54 +1,55 @@
-## Intuition
+# 1760. Minimum Limit Of Balls In A Bag
 
-- The idea is to minimize the maximum size of a bag of balls (x) by repeatedly dividing larger bags into smaller ones, constrained by the number of allowed operations. It can be solved using `binary search` to determine the minimum possible penalty.
+### Intuition
 
-<p>&nbsp;</p>
+* The idea is to minimize the maximum size of a bag of balls (x) by repeatedly dividing larger bags into smaller ones, constrained by the number of allowed operations. It can be solved using `binary search` to determine the minimum possible penalty.
 
-## Approach
+&#x20;
 
-### 1. Binary Search
+### Approach
 
-- The penalty (`x`) can range between 1 (minimum) and the maximum value in nums (maximum size of a bag).
-- Use binary search to find the smallest `x` such that the total number of operations required to ensure no bag has more than `x` balls is less than or equal to `maxOperations`.
+#### 1. Binary Search
 
-### 2. Helper Function
+* The penalty (`x`) can range between 1 (minimum) and the maximum value in nums (maximum size of a bag).
+* Use binary search to find the smallest `x` such that the total number of operations required to ensure no bag has more than `x` balls is less than or equal to `maxOperations`.
 
-- Write a function to calculate the number of operations required to ensure no bag exceeds a given size `x`.
-- If a bag has `k` balls, and `k > x`, the number of splits needed is: operations = lceilk/xrceil - 1
+#### 2. Helper Function
 
-### 3. Optimal `x`:
+* Write a function to calculate the number of operations required to ensure no bag exceeds a given size `x`.
+* If a bag has `k` balls, and `k > x`, the number of splits needed is: operations = lceilk/xrceil - 1
 
-- Perform binary search over the range lceil 1, max(nums) rceil.
-- For each `x`, calculate the total operations needed using the helper function.
-- If the total operations are within `maxOperations`, update the result and try smaller `x`.
+#### 3. Optimal `x`:
 
-## Explanation:
+* Perform binary search over the range lceil 1, max(nums) rceil.
+* For each `x`, calculate the total operations needed using the helper function.
+* If the total operations are within `maxOperations`, update the result and try smaller `x`.
 
-### 1. Binary Search
+### Explanation:
 
-- Start with the range [1, max(nums)].
-- For each midpoint (`x`), check if it is possible to split the bags such that no bag exceeds size `x` within `maxOperations`.
+#### 1. Binary Search
 
-### 2. Helper function
+* Start with the range \[1, max(nums)].
+* For each midpoint (`x`), check if it is possible to split the bags such that no bag exceeds size `x` within `maxOperations`.
 
-- For each bag, calculate the required operations:
-  - If k > x, the number of splits needed is:
-    lceil k/x rceil - 1 = (k-1) / x
-- If the total operations exceed `maxOperations`, `x` is invalid.
+#### 2. Helper function
 
-### 3. Result update
+* For each bag, calculate the required operations:
+  * If k > x, the number of splits needed is: lceil k/x rceil - 1 = (k-1) / x
+* If the total operations exceed `maxOperations`, `x` is invalid.
 
-- If `x` is valid, update the result and try smaller penalties.
-- Otherwise, increase `x`.
+#### 3. Result update
 
-## Complexity
+* If `x` is valid, update the result and try smaller penalties.
+* Otherwise, increase `x`.
 
-- Time complexity: O(n · log(max(nums))), where `n` is the length of the array nums.
-- Space complexity: O(1),
+### Complexity
 
-## Code
+* Time complexity: O(n · log(max(nums))), where `n` is the length of the array nums.
+* Space complexity: O(1),
 
-```go []
+### Code
+
+```go
 func possible(nums []int, x int, maxOperations int) bool {
     for _, num := range nums {
         count := (num - 1) / x
@@ -78,7 +79,7 @@ func minimumSize(nums []int, maxOperations int) int {
 }
 ```
 
-```rust []
+```rust
 impl Solution {
     fn possible(nums: &Vec<i32>, x: i32, max_operations: i32) -> bool {
         let mut max_operations = max_operations;

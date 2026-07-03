@@ -1,18 +1,23 @@
-# Intuition
+# 214. Shortest Palindrome
+
+## Intuition
+
 To find the shortest palindrome by adding characters only at the beginning, the first thought is to locate the longest palindromic prefix. Once this prefix is identified, the remaining suffix (which is not a palindrome) can be reversed and appended to the front, forming the shortest palindrome.
 
-# Approach
+## Approach
+
 1. Reverse the original string `s`.
 2. Concatenate the original string with its reverse using a separator (to avoid overlaps when searching for palindromes).
 3. Use the Z-function to compute the longest palindrome prefix in the combined string.
 4. Based on the longest palindrome prefix, append the non-palindromic suffix (from the reverse) to the original string.
 
-# Complexity
-- Time complexity: The time complexity is O(n), where `n` is the length of the string, due to the linear time required to compute the Z-function.
+## Complexity
 
-- Space complexity: The space complexity is O(n), required for storing the reversed string, the combined string, and the Z-function array.
+* Time complexity: The time complexity is O(n), where `n` is the length of the string, due to the linear time required to compute the Z-function.
+* Space complexity: The space complexity is O(n), required for storing the reversed string, the combined string, and the Z-function array.
 
-# Code
+## Code
+
 ```java
 class Solution {
     public String shortestPalindrome(String s) {
@@ -64,34 +69,34 @@ class Solution {
 }
 ```
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 2: Rolling Hash
+## Approach 2: Rolling Hash
+
 To solve this problem efficiently, the algorithm leverages a double hashing technique, comparing both the forward and reverse hash values as the string is traversed. The goal is to find the longest prefix of the string that is already a palindrome, and then add the minimum number of characters to the front to complete the palindrome.
 
-## Explanation:
+### Explanation:
 
 1. **Hash Calculation**:
-   - The algorithm computes two hashes: `hash1` for the forward part of the string and `hash2` for the reverse.
-   - `hash1` is updated by adding characters in a forward manner, while `hash2` accumulates the characters in reverse.
-   - As the string is processed, whenever the two hash values match, it indicates a potential palindrome from the start up to that point.
-
+   * The algorithm computes two hashes: `hash1` for the forward part of the string and `hash2` for the reverse.
+   * `hash1` is updated by adding characters in a forward manner, while `hash2` accumulates the characters in reverse.
+   * As the string is processed, whenever the two hash values match, it indicates a potential palindrome from the start up to that point.
 2. **Updating Palindrome Position**:
-   - Each time `hash1 == hash2`, the algorithm records the position (`pos`) up to which the string is a palindrome.
-   - This ensures that the longest prefix of the string that forms a palindrome is tracked.
-
+   * Each time `hash1 == hash2`, the algorithm records the position (`pos`) up to which the string is a palindrome.
+   * This ensures that the longest prefix of the string that forms a palindrome is tracked.
 3. **Appending Characters**:
-   - After determining the longest palindrome prefix, the algorithm calculates how many characters (`m`) need to be added at the front of the string.
-   - It then adjusts the string to add these characters by shifting existing characters and copying the reverse of the remaining suffix at the front.
-
+   * After determining the longest palindrome prefix, the algorithm calculates how many characters (`m`) need to be added at the front of the string.
+   * It then adjusts the string to add these characters by shifting existing characters and copying the reverse of the remaining suffix at the front.
 4. **Final String Adjustment**:
-   - The string is resized to accommodate the additional characters, and the characters from the reverse of the unmatched suffix are prepended to the string.
+   * The string is resized to accommodate the additional characters, and the characters from the reverse of the unmatched suffix are prepended to the string.
 
-## Complexity
-- **Time complexity**: O(n), where `n` is the length of the string.
-- **Space complexity**: O(n)
+### Complexity
 
-## Code 
+* **Time complexity**: O(n), where `n` is the length of the string.
+* **Space complexity**: O(n)
+
+### Code
+
 ```cpp
 const int64_t BASE = 31, MOD = 1e9 + 7;
 

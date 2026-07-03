@@ -1,40 +1,44 @@
-# Intuition
+# 840. Magic Squares In Grid
+
+## Intuition
 
 The problem requires us to find how many 3x3 subgrids within a given grid are magic squares. A 3x3 magic square has distinct numbers from 1 to 9, and the sum of the numbers in each row, column, and both diagonals must be the same (which is 15 for this case). The key challenge is to efficiently check whether each 3x3 subgrid meets these criteria.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach
+## Approach
 
 The solution involves scanning every possible 3x3 subgrid in the grid and verifying whether it forms a magic square. The `isMagic` function performs this check by ensuring the sum of rows, columns, and diagonals equals 15, and that the subgrid contains distinct numbers from 1 to 9.
 
-## Explanation:
+### Explanation:
 
 1. **`isMagic` Function**:
-   - **Check Center Value**:
-     - The center of a 3x3 magic square must be 5. If `grid[i][j]` (the center value of the subgrid) is not 5, the function returns `false`.
-   - **Initialize Bits and Sum Arrays**:
-     - `bits` tracks which numbers from 1 to 9 are present in the subgrid. If all numbers from 1 to 9 are present, `bits` will equal 1022 (since `1022` in binary is `1111111110`).
-     - `sum` is an array of size 8, where the first three elements store the sum of rows, the next three store the sum of columns, and the last two store the sum of diagonals.
-   - **Populate Bits and Sum**:
-     - The function iterates through each cell of the 3x3 subgrid. For each cell, it updates `bits` and the corresponding sums in the `sum` array.
-   - **Check for Magic Square**:
-     - The function checks if `bits` equals 1022 and if all values in the `sum` array are 15. If both conditions are met, the subgrid is a magic square.
-
+   * **Check Center Value**:
+     * The center of a 3x3 magic square must be 5. If `grid[i][j]` (the center value of the subgrid) is not 5, the function returns `false`.
+   * **Initialize Bits and Sum Arrays**:
+     * `bits` tracks which numbers from 1 to 9 are present in the subgrid. If all numbers from 1 to 9 are present, `bits` will equal 1022 (since `1022` in binary is `1111111110`).
+     * `sum` is an array of size 8, where the first three elements store the sum of rows, the next three store the sum of columns, and the last two store the sum of diagonals.
+   * **Populate Bits and Sum**:
+     * The function iterates through each cell of the 3x3 subgrid. For each cell, it updates `bits` and the corresponding sums in the `sum` array.
+   * **Check for Magic Square**:
+     * The function checks if `bits` equals 1022 and if all values in the `sum` array are 15. If both conditions are met, the subgrid is a magic square.
 2. **`numMagicSquaresInside` Function**:
-   - **Scan the Grid**:
-     - The function scans every possible 3x3 subgrid within the grid by iterating over all valid center cells `(i, j)`.
-   - **Count Magic Squares**:
-     - For each subgrid, the function calls `isMagic`. If the subgrid is a magic square, the result count (`res`) is incremented.
-   - **Return the Result**:
-     - Finally, the function returns the total count of magic squares found.
+   * **Scan the Grid**:
+     * The function scans every possible 3x3 subgrid within the grid by iterating over all valid center cells `(i, j)`.
+   * **Count Magic Squares**:
+     * For each subgrid, the function calls `isMagic`. If the subgrid is a magic square, the result count (`res`) is incremented.
+   * **Return the Result**:
+     * Finally, the function returns the total count of magic squares found.
 
-## Complexity
-- **Time complexity**: O(n × m), where `n` and `m` are the dimensions of the grid. The function checks each 3x3 subgrid, and there are (n-2) × (m-2) such subgrids.
-- **Space complexity**: O(1), since the additional space used by the function is constant.
+### Complexity
 
-## Code 
+* **Time complexity**: O(n × m), where `n` and `m` are the dimensions of the grid. The function checks each 3x3 subgrid, and there are (n-2) × (m-2) such subgrids.
+* **Space complexity**: O(1), since the additional space used by the function is constant.
+
+### Code
+
 cpp
+
 ```cpp
 class Solution {
 public:

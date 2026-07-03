@@ -1,23 +1,25 @@
-# Intuition
+# 981. Time Based Key Value Store
 
 This is a pretty straight forward problem, as the timestamp is strictly increasing it means when we store values with the same key it will be in sorted order. Hence we can use binary search when query
 
-&nbsp;
+&#x20;
 
 ## Approach: Use hashmap for keys and array to store pairs of value-timestamp
 
-- Use a hashmap/unordered_map to store keys for efficient lookup, return empty when key not exists
-- Use a vector<pair<string,int>> to store values and their timestamp. As the timestamp is strictly increasing, we can use binary search when lookup the correct pair. Some caveat:
-  - When lookup with binary search, we need to use timestamp, not index
-  - Take care of edge-case where repeated querying for out of bound values
-  - If query value is out of left bound, we need to return empty string (stated in the description but might still throw people up when implementing code)
+* Use a hashmap/unordered\_map to store keys for efficient lookup, return empty when key not exists
+* Use a vector\<pair\<string,int>> to store values and their timestamp. As the timestamp is strictly increasing, we can use binary search when lookup the correct pair. Some caveat:
+  * When lookup with binary search, we need to use timestamp, not index
+  * Take care of edge-case where repeated querying for out of bound values
+  * If query value is out of left bound, we need to return empty string (stated in the description but might still throw people up when implementing code)
 
 ## Complexity
-- Time complexity: O(logn)
-- Space complexity: O(n)
+
+* Time complexity: O(logn)
+* Space complexity: O(n)
 
 ## Code
-```cpp []
+
+```cpp
 class TimeMap {
 public:
 

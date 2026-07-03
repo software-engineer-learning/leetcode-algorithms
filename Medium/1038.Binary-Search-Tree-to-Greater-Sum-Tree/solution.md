@@ -1,17 +1,21 @@
-# Intuition
+# 1038. Binary Search Tree to Greater Sum Tree
+
+## Intuition
 
 To convert a Binary Search Tree (BST) to a Greater Tree, we need to transform each node such that its value becomes the original value plus the sum of all keys greater than the original key in the BST. This can be effectively achieved using a reverse in-order traversal (right -> node -> left) because, in a BST, an in-order traversal gives nodes in ascending order, and a reverse in-order traversal gives nodes in descending order. By traversing the tree in descending order, we can keep a running sum of all the nodes we have visited so far and update each node's value accordingly.
 
-&nbsp;
+&#x20;
 
-# Approach 1: Recursive
+## Approach 1: Recursive
 
-## Complexity
-- Time complexity: O(n)
-- Space complexity: O(n)
+### Complexity
 
-## Code
-```cpp []
+* Time complexity: O(n)
+* Space complexity: O(n)
+
+### Code
+
+```cpp
 class Solution {
 public:
     void dfs(TreeNode* root, int& sum) {
@@ -32,49 +36,47 @@ public:
 };
 ```
 
-&nbsp;
+&#x20;
 
-# Approach 2: Morris Traversal
+## Approach 2: Morris Traversal
 
 This solution uses a non-recursive approach based on Morris Traversal. This technique allows in-order tree traversal without using additional space for a stack or recursion, making the algorithm efficient in terms of space complexity.
 
-## Explanation
+### Explanation
 
 1. **Initialization**:
-   - `curr` is a pointer to the current node, starting from the root.
-   - `sum` is an integer to keep track of the cumulative sum of node values as we traverse the tree.
-
+   * `curr` is a pointer to the current node, starting from the root.
+   * `sum` is an integer to keep track of the cumulative sum of node values as we traverse the tree.
 2. **Main Loop**:
-   - The loop continues until `curr` is `nullptr`.
-
+   * The loop continues until `curr` is `nullptr`.
 3. **Right Subtree Check**:
-   - If `curr` has no right child, this means there are no nodes with greater values in the right subtree. Therefore:
-     - Add `curr->val` to `sum`.
-     - Update `curr->val` to `sum`.
-     - Move to the left child of `curr`.
-   - If `curr` has a right child:
-     - Find the inorder predecessor of `curr` in its right subtree. The predecessor is the leftmost node in the right subtree or the node that links back to `curr`.
-     - Traverse to the leftmost node in the right subtree (or the node that links back to `curr`).
-
+   * If `curr` has no right child, this means there are no nodes with greater values in the right subtree. Therefore:
+     * Add `curr->val` to `sum`.
+     * Update `curr->val` to `sum`.
+     * Move to the left child of `curr`.
+   * If `curr` has a right child:
+     * Find the inorder predecessor of `curr` in its right subtree. The predecessor is the leftmost node in the right subtree or the node that links back to `curr`.
+     * Traverse to the leftmost node in the right subtree (or the node that links back to `curr`).
 4. **Thread Creation**:
-   - If the left child of the predecessor is `nullptr`, it means we need to create a temporary link (thread) back to `curr` to facilitate the traversal.
-     - Set the left child of the predecessor to `curr`.
-     - Move `curr` to its right child to continue the traversal.
-   - If the left child of the predecessor is already set to `curr`, it means we have visited the right subtree and are now back at `curr`:
-     - Remove the temporary link (thread) by setting the left child of the predecessor back to `nullptr`.
-     - Add `curr->val` to `sum`.
-     - Update `curr->val` to `sum`.
-     - Move `curr` to its left child to continue the traversal.
-
+   * If the left child of the predecessor is `nullptr`, it means we need to create a temporary link (thread) back to `curr` to facilitate the traversal.
+     * Set the left child of the predecessor to `curr`.
+     * Move `curr` to its right child to continue the traversal.
+   * If the left child of the predecessor is already set to `curr`, it means we have visited the right subtree and are now back at `curr`:
+     * Remove the temporary link (thread) by setting the left child of the predecessor back to `nullptr`.
+     * Add `curr->val` to `sum`.
+     * Update `curr->val` to `sum`.
+     * Move `curr` to its left child to continue the traversal.
 5. **Return the Modified Tree**:
-   - After completing the traversal, return the modified root node.
+   * After completing the traversal, return the modified root node.
 
-## Complexity
-- Time complexity: O(n)
-- Space complexity: O(1)
+### Complexity
 
-## Code
-```cpp []
+* Time complexity: O(n)
+* Space complexity: O(1)
+
+### Code
+
+```cpp
 class Solution {
 public:
     TreeNode* bstToGst(TreeNode* root) {

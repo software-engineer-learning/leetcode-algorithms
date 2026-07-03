@@ -1,43 +1,45 @@
-# Intuition
+# 726. Number of Atoms
+
+## Intuition
 
 To solve the problem of counting atoms in a chemical formula, we can use a stack to manage the multiplicative effects of parentheses and a map to keep track of the count of each atom. By traversing the formula from right to left, we handle digits, elements, and parentheses in a way that ensures correct multiplication and aggregation of atom counts.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 1: Stack + Map
+## Approach 1: Stack + Map
 
-## Explanation:
+### Explanation:
 
 1. **Initialization**:
-   - Use a **TreeMap** to store the frequency of each element.
-   - Use a **stack** to manage the multiplicative effects of nested parentheses, initializing it with 1.
-   - Initialize variables to manage current count (`curr`), exponent (`expo`), and length of the current element (`elemLen`).
-
+   * Use a **TreeMap** to store the frequency of each element.
+   * Use a **stack** to manage the multiplicative effects of nested parentheses, initializing it with 1.
+   * Initialize variables to manage current count (`curr`), exponent (`expo`), and length of the current element (`elemLen`).
 2. **Traverse the formula from right to left**:
-   - **Handling closing parentheses ')'**:
-     - Push the product of the current count (or 1 if none) and the top of the stack onto the stack.
-     - Reset `curr` to 0 and `expo` to 1.
-   - **Handling opening parentheses '('**:
-     - Pop the top of the stack to remove the effect of the last closing parenthesis.
-   - **Handling digits**:
-     - Accumulate the digit into `curr` using `expo` to account for the position of the digit.
-     - Update `expo` to handle the next digit position.
-   - **Handling lowercase letters**:
-     - Increment `elemLen` to account for multi-character element names.
-   - **Handling uppercase letters (element names)**:
-     - Use `elemLen` to determine the full element name.
-     - Update the count of the element in the map by multiplying with the top of the stack.
-     - Reset `curr`, `expo`, and `elemLen` for the next element.
-
+   * **Handling closing parentheses ')'**:
+     * Push the product of the current count (or 1 if none) and the top of the stack onto the stack.
+     * Reset `curr` to 0 and `expo` to 1.
+   * **Handling opening parentheses '('**:
+     * Pop the top of the stack to remove the effect of the last closing parenthesis.
+   * **Handling digits**:
+     * Accumulate the digit into `curr` using `expo` to account for the position of the digit.
+     * Update `expo` to handle the next digit position.
+   * **Handling lowercase letters**:
+     * Increment `elemLen` to account for multi-character element names.
+   * **Handling uppercase letters (element names)**:
+     * Use `elemLen` to determine the full element name.
+     * Update the count of the element in the map by multiplying with the top of the stack.
+     * Reset `curr`, `expo`, and `elemLen` for the next element.
 3. **Construct the result string**:
-   - Iterate through the map in sorted order of element names.
-   - Append each element and its count (if greater than 1) to the result string.
+   * Iterate through the map in sorted order of element names.
+   * Append each element and its count (if greater than 1) to the result string.
 
-## Complexity
-- Time complexity: O(n log n), where `n` is the length of the formula.
-- Space complexity: O(n)
+### Complexity
 
-## Code 
+* Time complexity: O(n log n), where `n` is the length of the formula.
+* Space complexity: O(n)
+
+### Code
+
 ```cpp
 class Solution {
 public:

@@ -1,30 +1,32 @@
-# Intuition
+# 2392. Build a Matrix With Conditions
+
+## Intuition
 
 The goal is to construct a k × k matrix that satisfies given row and column conditions. These conditions dictate the relative ordering of elements in rows and columns. We can achieve this by performing topological sorts on the conditions to determine a valid sequence for both rows and columns. If a valid topological ordering exists for both conditions, we can then place the elements accordingly in the matrix.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach: Topological Sort
+## Approach: Topological Sort
 
-## Explanation:
+### Explanation:
 
 1. **Building the Graph**:
-   - Use the conditions to build a directed graph and calculate the indegree of each node.
-   - `buildGraph` function does this for both row and column conditions.
-
+   * Use the conditions to build a directed graph and calculate the indegree of each node.
+   * `buildGraph` function does this for both row and column conditions.
 2. **Topological Sort**:
-   - Perform topological sort on the constructed graph to determine the order of elements.
-   - `topoSort` function achieves this using Kahn's algorithm (BFS-based topological sort).
-
+   * Perform topological sort on the constructed graph to determine the order of elements.
+   * `topoSort` function achieves this using Kahn's algorithm (BFS-based topological sort).
 3. **Constructing the Matrix**:
-   - Use the row and column orderings obtained from the topological sorts to place the elements in the matrix.
-   - Ensure each number is placed according to its row and column indices derived from the sorted orders.
+   * Use the row and column orderings obtained from the topological sorts to place the elements in the matrix.
+   * Ensure each number is placed according to its row and column indices derived from the sorted orders.
 
-## Complexity
-- **Time complexity**: O(k²)
-- **Space complexity**: O(k²)
+### Complexity
 
-## Code 
+* **Time complexity**: O(k²)
+* **Space complexity**: O(k²)
+
+### Code
+
 ```cpp
 class Solution {
 public:

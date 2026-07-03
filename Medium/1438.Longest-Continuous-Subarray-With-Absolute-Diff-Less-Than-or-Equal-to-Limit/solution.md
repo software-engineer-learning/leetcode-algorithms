@@ -1,39 +1,39 @@
-# Intuition
+# 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+
+## Intuition
 
 To solve this problem, we can use a sliding window approach and keep track of the minimum and maximum elements within the current window.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 1: Sliding Window + Binary Search Tree
+## Approach 1: Sliding Window + Binary Search Tree
+
 This approach utilizes a sliding window in combination with a balanced binary search tree implemented via `std::multiset` in C++. The `multiset` allows for efficient insertion, deletion, and access to the smallest and largest elements, making it a suitable data structure for this problem.
 
-## Explanation:
+### Explanation:
 
 1. **Initialization**:
-   - Initialize `res` to store the result (length of the longest subarray).
-   - `left` is initialized to 0 to denote the starting index of the sliding window.
-   - A `multiset` called `ms` is used to maintain the elements within the current window.
-
+   * Initialize `res` to store the result (length of the longest subarray).
+   * `left` is initialized to 0 to denote the starting index of the sliding window.
+   * A `multiset` called `ms` is used to maintain the elements within the current window.
 2. **Expanding the Window**:
-   - Iterate through the array using a `right` pointer to expand the window.
-   - Insert the current element `nums[right]` into the `multiset`.
-
+   * Iterate through the array using a `right` pointer to expand the window.
+   * Insert the current element `nums[right]` into the `multiset`.
 3. **Maintaining the Condition**:
-   - After inserting a new element, check if the current window satisfies the condition: the difference between the maximum and minimum elements in the window should be less than or equal to `limit`.
-   - In `multiset`, the smallest element can be accessed using `*ms.begin()` and the largest element using `*ms.rbegin()`.
-   - If the difference between these elements exceeds `limit`, shrink the window from the left by removing `nums[left]` from the `multiset` and incrementing the `left` pointer.
-
+   * After inserting a new element, check if the current window satisfies the condition: the difference between the maximum and minimum elements in the window should be less than or equal to `limit`.
+   * In `multiset`, the smallest element can be accessed using `*ms.begin()` and the largest element using `*ms.rbegin()`.
+   * If the difference between these elements exceeds `limit`, shrink the window from the left by removing `nums[left]` from the `multiset` and incrementing the `left` pointer.
 4. **Updating the Result**:
-   - Update `res` with the size of the current valid window, which is `right - left + 1`.
-
+   * Update `res` with the size of the current valid window, which is `right - left + 1`.
 5. **Return the Result**:
-   - After iterating through the array, `res` will contain the length of the longest subarray that satisfies the condition.
+   * After iterating through the array, `res` will contain the length of the longest subarray that satisfies the condition.
 
-## Complexity
-- Time complexity: O(n*log(n))
-- Space complexity: O(n)
+### Complexity
 
-## Code 
+* Time complexity: O(n\*log(n))
+* Space complexity: O(n)
+
+### Code
 
 ```cpp
 class Solution {
@@ -57,41 +57,39 @@ public:
 };
 ```
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 2: Sliding Window + Monotonic Queue
+## Approach 2: Sliding Window + Monotonic Queue
 
 This optimized solution uses a sliding window in combination with two monotonic queues to efficiently maintain the minimum and maximum values within the current window. This approach ensures that the operations of inserting, removing, and accessing the minimum and maximum values are all handled in constant time, making it more efficient than using a binary search tree.
 
-## Explanation:
+### Explanation:
 
 1. **Initialization**:
-   - Initialize `res` to store the result (length of the longest subarray).
-   - `left` is initialized to 0 to denote the starting index of the sliding window.
-   - Two deques, `minDq` and `maxDq`, are used to maintain elements in the current window in increasing and decreasing order, respectively.
-
+   * Initialize `res` to store the result (length of the longest subarray).
+   * `left` is initialized to 0 to denote the starting index of the sliding window.
+   * Two deques, `minDq` and `maxDq`, are used to maintain elements in the current window in increasing and decreasing order, respectively.
 2. **Expanding the Window**:
-   - Iterate through the array using a `right` pointer to expand the window.
-   - Update `minDq` to maintain the minimum elements: remove elements from the back of `minDq` while the current element is smaller than the elements at the back.
-   - Update `maxDq` to maintain the maximum elements: remove elements from the back of `maxDq` while the current element is larger than the elements at the back.
-   - Insert the current element into both `minDq` and `maxDq`.
-
+   * Iterate through the array using a `right` pointer to expand the window.
+   * Update `minDq` to maintain the minimum elements: remove elements from the back of `minDq` while the current element is smaller than the elements at the back.
+   * Update `maxDq` to maintain the maximum elements: remove elements from the back of `maxDq` while the current element is larger than the elements at the back.
+   * Insert the current element into both `minDq` and `maxDq`.
 3. **Maintaining the Condition**:
-   - Check if the current window satisfies the condition: the difference between the maximum and minimum elements should be less than or equal to `limit`.
-   - The minimum element can be accessed using `minDq.front()` and the maximum element using `maxDq.front()`.
-   - If the condition is violated, shrink the window from the left by removing the elements at `left` from the deques and incrementing the `left` pointer.
-
+   * Check if the current window satisfies the condition: the difference between the maximum and minimum elements should be less than or equal to `limit`.
+   * The minimum element can be accessed using `minDq.front()` and the maximum element using `maxDq.front()`.
+   * If the condition is violated, shrink the window from the left by removing the elements at `left` from the deques and incrementing the `left` pointer.
 4. **Updating the Result**:
-   - Update `res` with the size of the current valid window, which is `right - left + 1`.
-
+   * Update `res` with the size of the current valid window, which is `right - left + 1`.
 5. **Return the Result**:
-   - After iterating through the array, `res` will contain the length of the longest subarray that satisfies the condition.
+   * After iterating through the array, `res` will contain the length of the longest subarray that satisfies the condition.
 
-## Complexity
-- Time complexity: O(n)
-- Space complexity: O(n)
+### Complexity
 
-## Code 
+* Time complexity: O(n)
+* Space complexity: O(n)
+
+### Code
+
 ```cpp
 class Solution {
 public:

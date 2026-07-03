@@ -1,20 +1,23 @@
-# Intuition
+# 81. Search In Rotated Sorted Array
+
+## Intuition
 
 This is a very confusing problem if you try solving it with binary search (per the strict requirement in the description) and have not done the previous version. Even though the solution is 99% the same it is still advisible to solve the original version first.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach: Binary search
+## Approach: Binary search
 
-- If you have solved the original version, you will be temped to try implementing the binary search approach. But you will encounter errors with testcase like nums = [2,2,2,1,2,3] where you can't correctly deduce at which side does middle index fall into.
-- A key insight is that in those case where `mid == left && mid != target`, we can see that left WILL NOT equal target, so we can safely ignore it and in binary search, we always try to find a way to decrease the search space by moving either end of the indexes. So this is another way to decrease the index: move left to the right.
-- The rest of the implimentation is the same as problem #33.
+* If you have solved the original version, you will be temped to try implementing the binary search approach. But you will encounter errors with testcase like nums = \[2,2,2,1,2,3] where you can't correctly deduce at which side does middle index fall into.
+* A key insight is that in those case where `mid == left && mid != target`, we can see that left WILL NOT equal target, so we can safely ignore it and in binary search, we always try to find a way to decrease the search space by moving either end of the indexes. So this is another way to decrease the index: move left to the right.
+* The rest of the implimentation is the same as problem #33.
 
-## Complexity
-- Time complexity: O(n) The worst case is that every elements inside the array is equal, in which case we need to search the whole arrays.
-- Space complexity: O(1)
+### Complexity
 
-## Code 
+* Time complexity: O(n) The worst case is that every elements inside the array is equal, in which case we need to search the whole arrays.
+* Space complexity: O(1)
+
+### Code
 
 ```cpp
 class Solution {

@@ -1,54 +1,51 @@
-# Intuition
+# 790. Domino and Tromino Tiling
+
+## Intuition
 
 This problem involves dynamic programming. We aim to count how many ways we can tile a `2 x n` board using **dominos** (`2 x 1`) and **trominos** (L-shaped tiles covering 3 squares). The tricky part is handling the additional configurations created by trominos and their rotations.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 1: Dynamic Programming
+## Approach 1: Dynamic Programming
 
 We define two arrays:
 
 * `f[i]`: Number of ways to completely tile a `2 x i` board.
 * `g[i]`: Number of ways to tile a `2 x i` board **with one square missing in the corner**, which helps us model tromino transitions.
 
-## Explanation:
+### Explanation:
 
 1. **Base Cases**:
-
    * `f[1] = 1`: Only one way using a vertical domino.
    * `f[2] = 2`: Either two vertical dominos or two horizontal dominos.
    * `g[1] = 1`: Only one way using a tromino.
    * `g[2] = 2`: Either one vertical dominos + one tromino or one tromino + one horizontal dominos.
+2.  **Transition for `f[i]`**:
 
-2. **Transition for `f[i]`**:
+    * `f[i - 1]`: Add a vertical domino to a `2 x (i - 1)` board.
+    * `f[i - 2]`: Add two horizontal dominos to a `2 x (i - 2)` board.
+    * `2 * g[i - 2]`: Add a tromino in either of two orientations to extend a partial board of size `i - 2`.
 
-   * `f[i - 1]`: Add a vertical domino to a `2 x (i - 1)` board.
-   * `f[i - 2]`: Add two horizontal dominos to a `2 x (i - 2)` board.
-   * `2 * g[i - 2]`: Add a tromino in either of two orientations to extend a partial board of size `i - 2`.
+    So:
 
-   So:
+    ```cpp
+    f[i] = f[i - 1] + f[i - 2] + 2 * g[i - 2];
+    ```
+3.  **Transition for `g[i]`**:
 
-   ```cpp
-   f[i] = f[i - 1] + f[i - 2] + 2 * g[i - 2];
-   ```
+    * We derive `g[i]` from previously complete (`f[i - 1]`) or incomplete (`g[i - 1]`) states:
 
-3. **Transition for `g[i]`**:
+    ```cpp
+    g[i] = f[i - 1] + g[i - 1];
+    ```
+4. **Modulo Operation**: Since the result can be large, all operations are done modulo 10⁹ + 7.
 
-   * We derive `g[i]` from previously complete (`f[i - 1]`) or incomplete (`g[i - 1]`) states:
-
-   ```cpp
-   g[i] = f[i - 1] + g[i - 1];
-   ```
-
-4. **Modulo Operation**:
-   Since the result can be large, all operations are done modulo 10⁹ + 7.
-
-## Complexity
+### Complexity
 
 * Time complexity: O(n) — We compute each state up to `n`.
 * Space complexity: O(n) — Arrays `f` and `g` are of size `n + 1`.
 
-## Code
+### Code
 
 ```cpp
 const int MOD = 1e9 + 7;
@@ -70,13 +67,13 @@ public:
 };
 ```
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 2: Space-Optimized Dynamic Programming
+## Approach 2: Space-Optimized Dynamic Programming
 
 Instead of storing full arrays `f[0..n]` and `g[0..n]`, we only keep the **last three values** needed to compute the current state — using rotating indices or just reassigning variables in place.
 
-## Explanation:
+### Explanation:
 
 We keep:
 
@@ -86,30 +83,27 @@ We keep:
 Then, in each iteration from `i = 3` to `n`, we:
 
 1. Shift values:
-
    * Move `f[1] → f[0]`, `f[2] → f[1]`, and compute new `f[2]`
    * Similarly for `g`
+2.  Use the same recurrence formulas:
 
-2. Use the same recurrence formulas:
+    * `f[i] = f[i - 1] + f[i - 2] + 2 * g[i - 2]`
+    * `g[i] = f[i - 1] + g[i - 1]`
 
-   * `f[i] = f[i - 1] + f[i - 2] + 2 * g[i - 2]`
-   * `g[i] = f[i - 1] + g[i - 1]`
+    So:
 
-   So:
-
-   ```cpp
-   f[2] = ((f[1] + f[0]) % MOD + 2 * g[0] % MOD) % MOD;
-   g[2] = (f[1] + g[1]) % MOD;
-   ```
-
+    ```cpp
+    f[2] = ((f[1] + f[0]) % MOD + 2 * g[0] % MOD) % MOD;
+    g[2] = (f[1] + g[1]) % MOD;
+    ```
 3. After the loop, `f[2]` holds the result `f[n]`.
 
-## Complexity
+### Complexity
 
 * Time complexity: O(n) — Still iterating from 3 to `n`.
 * Space complexity: O(1) — We only use constant space (`f[3]` and `g[3]`).
 
-## Code
+### Code
 
 ```cpp
 const int MOD = 1e9 + 7;
@@ -134,9 +128,9 @@ public:
 };
 ```
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 3: Matrix Exponentiation
+## Approach 3: Matrix Exponentiation
 
 This approach treats the tiling recurrence as a **linear recurrence**, and solves it using **matrix exponentiation**. This is much faster for large `n`, reducing time complexity from linear to logarithmic: O(log n).
 
@@ -170,19 +164,17 @@ Because we know:
 * `f(2) = 2`, `f(1) = 1`
 * `g(2) = 2`, `g(1) = 1`
 
-## Explanation:
+### Explanation:
 
-1. **Matrix Definition**:
-   The matrix `A` is:
+1.  **Matrix Definition**: The matrix `A` is:
 
-   ```cpp
-   { 1, 1, 0, 2 },  // f(i) = f(i-1) + f(i-2) + 2 * g(i-2)
-   { 1, 0, 0, 0 },  // shift
-   { 1, 0, 1, 0 },  // g(i) = f(i-1) + g(i-1)
-   { 0, 0, 1, 0 }   // shift
-   ```
-
-2. **Base Vector**:
+    ```cpp
+    { 1, 1, 0, 2 },  // f(i) = f(i-1) + f(i-2) + 2 * g(i-2)
+    { 1, 0, 0, 0 },  // shift
+    { 1, 0, 1, 0 },  // g(i) = f(i-1) + g(i-1)
+    { 0, 0, 1, 0 }   // shift
+    ```
+2.  **Base Vector**:
 
     ```cpp
     base = {
@@ -192,24 +184,20 @@ Because we know:
         1, // g(1)
     }
     ```
+3. **Matrix Exponentiation**: We compute `A^(n-2)` in O(log n) time using exponentiation by squaring.
+4.  **Final Result**: Multiply the powered matrix with the base vector:
 
-3. **Matrix Exponentiation**:
-   We compute `A^(n-2)` in O(log n) time using exponentiation by squaring.
+    ```cpp
+    res = A.pow(n - 2) * base;
+    return res[0][0]; // which is f(n)
+    ```
 
-4. **Final Result**:
-   Multiply the powered matrix with the base vector:
-
-   ```cpp
-   res = A.pow(n - 2) * base;
-   return res[0][0]; // which is f(n)
-   ```
-
-## Complexity
+### Complexity
 
 * Time complexity: O(log n) — from matrix exponentiation.
 * Space complexity: O(1) — constant space for fixed 4x4 matrices.
 
-## Code
+### Code
 
 ```cpp
 const int MOD = 1e9 + 7;

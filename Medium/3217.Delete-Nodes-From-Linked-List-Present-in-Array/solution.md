@@ -1,39 +1,35 @@
-# Intuition
+# 3217. Delete Nodes From Linked List Present in Array
+
+## Intuition
 
 To remove nodes from a linked list whose values exist in a given array, we can use a set for efficient lookups. By iterating through the linked list and using the set to check for values to be removed, we can modify the list in place.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach: HashSet
+## Approach: HashSet
 
-## Explanation:
+### Explanation:
 
 1. **Create a Set**:
-
-   - Convert the given array `nums` into an `unordered_set` for O(1) average-time complexity lookups.
-
+   * Convert the given array `nums` into an `unordered_set` for O(1) average-time complexity lookups.
 2. **Initialize a Dummy Node**:
-
-   - Use a dummy node that points to the head of the linked list. This helps simplify edge cases where the head itself needs to be removed.
-
+   * Use a dummy node that points to the head of the linked list. This helps simplify edge cases where the head itself needs to be removed.
 3. **Iterate Through the Linked List**:
-
-   - Use a pointer `curr` initialized to the dummy node.
-   - Traverse the list using `curr`. For each node, check if the next node's value exists in the set:
-     - If it does, skip the next node by updating `curr->next` to `curr->next->next`.
-     - Otherwise, move the `curr` pointer to the next node.
-
+   * Use a pointer `curr` initialized to the dummy node.
+   * Traverse the list using `curr`. For each node, check if the next node's value exists in the set:
+     * If it does, skip the next node by updating `curr->next` to `curr->next->next`.
+     * Otherwise, move the `curr` pointer to the next node.
 4. **Return the Modified List**:
-   - Return `dummy.next` which points to the new head of the modified list.
+   * Return `dummy.next` which points to the new head of the modified list.
 
-## Complexity
+### Complexity
 
-- Time complexity: O(n + m), where `n` is the length of the linked list and `m` is the length of the array `nums`.
-- Space complexity: O(m).
+* Time complexity: O(n + m), where `n` is the length of the linked list and `m` is the length of the array `nums`.
+* Space complexity: O(m).
 
-## Code
+### Code
 
-### C++
+#### C++
 
 ```cpp
 class Solution {
@@ -58,7 +54,7 @@ public:
 };
 ```
 
-### Go
+#### Go
 
 ```go
 /**
@@ -87,7 +83,8 @@ func modifiedList(nums []int, head *ListNode) *ListNode {
 }
 ```
 
-### Java
+#### Java
+
 ```java
 /**
  * Definition for singly-linked list.

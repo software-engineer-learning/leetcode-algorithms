@@ -1,36 +1,41 @@
-# Intuition
-- We can intuitively know that this is a dp problem as it is very similar to [this problem](https://leetcode.com/problems/cherry-pickup-ii/description/)
-- Now that we know it, we can try breaking the 3 childs into 3 seperate dp problems and solve each one, then we can get the sum as the final result
-    - There is one problem though, as the problem stated that the fruits of every position can only be taken once, so after calculating each child, we have to **mark the optimal path** of that child to 0 to avoid over counting.
+# 3363. Find the Maximum Number of Fruits Collected
 
-![alt text](image.png)
+## Intuition
 
-- As there are only `n-1` moves and we **HAVE TO** arrive at position (n-1,n-1) for the result to be valid we can:
-    - Rebuild the optimal path using the memoize table
-    - For the first child at position (0,0), there is only 1 valid path going diagonal, so we can simply do a for loop to calculate and mark it as 0.
+* We can intuitively know that this is a dp problem as it is very similar to [this problem](https://leetcode.com/problems/cherry-pickup-ii/description/)
+* Now that we know it, we can try breaking the 3 childs into 3 seperate dp problems and solve each one, then we can get the sum as the final result
+  * There is one problem though, as the problem stated that the fruits of every position can only be taken once, so after calculating each child, we have to **mark the optimal path** of that child to 0 to avoid over counting.
 
-# Approach
-- We break down the problem into 3 smaller dp problems: `top_left`, `top_right`, `bottom_left`, do the dp calculation for each one
-- For the `top_left`, we can just calculate the diagonal path from this position and set each cells to 0 because this is the only path
-- For the next child, after calculate the optimal result, we can rebuild the optimal path and set its cells to zero with `cleanup`
-- The 3rd child we can just do dp calculation and return the sum, no need to mark its path.
-- For the dp recursive function:
-    - At each state, we have 3 choices (3 way to move)
-    - The states variables are the `x` and `y` coordinates, I used `r` and `c` which is short for row and column.
-    - The base cases are:
-        - Position out of bound, check with `valid()`
-        - Out of moves but still have not arrived at the destination `if(moves == 0 && !(r == n-1 && c == n-1)) return INT_MIN;`
-        - When we arrive at the destination `if(r == n-1 && c == n-1) return 0;`
-        - When we have already calculated this path `if(dp[r][c] != -1) { return dp[r][c]; }`
-    - The recursive formula is pretty simple, we just try to get max fruits from three choices `dp[r][c] = max({3 choices here})`
+![alt text](<../../.gitbook/assets/image (3).png>)
 
-# Complexity
-- Time complexity: O(n²) size of the board
+* As there are only `n-1` moves and we **HAVE TO** arrive at position (n-1,n-1) for the result to be valid we can:
+  * Rebuild the optimal path using the memoize table
+  * For the first child at position (0,0), there is only 1 valid path going diagonal, so we can simply do a for loop to calculate and mark it as 0.
 
-- Space complexity: O(n²) for the memoize `dp` table
+## Approach
 
-# Code
-```cpp []
+* We break down the problem into 3 smaller dp problems: `top_left`, `top_right`, `bottom_left`, do the dp calculation for each one
+* For the `top_left`, we can just calculate the diagonal path from this position and set each cells to 0 because this is the only path
+* For the next child, after calculate the optimal result, we can rebuild the optimal path and set its cells to zero with `cleanup`
+* The 3rd child we can just do dp calculation and return the sum, no need to mark its path.
+* For the dp recursive function:
+  * At each state, we have 3 choices (3 way to move)
+  * The states variables are the `x` and `y` coordinates, I used `r` and `c` which is short for row and column.
+  * The base cases are:
+    * Position out of bound, check with `valid()`
+    * Out of moves but still have not arrived at the destination `if(moves == 0 && !(r == n-1 && c == n-1)) return INT_MIN;`
+    * When we arrive at the destination `if(r == n-1 && c == n-1) return 0;`
+    * When we have already calculated this path `if(dp[r][c] != -1) { return dp[r][c]; }`
+  * The recursive formula is pretty simple, we just try to get max fruits from three choices `dp[r][c] = max({3 choices here})`
+
+## Complexity
+
+* Time complexity: O(n²) size of the board
+* Space complexity: O(n²) for the memoize `dp` table
+
+## Code
+
+```cpp
 class Solution {
 public:
     vector<vector<int>> dp;

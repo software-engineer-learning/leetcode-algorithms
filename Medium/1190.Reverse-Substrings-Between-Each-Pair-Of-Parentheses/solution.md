@@ -1,22 +1,23 @@
-# Approach 1: Brute Force
+# 1190. Reverse Substrings Between Each Pair Of Parentheses
+
+## Approach 1: Brute Force
 
 1. Initialization: We initialize a stack to keep track of characters and handle nested parentheses.
-
 2. Iterating through the string:
 
-- If the current character is a closing parenthesis `)`, we pop characters from the stack until we find the corresponding opening parenthesis `(`. The popped characters are stored in a temporary string temp, which is then reversed and pushed back onto the stack.
-- If the current character is not a closing parenthesis, we simply push it onto the stack.
+* If the current character is a closing parenthesis `)`, we pop characters from the stack until we find the corresponding opening parenthesis `(`. The popped characters are stored in a temporary string temp, which is then reversed and pushed back onto the stack.
+* If the current character is not a closing parenthesis, we simply push it onto the stack.
 
 3. Result Construction: After processing all characters, the stack will contain the final result without any parentheses, which we then convert to a string and return.
 
-# Complexity
+## Complexity
 
-- Time complexity: O(N²).
-- Space complexity: O(N).
+* Time complexity: O(N²).
+* Space complexity: O(N).
 
-# Solution
+## Solution
 
-## Go
+### Go
 
 ```go
 func reverseParentheses(s string) string {
@@ -46,7 +47,7 @@ func reverseParentheses(s string) string {
 }
 ```
 
-## Rust
+### Rust
 
 ```rust
 impl Solution {
@@ -71,36 +72,36 @@ impl Solution {
 }
 ```
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 2: Teleport
+## Approach 2: Teleport
 
 We use a stack to identify matching parentheses and a vector to store the teleport positions, which indicate where to jump when encountering a parenthesis. We then construct the result string by iterating through the original string and handling the teleportation to reverse the segments correctly.
 
-## Explanation:
+### Explanation:
 
 1. **Initialization**:
-   - `n`: the length of the input string `s`.
-   - `st`: a stack to keep track of the indices of opening parentheses.
-   - `teleport`: a vector of size `n` to store the matching indices of parentheses.
-
+   * `n`: the length of the input string `s`.
+   * `st`: a stack to keep track of the indices of opening parentheses.
+   * `teleport`: a vector of size `n` to store the matching indices of parentheses.
 2. **Identify Matching Parentheses**:
-   - Iterate through the string `s`:
-     - If the current character is '(', push its index onto the stack.
-     - If the current character is ')', pop the top index from the stack to get the matching opening parenthesis. Store the matching indices in the `teleport` vector for both '(' and ')'.
-
+   * Iterate through the string `s`:
+     * If the current character is '(', push its index onto the stack.
+     * If the current character is ')', pop the top index from the stack to get the matching opening parenthesis. Store the matching indices in the `teleport` vector for both '(' and ')'.
 3. **Construct Result String**:
-   - Initialize `res` as an empty string to store the result.
-   - Initialize `dir` as 1 to indicate the direction of traversal (1 for forward, -1 for backward).
-   - Iterate through the string `s`:
-     - If the current character is '(' or ')', teleport to the matching parenthesis index and reverse the direction.
-     - Otherwise, append the current character to `res`.
+   * Initialize `res` as an empty string to store the result.
+   * Initialize `dir` as 1 to indicate the direction of traversal (1 for forward, -1 for backward).
+   * Iterate through the string `s`:
+     * If the current character is '(' or ')', teleport to the matching parenthesis index and reverse the direction.
+     * Otherwise, append the current character to `res`.
 
-## Complexity
-- Time complexity: O(n)
-- Space complexity: O(n)
+### Complexity
 
-## Code 
+* Time complexity: O(n)
+* Space complexity: O(n)
+
+### Code
+
 ```cpp
 class Solution {
 public:

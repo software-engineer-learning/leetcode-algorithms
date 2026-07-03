@@ -1,24 +1,28 @@
-# Intuition
+# 2182. Construct string with repeat limit
 
-- Key insight to solve this problem is you can greedily take the lexicographically largest character until reaching limit, at that point there are 2 possible cases:
-  - The current char is exhausted (`count` is 0) -> we just proceed to the next char
-  - The current char can still be use (`count` > 0) but you reached limit -> you can take 1 from the next lexicographically largest character as padding then keep taking current char, repeat until you can't.
-  - One thing to note is that if there are no "next char", that mean you have exhausted all options so just return the result string
+## Intuition
 
-<p>&nbsp;</p>
+* Key insight to solve this problem is you can greedily take the lexicographically largest character until reaching limit, at that point there are 2 possible cases:
+  * The current char is exhausted (`count` is 0) -> we just proceed to the next char
+  * The current char can still be use (`count` > 0) but you reached limit -> you can take 1 from the next lexicographically largest character as padding then keep taking current char, repeat until you can't.
+  * One thing to note is that if there are no "next char", that mean you have exhausted all options so just return the result string
 
-# Approach: Max-heap
+&#x20;
 
-- For this kind of problem, you would intuitively think about using a frequency map/array to store the `count` of each characters in string, but the problem would be how to correctly access characters.
-- As we discussed above in the intuition section, we can greedily take the lexicographically largest char until reaching limit, so we need a way to access the largest available char quickly. For this we can use a max heap to store a `pair<int, int>` with the first element the ASCII value of the character, that way the largest char will always bubble top.
+## Approach: Max-heap
 
-## Complexity
-- Time complexity: O(nlog(k)) with `k` is the number of unique characters (at most 26), each push/pop operation takes log(k) time and can repeat at most `n` times
-- Space complexity: O(26) without counting the return `res` string the size of the heap and frequency array can be at worse 26.
+* For this kind of problem, you would intuitively think about using a frequency map/array to store the `count` of each characters in string, but the problem would be how to correctly access characters.
+* As we discussed above in the intuition section, we can greedily take the lexicographically largest char until reaching limit, so we need a way to access the largest available char quickly. For this we can use a max heap to store a `pair<int, int>` with the first element the ASCII value of the character, that way the largest char will always bubble top.
 
-## Code
+### Complexity
 
-### C++
+* Time complexity: O(nlog(k)) with `k` is the number of unique characters (at most 26), each push/pop operation takes log(k) time and can repeat at most `n` times
+* Space complexity: O(26) without counting the return `res` string the size of the heap and frequency array can be at worse 26.
+
+### Code
+
+#### C++
+
 ```cpp
 class Solution {
 public:

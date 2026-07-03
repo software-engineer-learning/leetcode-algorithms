@@ -1,30 +1,31 @@
-# Intuition
+# 2418. Sort the People
+
+## Intuition
 
 The task is to sort names based on the heights in descending order. The given solution sorts indices based on the heights and then rearranges names according to this sorted order. This approach leverages index manipulation to achieve the required result efficiently.
 
-<p>&nbsp;</p>
+&#x20;
 
-# Approach 1: Index-Based Sort
+## Approach 1: Index-Based Sort
 
-## Explanation:
+### Explanation:
 
 1. **Create a list of indices**:
-   - Create an `indexes` vector that contains indices from 0 to n-1. This helps in sorting and mapping heights to names.
-
+   * Create an `indexes` vector that contains indices from 0 to n-1. This helps in sorting and mapping heights to names.
 2. **Sort indices based on heights**:
-   - Sort the `indexes` vector using a lambda function that compares heights. This function ensures that indices are sorted in descending order of the corresponding heights.
-
+   * Sort the `indexes` vector using a lambda function that compares heights. This function ensures that indices are sorted in descending order of the corresponding heights.
 3. **Rearrange names according to sorted indices**:
-   - Reorder the `names` array based on the sorted indices. This is achieved by swapping elements to their correct positions according to the sorted order. 
-
+   * Reorder the `names` array based on the sorted indices. This is achieved by swapping elements to their correct positions according to the sorted order.
 4. **Returning the Result**:
-   - Return the reordered `names` vector.
+   * Return the reordered `names` vector.
 
-## Complexity
-- Time complexity: O(n log n), where n is the number of people.
-- Space complexity: O(n)
+### Complexity
 
-## Code
+* Time complexity: O(n log n), where n is the number of people.
+* Space complexity: O(n)
+
+### Code
+
 ```cpp
 class Solution {
 public:
