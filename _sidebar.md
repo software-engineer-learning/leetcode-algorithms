@@ -30,6 +30,7 @@
   - [1636. Sort Array By Increasing Frequency](Easy/1636.Sort-Array-By-Increasing-Frequency/solution.md)
   - [1684. Count The Number Of Consistent Strings](Easy/1684.Count-The-Number-Of-Consistent-Strings/solution.md)
   - [1945. Sum of Digits of String After Convert](Easy/1945.Sum-of-Digits-of-String-After-Convert/solution.md)
+  - [1967. Number of Strings That Appear as Substrings in Word](Easy/1967.Number-of-Strings-That-Appear-as-Substrings-in-Word/solution.md)
   - [2022. Convert 1D Array Into 2D Array](Easy/2022.Convert-1D-Array-Into-2D-Array/solution.md)
   - [2053. Kth Distinct String in an Array](Easy/2053.Kth-Distinct-String-in-an-Array/solution.md)
   - [2191. Sort the Jumbled Numbers](Easy/2191.Sort-the-Jumbled-Numbers/solution.md)
@@ -152,6 +153,7 @@
   - [3217. Delete Nodes From Linked List Present in Array](Medium/3217.Delete-Nodes-From-Linked-List-Present-in-Array/solution.md)
   - [3218. Minimum Cost for Cutting Cake I](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md)
   - [3254. Find the Power of K Size Subarrays I](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md)
+  - [3286. Find a Safe Walk Through a Grid](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)
 - Hard
   - [11. Container With Most Water](Hard/11.Container-With-Most-Water/solution.md)
   - [23. Merge k Sorted Lists](Hard/23.Merge-k-Sorted-Lists/solution.md)
@@ -180,4 +182,5 @@
   - [2751. Robot Collisions](Hard/2751.Robot-Collisions/solution.md)
   - [3219. Minimum Cost for Cutting Cake II](Hard/3219.Minimum-Cost-for-Cutting-Cake-II/solution.md)
   - [3363. Find the Maximum Number of Fruits Collected](Hard/3363.%20Find-the-Maximum-Number-of-Fruits-Collected/solution.md)
+  - [3620. Network Recovery Pathways](Hard/3620.Network-Recovery-Pathways/solution.md)
   - [3739. Count Subarrays With Majority Element II](Hard/3739.Count-Subarrays-With-Majority-Element-II/solution.md)

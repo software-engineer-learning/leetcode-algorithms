@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **164** problems with at least one solution file.
+Total: **165** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -169,7 +169,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3254. Find the Power of K Size Subarrays I | [Link](https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/) | [main](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md) |
 | 3286. Find a Safe Walk Through a Grid | [Link](https://leetcode.com/problems/find-a-safe-walk-through-a-grid/) | [main](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md) |
 
-### Hard (28)
+### Hard (29)
 
 | Problem | LeetCode | Solution |
 |---------|----------|----------|
@@ -200,4 +200,5 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 2751. Robot Collisions | [Link](https://leetcode.com/problems/robot-collisions/) | [main](Hard/2751.Robot-Collisions/solution.md) |
 | 3219. Minimum Cost for Cutting Cake II | [Link](https://leetcode.com/problems/minimum-cost-for-cutting-cake-ii/) | [main](Hard/3219.Minimum-Cost-for-Cutting-Cake-II/solution.md) |
 | 3363. Find the Maximum Number of Fruits Collected | [Link](https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/) | [main](Hard/3363. Find-the-Maximum-Number-of-Fruits-Collected/solution.md) |
+| 3620. Network Recovery Pathways | [Link](https://leetcode.com/problems/network-recovery-pathways/) | [main](Hard/3620.Network-Recovery-Pathways/solution.md) |
 | 3739. Count Subarrays With Majority Element II | [Link](https://leetcode.com/problems/count-subarrays-with-majority-element-ii/) | [main](Hard/3739.Count-Subarrays-With-Majority-Element-II/solution.md) |
