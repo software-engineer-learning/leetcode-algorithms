@@ -139,6 +139,7 @@
   - [2419. Longest Subarray With Maximum Bitwise AND](Medium/2419.Longest-Subarray-With-Maximum-Bitwise-AND/solution.md)
   - [2461. Maximum Sum of Distinct Subarrays With Length K](Medium/2461.Maximum-Sum-of-Distinct-Subarrays-With-Length-K/solution.md)
   - [2491. Divide Players Into Teams of Equal Skill](Medium/2491.Divide-Players-Into-Teams-of-Equal-Skill/solution.md)
+  - [2492. Minimum Score of a Path Between Two Cities](Medium/2492.Minimum-Score-of-a-Path-Between-Two-Cities/solution.md)
   - [2501. Longest Square Streak in an Array](Medium/2501.Longest-Square-Streak-in-an-Array/solution.md)
   - [2583. Kth Largest Sum in a Binary Tree](Medium/2583.Kth-Largest-Sum-in-a-Binary-Tree/solution.md)
   - [2601. Prime Subtraction Operation](Medium/2601.Prime-Subtraction-Operation/solution.md)
