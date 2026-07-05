@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **167** problems with at least one solution file.
+Total: **168** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (37)
+### Easy (38)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,6 +36,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 219. Contains Duplicate II                                         | [Link](https://leetcode.com/problems/contains-duplicate-ii/)                                        | [hashmap](Easy/219.Contains-Duplicate-II/solution-hashmap.md) · [slidingwindow](Easy/219.Contains-Duplicate-II/solution-slidingwindow.md) |
 | 222. Count Complete Tree Nodes                                     | [Link](https://leetcode.com/problems/count-complete-tree-nodes/)                                    | [main](Easy/222.Count-Complete-Tree-Nodes/solution.md)                                                                                    |
 | 350. Intersection of Two Arrays II                                 | [Link](https://leetcode.com/problems/intersection-of-two-arrays-ii/)                                | [main](Easy/350.Intersection-of-Two-Arrays-II/solution.md)                                                                                |
+| 495. Teemo Attacking                                               | [Link](https://leetcode.com/problems/teemo-attacking/)                                              | [main](Easy/495.Teemo-Attacking/solution.md)                                                                                              |
 | 590. N-ary Tree Postorder Traversal                                | [Link](https://leetcode.com/problems/n-ary-tree-postorder-traversal/)                               | [main](Easy/590.N-ary-Tree-Postorder-Traversal/solution.md)                                                                               |
 | 594. Longest Harmonious Subsequence                                | [Link](https://leetcode.com/problems/longest-harmonious-subsequence/)                               | [main](Easy/594.Longest-Harmonious-Subsequence/solution.md)                                                                               |
 | 860. Lemonade Change                                               | [Link](https://leetcode.com/problems/lemonade-change/)                                              | [main](Easy/860.Lemonade-Change/solution.md)                                                                                              |
