@@ -173,6 +173,7 @@
   - [862. Shortest Subarray with Sum at Least K](Hard/862.Shortest-Subarray-with-Sum-at-Least-K/solution.md)
   - [995. Minimum Number of K Consecutive Bit Flips](Hard/995.Minimum-Number-of-K-Consecutive-Bit-Flips/solution.md)
   - [1106. Parsing A Boolean Expression](Hard/1106.Parsing-A-Boolean-Expression/solution.md)
+  - [1301. Number of Paths with Max Score](Hard/1301.Number-of-Paths-with-Max-Score/solution.md)
   - [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](Hard/1579.Remove-Max-Number-of-Edges-to-Keep-Graph-Fully-Traversable/solution.md)
   - [2071. Maximum Number of Tasks You Can Assign](Hard/2071.Maximum-Number-of-Tasks-You-Can-Assign/solution.md)
   - [2302. Count Subarrays With Score Less Than K](Hard/2302.Count-Subarrays-With-Score-Less-Than-K/solution.md)
