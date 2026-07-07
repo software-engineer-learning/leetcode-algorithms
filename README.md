@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **169** problems with at least one solution file.
+Total: **170** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (38)
+### Easy (39)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,6 +65,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3314. Construct the Minimum Bitwise Array I                        | [Link](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/)                        | [main](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)                                                                       |
 | 3375. Minimum Operations to Make Array Values Equal to k           | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/)           | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md)                                                          |
 | 3637. Trionic Array I                                              | [Link](https://leetcode.com/problems/trionic-array-i/)                                              | [main](Easy/3637.Trionic-Array-I/solution.md)                                                                                             |
+| 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 
 ### Medium (101)
 
