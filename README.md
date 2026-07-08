@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **170** problems with at least one solution file.
+Total: **171** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -67,7 +67,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3637. Trionic Array I                                              | [Link](https://leetcode.com/problems/trionic-array-i/)                                              | [main](Easy/3637.Trionic-Array-I/solution.md)                                                                                             |
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 
-### Medium (101)
+### Medium (102)
 
 | Problem                                                                          | LeetCode                                                                                                          | Solution                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -172,6 +172,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3218. Minimum Cost for Cutting Cake I                                            | [Link](https://leetcode.com/problems/minimum-cost-for-cutting-cake-i/)                                            | [main](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md)                                                                                                                                                                                                                                         |
 | 3254. Find the Power of K Size Subarrays I                                       | [Link](https://leetcode.com/problems/find-the-power-of-k-size-subarrays-i/)                                       | [main](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md)                                                                                                                                                                                                                                    |
 | 3286. Find a Safe Walk Through a Grid                                            | [Link](https://leetcode.com/problems/find-a-safe-walk-through-a-grid/)                                            | [main](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)                                                                                                                                                                                                                                         |
+| 3756. Concatenate Non-Zero Digits and Multiply by Sum II                           | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/)                         | [main](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)                                                                                                                                                                                                                      |
 
 ### Hard (30)
 
