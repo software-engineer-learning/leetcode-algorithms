@@ -158,6 +158,7 @@
   - [3218. Minimum Cost for Cutting Cake I](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md)
   - [3254. Find the Power of K Size Subarrays I](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md)
   - [3286. Find a Safe Walk Through a Grid](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)
+  - [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
 - Hard
   - [11. Container With Most Water](Hard/11.Container-With-Most-Water/solution.md)
   - [23. Merge k Sorted Lists](Hard/23.Merge-k-Sorted-Lists/solution.md)
