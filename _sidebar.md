@@ -146,6 +146,7 @@
   - [2501. Longest Square Streak in an Array](Medium/2501.Longest-Square-Streak-in-an-Array/solution.md)
   - [2583. Kth Largest Sum in a Binary Tree](Medium/2583.Kth-Largest-Sum-in-a-Binary-Tree/solution.md)
   - [2601. Prime Subtraction Operation](Medium/2601.Prime-Subtraction-Operation/solution.md)
+  - [2685. Count the Number of Complete Components](Medium/2685.Count-the-Number-of-Complete-Components/solution.md)
   - [2707. Extra Characters In A String](Medium/2707.Extra-Characters-In-A-String/solution.md)
   - [2779. Maximum Beauty Of An Array After Applying Operation](Medium/2779.Maximum-Beauty-Of-An-Array-After-Applying-Operation/solution.md)
   - [2825. Make String a Subsequence Using Cyclic Increments](Medium/2825.Make-String-a-Subsequence-Using-Cyclic-Increments/solution.md)
