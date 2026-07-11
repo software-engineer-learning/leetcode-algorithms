@@ -196,5 +196,6 @@
 * [2751. Robot Collisions](Hard/2751.Robot-Collisions/solution.md)
 * [3219. Minimum Cost for Cutting Cake II](Hard/3219.Minimum-Cost-for-Cutting-Cake-II/solution.md)
 * [3363. Find the Maximum Number of Fruits Collected](Hard/3363.%20Find-the-Maximum-Number-of-Fruits-Collected/solution.md)
+* [3534. Path Existence Queries in a Graph II](Hard/3534.Path-Existence-Queries-in-a-Graph-II/solution.md)
 * [3620. Network Recovery Pathways](Hard/3620.Network-Recovery-Pathways/solution.md)
 * [3739. Count Subarrays With Majority Element II](Hard/3739.Count-Subarrays-With-Majority-Element-II/solution.md)
