@@ -1,43 +1,79 @@
 # Intuition
-The problem asks to transform an array such that each element is replaced with its rank when the array is sorted. The rank of an element is determined by its position in the sorted array, with the smallest element getting rank 1. The goal is to assign ranks efficiently by leveraging sorting and a map for lookup.
 
-# Approach
-1. First, create a sorted copy of the original array. This will allow us to determine the rank of each element based on its position in the sorted order.
-2. Use a hash map to store the ranks for each unique element as we iterate through the sorted array. The rank starts at 1 and increases as we encounter new elements.
-3. Finally, iterate through the original array, replacing each element with its corresponding rank from the map.
-4. Return the transformed array with ranks.
+Each element's rank is its position among the **distinct** sorted values (smallest
+gets 1). Sort a copy of the array, assign ranks to unique values in order, then map
+each original element to its rank.
+
+# Approach: Sort + Rank Map
+
+1. Copy and sort `arr` to get values in ascending order.
+2. Walk the sorted values, assigning rank 1 to the smallest unique value and
+   incrementing only when the value changes.
+3. Build a map from value to rank.
+4. Replace each element of the original array with its rank from the map.
 
 # Complexity
-- Time complexity: O(N log N), where `N` is the length of the array. This is due to the sorting step, while the map operations and final array transformation take linear time O(N).
 
-- Space complexity: O(N), for storing the sorted array and the rank map.
+- Time complexity: $$O(n \log n)$$, where `n` is `arr.length` — dominated by
+  sorting; map lookups are $$O(1)$$ on average.
+- Space complexity: $$O(n)$$ for the sorted copy and rank map.
 
 # Code
-```java
-class Solution {
-    public int[] arrayRankTransform(int[] arr) {
-        int N = arr.length;
-        if (N == 0) {
-            return arr;
-        }
 
-        int[] sortedArr = arr.clone();
-        Arrays.sort(sortedArr);
+## Go
 
-        Map<Integer, Integer> rankMap = new HashMap<>();
-        int rank = 1;
+```go
+import "sort"
 
-        for (int num : sortedArr) {
-            if (!rankMap.containsKey(num)) {
-                rankMap.put(num, rank++);
+func arrayRankTransform(arr []int) []int {
+	sortedVals := make([]int, len(arr))
+	copy(sortedVals, arr)
+	sort.Ints(sortedVals)
+
+	sortedUnique := make([]int, 0, len(sortedVals))
+	for i, v := range sortedVals {
+		if i == 0 || v != sortedVals[i-1] {
+			sortedUnique = append(sortedUnique, v)
+		}
+	}
+
+	rankMap := make(map[int]int, len(sortedUnique))
+	for i, v := range sortedUnique {
+		rankMap[v] = i + 1
+	}
+
+	res := make([]int, len(arr))
+	for i, v := range arr {
+		res[i] = rankMap[v]
+	}
+	return res
+}
+```
+
+## Rust
+
+```rust
+use std::collections::HashMap;
+
+impl Solution {
+    pub fn array_rank_transform(mut arr: Vec<i32>) -> Vec<i32> {
+        let mut sorted_arr: Vec<i32> = arr.iter().cloned().collect();
+        sorted_arr.sort();
+        let mut rank_map = HashMap::new();
+        let mut rank = 1;
+        for val in sorted_arr.iter() {
+            if !rank_map.contains_key(&val) {
+                rank_map.insert(val, rank);
+                rank += 1;
             }
         }
-
-        for (int i = 0; i < N; i++) {
-            arr[i] = rankMap.get(arr[i]);
+        for i in 0..arr.len() {
+            match rank_map.get(&arr[i]) {
+                Some(&value) => arr[i] = value,
+                None => break,
+            }
         }
-
-        return arr;
+        arr
     }
 }
 ```
