@@ -19,16 +19,17 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **174** problems with at least one solution file.
+Total: **175** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (39)
+### Easy (40)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | 100. Same Tree                                                     | [Link](https://leetcode.com/problems/same-tree/)                                                    | [main](Easy/100.Same-Tree/solution.md)                                                                                                    |
 | 101. Symmetric Tree                                                | [Link](https://leetcode.com/problems/symmetric-tree/)                                               | [main](Easy/101.Symmetric-Tree/solution.md)                                                                                               |
+| 1021. Remove Outermost Parentheses                                 | [Link](https://leetcode.com/problems/remove-outermost-parentheses/)                                 | [main](Easy/1021.Remove-Outermost-Parentheses/solution.md)                                                                               |
 | 1189. Maximum Number of Balloons                                   | [Link](https://leetcode.com/problems/maximum-number-of-balloons/)                                   | [main](Easy/1189.Maximum-Number-of-Balloons/solution.md)                                                                                  |
 | 136. Single Number                                                 | [Link](https://leetcode.com/problems/single-number/)                                                | [main](Easy/136.Single-Number/solution.md)                                                                                                |
 | 145. Binary Tree Postorder Traversal                               | [Link](https://leetcode.com/problems/binary-tree-postorder-traversal/)                              | [main](Easy/145.Binary-Tree-Postorder-Traversal/solution.md)                                                                              |
