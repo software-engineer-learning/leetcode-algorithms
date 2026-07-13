@@ -93,6 +93,7 @@
   - [1190. Reverse Substrings Between Each Pair Of Parentheses](Medium/1190.Reverse-Substrings-Between-Each-Pair-Of-Parentheses/solution.md)
   - [1261. Find Elements in a Contaminated Binary Tree](Medium/1261.Find-Elements-in-a-Contaminated-Binary-Tree/solution.md)
   - [1288. Remove Covered Intervals](Medium/1288.Remove-Covered-Intervals/solution.md)
+  - [1291. Sequential Digits](Medium/1291.Sequential-Digits/solution.md)
   - [1310. XOR Queries of a Subarray](Medium/1310.XOR-Queries-of-a-Subarray/solution.md)
   - [1371. Find the Longest Substring Containing Vowels in Even Counts](Medium/1371.Find-the-Longest-Substring-Containing-Vowels-in-Even-Counts/solution.md)
   - [1382. Balance A Binary Search Tree](Medium/1382.%20Balance-A-Binary-Search-Tree/solution.md)
