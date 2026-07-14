@@ -198,6 +198,7 @@
 * [2551. Put Marbles in Bags](Hard/2551.Put-Marbles-in-Bags/solution.md)
 * [2751. Robot Collisions](Hard/2751.Robot-Collisions/solution.md)
 * [3219. Minimum Cost for Cutting Cake II](Hard/3219.Minimum-Cost-for-Cutting-Cake-II/solution.md)
+* [3336. Find the Number of Subsequences With Equal GCD](Hard/3336.Find-the-Number-of-Subsequences-With-Equal-GCD/solution.md)
 * [3363. Find the Maximum Number of Fruits Collected](Hard/3363.%20Find-the-Maximum-Number-of-Fruits-Collected/solution.md)
 * [3534. Path Existence Queries in a Graph II](Hard/3534.Path-Existence-Queries-in-a-Graph-II/solution.md)
 * [3620. Network Recovery Pathways](Hard/3620.Network-Recovery-Pathways/solution.md)
