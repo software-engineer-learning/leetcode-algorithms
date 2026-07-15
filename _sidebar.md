@@ -45,6 +45,7 @@
   - [3314. Construct the Minimum Bitwise Array I](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)
   - [3375. Minimum Operations to Make Array Values Equal to k](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md)
   - [3637. Trionic Array I](Easy/3637.Trionic-Array-I/solution.md)
+  - [3658. GCD of Odd and Even Sums](Easy/3658.GCD-of-Odd-and-Even-Sums/solution.md)
   - [3754. Concatenate Non Zero Digits and Multiply by Sum I](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)
 - Medium
   - [33. Search in rotated sorted array](Medium/33.Search-in-rotated-sorted-array/solution.md)
