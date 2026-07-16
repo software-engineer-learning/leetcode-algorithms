@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **178** problems with at least one solution file.
+Total: **179** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -69,7 +69,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3658. GCD of Odd and Even Sums                                     | [Link](https://leetcode.com/problems/gcd-of-odd-and-even-sums/)                                     | [main](Easy/3658.GCD-of-Odd-and-Even-Sums/solution.md)                                                                                   |
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 
-### Medium (105)
+### Medium (106)
 
 | Problem                                                                          | LeetCode                                                                                                          | Solution                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -178,6 +178,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3286. Find a Safe Walk Through a Grid                                            | [Link](https://leetcode.com/problems/find-a-safe-walk-through-a-grid/)                                            | [main](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)                                                                                                                                                                                                                                         |
 | 3532. Path Existence Queries in a Graph I                                        | [Link](https://leetcode.com/problems/path-existence-queries-in-a-graph-i/)                                        | [main](Medium/3532.Path-Existence-Queries-in-a-Graph-I/solution.md)                                                                                                                                                                                                                                   |
 | 3756. Concatenate Non-Zero Digits and Multiply by Sum II                           | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/)                         | [main](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)                                                                                                                                                                                                                      |
+| 3867. Sum of GCD of Formed Pairs                                                   | [Link](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/)                                                 | [main](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)                                                                                                                                                                                                                                              |
 
 ### Hard (32)
 
