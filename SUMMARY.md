@@ -169,6 +169,7 @@
 * [3286. Find a Safe Walk Through a Grid](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)
 * [3532. Path Existence Queries in a Graph I](Medium/3532.Path-Existence-Queries-in-a-Graph-I/solution.md)
 * [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
+* [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
 
 ## Hard
 
