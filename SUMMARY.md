@@ -95,6 +95,7 @@
 * [1014. Best Sightseeing Pair](Medium/1014.Best-Sightseeing-Pair/solution.md)
 * [1038. Binary Search Tree to Greater Sum Tree](Medium/1038.Binary-Search-Tree-to-Greater-Sum-Tree/solution.md)
 * [1052. Grumpy Bookstore Owner](Medium/1052.Grumpy-Bookstore-Owner/solution.md)
+* [1081. Smallest Subsequence of Distinct Characters](Medium/1081.Smallest-Subsequence-of-Distinct-Characters/solution.md)
 * [1110. Delete Nodes And Return Forest](Medium/1110.Delete-Nodes-And-Return-Forest/solution.md)
 * [1140. Stone Game II](Medium/1140.Stone-Game-II/solution.md)
 * [1190. Reverse Substrings Between Each Pair Of Parentheses](Medium/1190.Reverse-Substrings-Between-Each-Pair-Of-Parentheses/solution.md)
