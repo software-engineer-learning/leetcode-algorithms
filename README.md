@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **181** problems with at least one solution file.
+Total: **182** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (42)
+### Easy (43)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,6 +42,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 594. Longest Harmonious Subsequence                                | [Link](https://leetcode.com/problems/longest-harmonious-subsequence/)                               | [main](Easy/594.Longest-Harmonious-Subsequence/solution.md)                                                                               |
 | 860. Lemonade Change                                               | [Link](https://leetcode.com/problems/lemonade-change/)                                              | [main](Easy/860.Lemonade-Change/solution.md)                                                                                              |
 | 884. Uncommon Words from Two Sentences                             | [Link](https://leetcode.com/problems/uncommon-words-from-two-sentences/)                            | [main](Easy/884.Uncommon-Words-from-Two-Sentences/solution.md)                                                                            |
+| 1260. Shift 2D Grid                                                | [Link](https://leetcode.com/problems/shift-2d-grid/)                                                | [main](Easy/1260.Shift-2D-Grid/solution.md)                                                                                                |
 | 1331. Rank Transform of an Array                                   | [Link](https://leetcode.com/problems/rank-transform-of-an-array/)                                   | [main](Easy/1331.Rank-Transform-of-an-Array/solution.md)                                                                                  |
 | 1399. Count Largest Group                                          | [Link](https://leetcode.com/problems/count-largest-group/)                                          | [main](Easy/1399.Count-Largest-Group/solution.md)                                                                                         |
 | 1455. Check If A Word Occurs As A Prefix Of Any Word In A Sentence | [Link](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | [main](Easy/1455.Check-If-A-Word-Occurs-As-A-Prefix-Of-Any-Word-In-A-Sentence/solution.md)                                                |
