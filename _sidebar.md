@@ -19,6 +19,7 @@
   - [884. Uncommon Words from Two Sentences](Easy/884.Uncommon-Words-from-Two-Sentences/solution.md)
   - [1021. Remove Outermost Parentheses](Easy/1021.Remove-Outermost-Parentheses/solution.md)
   - [1189. Maximum Number of Balloons](Easy/1189.Maximum-Number-of-Balloons/solution.md)
+  - [1260. Shift 2D Grid](Easy/1260.Shift-2D-Grid/solution.md)
   - [1331. Rank Transform of an Array](Easy/1331.Rank-Transform-of-an-Array/solution.md)
   - [1399. Count Largest Group](Easy/1399.Count-Largest-Group/solution.md)
   - [1455. Check If A Word Occurs As A Prefix Of Any Word In A Sentence](Easy/1455.Check-If-A-Word-Occurs-As-A-Prefix-Of-Any-Word-In-A-Sentence/solution.md)
