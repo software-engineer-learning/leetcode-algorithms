@@ -104,7 +104,7 @@ Follow: <https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/Rules.md>
    - LeetCode link
    - Link(s) to each `solution*.md` variant (`main` for `solution.md`, or the suffix for `solution-<variant>.md`)
 
-The index currently lists **182** problems. Regenerate the tables from the repo if many entries change at once.
+The index currently lists **183** problems. Regenerate the tables from the repo if many entries change at once.
 
 ## Common patterns in this repo
 
