@@ -170,6 +170,7 @@
 * [3218. Minimum Cost for Cutting Cake I](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md)
 * [3254. Find the Power of K Size Subarrays I](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md)
 * [3286. Find a Safe Walk Through a Grid](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)
+* [3499. Maximize Active Section with Trade I](Medium/3499.Maximize-Active-Section-with-Trade-I/solution.md)
 * [3532. Path Existence Queries in a Graph I](Medium/3532.Path-Existence-Queries-in-a-Graph-I/solution.md)
 * [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
 * [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
