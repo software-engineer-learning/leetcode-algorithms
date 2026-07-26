@@ -15,6 +15,7 @@
   - [495. Teemo Attacking](Easy/495.Teemo-Attacking/solution.md)
   - [590. N ary Tree Postorder Traversal](Easy/590.N-ary-Tree-Postorder-Traversal/solution.md)
   - [594. Longest Harmonious Subsequence](Easy/594.Longest-Harmonious-Subsequence/solution.md)
+  - [628. Maximum Product of Three Numbers](Easy/628.Maximum-Product-of-Three-Numbers/solution.md)
   - [860. Lemonade Change](Easy/860.Lemonade-Change/solution.md)
   - [884. Uncommon Words from Two Sentences](Easy/884.Uncommon-Words-from-Two-Sentences/solution.md)
   - [1021. Remove Outermost Parentheses](Easy/1021.Remove-Outermost-Parentheses/solution.md)
