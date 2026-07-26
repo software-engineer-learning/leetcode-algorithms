@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **186** problems with at least one solution file.
+Total: **187** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (44)
+### Easy (45)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,6 +40,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 495. Teemo Attacking                                               | [Link](https://leetcode.com/problems/teemo-attacking/)                                              | [main](Easy/495.Teemo-Attacking/solution.md)                                                                                              |
 | 590. N-ary Tree Postorder Traversal                                | [Link](https://leetcode.com/problems/n-ary-tree-postorder-traversal/)                               | [main](Easy/590.N-ary-Tree-Postorder-Traversal/solution.md)                                                                               |
 | 594. Longest Harmonious Subsequence                                | [Link](https://leetcode.com/problems/longest-harmonious-subsequence/)                               | [main](Easy/594.Longest-Harmonious-Subsequence/solution.md)                                                                               |
+| 628. Maximum Product of Three Numbers                              | [Link](https://leetcode.com/problems/maximum-product-of-three-numbers/)                              | [main](Easy/628.Maximum-Product-of-Three-Numbers/solution.md)                                                                             |
 | 860. Lemonade Change                                               | [Link](https://leetcode.com/problems/lemonade-change/)                                              | [main](Easy/860.Lemonade-Change/solution.md)                                                                                              |
 | 884. Uncommon Words from Two Sentences                             | [Link](https://leetcode.com/problems/uncommon-words-from-two-sentences/)                            | [main](Easy/884.Uncommon-Words-from-Two-Sentences/solution.md)                                                                            |
 | 1260. Shift 2D Grid                                                | [Link](https://leetcode.com/problems/shift-2d-grid/)                                                | [main](Easy/1260.Shift-2D-Grid/solution.md)                                                                                                |
