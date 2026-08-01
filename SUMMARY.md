@@ -76,6 +76,7 @@
   * [greedy-patience-sort](Medium/300.%20Longest-Increasing-Subsequence/solution-greedy-patience-sort.md)
   * [topdown](Medium/300.%20Longest-Increasing-Subsequence/solution-topdown.md)
 * [307. Range sum query Mutable](Medium/307.Range-sum-query-Mutable/solution.md)
+* [486. Predict the Winner](Medium/486.Predict-the-Winner/solution.md)
 * [539. Minimum Time Difference](Medium/539.Minimum-Time-Difference/solution.md)
 * [567. Permutation in String](Medium/567.Permutation-in-String/solution.md)
 * [624. Maximum Distance in Arrays](Medium/624.Maximum-Distance-in-Arrays/solution.md)
