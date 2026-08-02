@@ -92,6 +92,7 @@
 * [853. Car Fleet](Medium/853.Car-Fleet/solution.md)
 * [874. Walking Robot Simulation](Medium/874.Walking-Robot-Simulation/solution.md)
 * [875. KoKo Eating Bananas](Medium/875.KoKo-Eating-Bananas/solution.md)
+* [877. Stone Game](Medium/877.Stone-Game/solution.md)
 * [885. Spiral Matrix III](Medium/885.Spiral-Matrix-III/solution.md)
 * [921. Minimum Add To Make Parentheses Valid](Medium/921.Minimum-Add-To-Make-Parentheses-Valid/solution.md)
 * [947. Most Stones Removed with Same Row or Column](Medium/947.Most-Stones-Removed-with-Same-Row-or-Column/solution.md)
