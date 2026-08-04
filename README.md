@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **191** problems with at least one solution file.
+Total: **192** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (46)
+### Easy (47)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -72,6 +72,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3536. Maximum Product of Two Digits                                | [Link](https://leetcode.com/problems/maximum-product-of-two-digits/)                                | [main](Easy/3536.Maximum-Product-of-Two-Digits/solution.md)                                                                              |
 | 3637. Trionic Array I                                              | [Link](https://leetcode.com/problems/trionic-array-i/)                                              | [main](Easy/3637.Trionic-Array-I/solution.md)                                                                                             |
 | 3658. GCD of Odd and Even Sums                                     | [Link](https://leetcode.com/problems/gcd-of-odd-and-even-sums/)                                     | [main](Easy/3658.GCD-of-Odd-and-Even-Sums/solution.md)                                                                                   |
+| 3731. Find Missing Elements                                        | [Link](https://leetcode.com/problems/find-missing-elements/)                                        | [main](Easy/3731.Find-Missing-Elements/solution.md)                                                                                     |
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 
 ### Medium (113)
