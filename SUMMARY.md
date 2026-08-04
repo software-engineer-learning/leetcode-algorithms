@@ -54,6 +54,7 @@
 * [3536. Maximum Product of Two Digits](Easy/3536.Maximum-Product-of-Two-Digits/solution.md)
 * [3637. Trionic Array I](Easy/3637.Trionic-Array-I/solution.md)
 * [3658. GCD of Odd and Even Sums](Easy/3658.GCD-of-Odd-and-Even-Sums/solution.md)
+* [3731. Find Missing Elements](Easy/3731.Find-Missing-Elements/solution.md)
 * [3754. Concatenate Non Zero Digits and Multiply by Sum I](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)
 
 ## Medium
