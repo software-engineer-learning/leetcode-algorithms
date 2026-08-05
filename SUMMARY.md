@@ -176,6 +176,7 @@
 * [3218. Minimum Cost for Cutting Cake I](Medium/3218.Minimum-Cost-for-Cutting-Cake-I/solution.md)
 * [3254. Find the Power of K Size Subarrays I](Medium/3254.Find-the-Power-of-K-Size-Subarrays-I/solution.md)
 * [3286. Find a Safe Walk Through a Grid](Medium/3286.Find-a-Safe-Walk-Through-a-Grid/solution.md)
+* [3310. Remove Methods From Project](Medium/3310.Remove-Methods-From-Project/solution.md)
 * [3499. Maximize Active Section with Trade I](Medium/3499.Maximize-Active-Section-with-Trade-I/solution.md)
 * [3513. Number of Unique XOR Triplets I](Medium/3513.Number-of-Unique-XOR-Triplets-I/solution.md)
 * [3514. Number of Unique XOR Triplets II](Medium/3514.Number-of-Unique-XOR-Triplets-II/solution.md)
