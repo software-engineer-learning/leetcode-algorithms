@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **194** problems with at least one solution file.
+Total: **195** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (47)
+### Easy (48)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,6 +66,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 2558. Take Gifts From The Richest Pile                             | [Link](https://leetcode.com/problems/take-gifts-from-the-richest-pile/)                             | [main](Easy/2558.Take-Gifts-From-The-Richest-Pile/solution.md)                                                                            |
 | 2582. Passing The Pillow                                           | [Link](https://leetcode.com/problems/passing-the-pillow/)                                           | [rust](Easy/2582.Passing-The-Pillow/solution-rust.md)                                                                                     |
 | 2696. Minimum String Length After Removing Substrings              | [Link](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/)              | [main](Easy/2696.Minimum-String-Length-After-Removing-Substrings/solution.md)                                                             |
+| 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum  | [Link](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/)  | [main](Easy/2996.Smallest-Missing-Integer-Greater-Than-Sequential-Prefix-Sum/solution.md)                                                 |
 | 3216. Lexicographically Smallest String After a Swap               | [Link](https://leetcode.com/problems/lexicographically-smallest-string-after-a-swap/)               | [main](Easy/3216.Lexicographically-Smallest-String-After-a-Swap/solution.md)                                                              |
 | 3314. Construct the Minimum Bitwise Array I                        | [Link](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/)                        | [main](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)                                                                       |
 | 3375. Minimum Operations to Make Array Values Equal to k           | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/)           | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md)                                                          |
