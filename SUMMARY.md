@@ -169,6 +169,7 @@
 * [2779. Maximum Beauty Of An Array After Applying Operation](Medium/2779.Maximum-Beauty-Of-An-Array-After-Applying-Operation/solution.md)
 * [2825. Make String a Subsequence Using Cyclic Increments](Medium/2825.Make-String-a-Subsequence-Using-Cyclic-Increments/solution.md)
 * [2924. Find Champion II](Medium/2924.Find-Champion-II/solution.md)
+* [2958. Length of Longest Subarray With at Most K Frequency](Medium/2958.Length-of-Longest-Subarray-With-at-Most-K-Frequency/solution.md)
 * [3016. Minimum Number of Pushes to Type Word II](Medium/3016.Minimum-Number-of-Pushes-to-Type-Word-II/solution.md)
 * [3020. Find the Maximum Number of Elements in Subset](Medium/3020.Find-the-Maximum-Number-of-Elements-in-Subset/solution.md)
 * [3043. Find the Length of the Longest Common Prefix](Medium/3043.Find-the-Length-of-the-Longest-Common-Prefix/solution.md)
