@@ -49,6 +49,7 @@
   * [rust](Easy/2582.Passing-The-Pillow/solution-rust.md)
 * [2696. Minimum String Length After Removing Substrings](Easy/2696.Minimum-String-Length-After-Removing-Substrings/solution.md)
 * [2996. Smallest Missing Integer Greater Than Sequential Prefix Sum](Easy/2996.Smallest-Missing-Integer-Greater-Than-Sequential-Prefix-Sum/solution.md)
+* [3090. Maximum Length Substring With Two Occurrences](Easy/3090.Maximum-Length-Substring-With-Two-Occurrences/solution.md)
 * [3216. Lexicographically Smallest String After a Swap](Easy/3216.Lexicographically-Smallest-String-After-a-Swap/solution.md)
 * [3314. Construct the Minimum Bitwise Array I](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)
 * [3375. Minimum Operations to Make Array Values Equal to k](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md)
@@ -184,6 +185,7 @@
 * [3514. Number of Unique XOR Triplets II](Medium/3514.Number-of-Unique-XOR-Triplets-II/solution.md)
 * [3517. Smallest Palindromic Rearrangement I](Medium/3517.Smallest-Palindromic-Rearrangement-I/solution.md)
 * [3532. Path Existence Queries in a Graph I](Medium/3532.Path-Existence-Queries-in-a-Graph-I/solution.md)
+* [3702. Longest Subsequence With Non Zero Bitwise XOR](Medium/3702.Longest-Subsequence-With-Non-Zero-Bitwise-XOR/solution.md)
 * [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
 * [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
 
