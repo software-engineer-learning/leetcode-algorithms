@@ -115,6 +115,7 @@
 * [1310. XOR Queries of a Subarray](Medium/1310.XOR-Queries-of-a-Subarray/solution.md)
 * [1371. Find the Longest Substring Containing Vowels in Even Counts](Medium/1371.Find-the-Longest-Substring-Containing-Vowels-in-Even-Counts/solution.md)
 * [1382. Balance A Binary Search Tree](Medium/1382.%20Balance-A-Binary-Search-Tree/solution.md)
+* [1386. Cinema Seat Allocation](Medium/1386.Cinema-Seat-Allocation/solution.md)
 * [1395. Count Number of Teams](Medium/1395.Count-Number-of-Teams/solution.md)
 * [1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](Medium/1438.Longest-Continuous-Subarray-With-Absolute-Diff-Less-Than-or-Equal-to-Limit/solution.md)
 * [1482. Minimum number of days to make m bouquets](Medium/1482.Minimum-number-of-days-to-make-m-bouquets/solution.md)
