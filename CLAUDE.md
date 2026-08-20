@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-Guidance for AI assistants working in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project overview
 
-This repo stores LeetCode algorithm solutions as markdown write-ups. Solutions are grouped by difficulty and problem id:
+This repo stores LeetCode algorithm solutions as markdown write-ups — there is no build or test suite; the "product" is the markdown plus the navigation files generated from it. Solutions are grouped by difficulty and problem id:
 
 ```text
 Easy/
@@ -19,6 +19,26 @@ Hard/
 ```
 
 Telegram group: <https://t.me/+ST0unit9nTRkYjhl>
+
+## Adding a solution
+
+Prefer the repo skill: `/add-solution` (in `.claude/skills/add-solution/`). It resolves problem metadata via the LeetCode GraphQL API (direct `WebFetch` on leetcode.com returns 403), creates the folder, writes `solution.md`/`description.md`, and updates the README index. The conventions below are what that skill enforces.
+
+## Publishing pipeline
+
+The repo is published two ways from the same markdown, each with its own generated navigation file:
+
+- **GitBook** — Git-synced via `.gitbook.yaml`; navigation is `SUMMARY.md`.
+- **Docsify** — static site served by `index.html`; navigation is `_sidebar.md`.
+
+`SUMMARY.md` and `_sidebar.md` are **generated — do not hand-edit them**. After adding, renaming, or removing a problem folder or solution file, regenerate both:
+
+```bash
+./tools/gen-summary.sh   # rebuilds SUMMARY.md (GitBook TOC)
+./tools/gen-sidebar.sh   # rebuilds _sidebar.md (Docsify sidebar)
+```
+
+Both scripts derive everything from the `<Difficulty>/<id>.<Title>/solution*.md` layout, so correct folder naming matters.
 
 ## Conventions
 
@@ -79,7 +99,11 @@ Notes:
   `$...$` shows up as literal text there. GitHub renders `$$...$$` too, so this
   works on both. Plain text loses real typesetting (`\frac`, `\lceil`, ...).
 - Run `./tools/mathfix.py` on new solution files to convert any `$...$` to
-  `$$...$$` (it skips code blocks, inline code, and currency).
+  `$$...$$` (it skips code blocks, inline code, and currency). Use
+  `--check` to preview without writing. This is the canonical math tool;
+  `tools/fix-math-markdown.py` and `tools/fix_complexity_markdown.py` are
+  older scripts that convert math *away* from LaTeX (to Unicode/code spans)
+  and contradict the current `$$...$$` convention — do not run them.
 - Keep explanations concise and focused on why the approach works.
 - Match the documentation style of nearby problems in the same folder/difficulty.
 - Optional `description.md` can contain the LeetCode problem statement, examples, and constraints.
@@ -104,7 +128,7 @@ Follow: <https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/Rules.md>
    - LeetCode link
    - Link(s) to each `solution*.md` variant (`main` for `solution.md`, or the suffix for `solution-<variant>.md`)
 
-The index currently lists **201** problems. Regenerate the tables from the repo if many entries change at once.
+Also update the total problem count in the README header line ("Total: **N** problems") and the per-difficulty count in the section heading. Regenerate the tables from the repo if many entries change at once.
 
 ## Common patterns in this repo
 
