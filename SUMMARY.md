@@ -49,6 +49,7 @@
   * [rust](Easy/2582.Passing-The-Pillow/solution-rust.md)
 * [2696. Minimum String Length After Removing Substrings](Easy/2696.Minimum-String-Length-After-Removing-Substrings/solution.md)
 * [2996. Smallest Missing Integer Greater Than Sequential Prefix Sum](Easy/2996.Smallest-Missing-Integer-Greater-Than-Sequential-Prefix-Sum/solution.md)
+* [3069. Distribute Elements Into Two Arrays I](Easy/3069.Distribute-Elements-Into-Two-Arrays-I/solution.md)
 * [3090. Maximum Length Substring With Two Occurrences](Easy/3090.Maximum-Length-Substring-With-Two-Occurrences/solution.md)
 * [3216. Lexicographically Smallest String After a Swap](Easy/3216.Lexicographically-Smallest-String-After-a-Swap/solution.md)
 * [3314. Construct the Minimum Bitwise Array I](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)

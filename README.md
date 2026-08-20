@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **200** problems with at least one solution file.
+Total: **201** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (50)
+### Easy (51)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,6 +67,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 2582. Passing The Pillow                                           | [Link](https://leetcode.com/problems/passing-the-pillow/)                                           | [rust](Easy/2582.Passing-The-Pillow/solution-rust.md)                                                                                     |
 | 2696. Minimum String Length After Removing Substrings              | [Link](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/)              | [main](Easy/2696.Minimum-String-Length-After-Removing-Substrings/solution.md)                                                             |
 | 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum  | [Link](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/)  | [main](Easy/2996.Smallest-Missing-Integer-Greater-Than-Sequential-Prefix-Sum/solution.md)                                                 |
+| 3069. Distribute Elements Into Two Arrays I                        | [Link](https://leetcode.com/problems/distribute-elements-into-two-arrays-i/)                         | [main](Easy/3069.Distribute-Elements-Into-Two-Arrays-I/solution.md)                                                                      |
 | 3090. Maximum Length Substring With Two Occurrences                | [Link](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/)                | [main](Easy/3090.Maximum-Length-Substring-With-Two-Occurrences/solution.md)                                                               |
 | 3216. Lexicographically Smallest String After a Swap               | [Link](https://leetcode.com/problems/lexicographically-smallest-string-after-a-swap/)               | [main](Easy/3216.Lexicographically-Smallest-String-After-a-Swap/solution.md)                                                              |
 | 3314. Construct the Minimum Bitwise Array I                        | [Link](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/)                        | [main](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)                                                                       |
