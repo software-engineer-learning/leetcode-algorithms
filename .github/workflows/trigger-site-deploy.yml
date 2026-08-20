@@ -1,0 +1,31 @@
+name: Trigger site deploy
+
+# Rebuilds swe.springlee.dev whenever solution content changes: fires the
+# repository_dispatch event that swe-site's deploy workflow listens for.
+# Needs a SITE_DISPATCH_TOKEN secret: a fine-grained PAT for lyxuansang91/swe-site
+# with "Contents: read and write" permission.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Easy/**"
+      - "Medium/**"
+      - "Hard/**"
+      - "README.md"
+      - "SUMMARY.md"
+      - ".gitbook/**"
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch swe-site deploy
+        env:
+          SITE_DISPATCH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+        run: |
+          curl -fsS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${SITE_DISPATCH_TOKEN}" \
+            https://api.github.com/repos/lyxuansang91/swe-site/dispatches \
+            -d '{"event_type":"content-updated"}'
