@@ -1,0 +1,115 @@
+name: GitBook
+
+# GitBook publishes this repo through Git sync (.gitbook.yaml -> SUMMARY.md), so
+# whatever lands on main is what readers see — there is no build step in between
+# to catch a stale table of contents or a link to a folder that was renamed.
+# This workflow is that missing build step:
+#
+#   * on pull requests -> validate only, so a bad TOC never reaches main
+#   * on push to main  -> regenerate the navigation and commit any drift, which
+#                         produces the push GitBook's Git sync reacts to
+#
+# Regenerating on main is what actually "updates GitBook": the commit this job
+# makes is the trigger. No GitBook API token is involved.
+#
+# The bot commit does not re-run this workflow: GitHub suppresses workflow
+# triggers for pushes made with the default GITHUB_TOKEN, so there is no loop.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Easy/**"
+      - "Medium/**"
+      - "Hard/**"
+      - "README.md"
+      - "SUMMARY.md"
+      - "_sidebar.md"
+      - ".gitbook.yaml"
+      - "tools/**"
+      - ".github/workflows/gitbook.yml"
+  pull_request:
+    paths:
+      - "Easy/**"
+      - "Medium/**"
+      - "Hard/**"
+      - "README.md"
+      - "SUMMARY.md"
+      - "_sidebar.md"
+      - ".gitbook.yaml"
+      - "tools/**"
+      - ".github/workflows/gitbook.yml"
+  workflow_dispatch:
+
+# Never let two runs race to commit regenerated navigation.
+concurrency:
+  group: gitbook-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate GitBook sources
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check navigation, links, counts and math
+        run: ./tools/check-nav.sh
+
+      - name: Explain how to fix
+        if: failure()
+        run: |
+          echo "::notice::Run './tools/gen-summary.sh && ./tools/gen-sidebar.sh && ./tools/mathfix.py' locally, then commit the result."
+
+  publish:
+    name: Regenerate navigation and sync
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # A real token is needed so the commit below is pushed as a normal
+          # commit that GitBook's Git sync app can see.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Normalize math for GitBook
+        run: ./tools/mathfix.py
+
+      - name: Regenerate SUMMARY.md and _sidebar.md
+        run: |
+          ./tools/gen-summary.sh
+          ./tools/gen-sidebar.sh
+
+      - name: Commit drift, if any
+        id: commit
+        run: |
+          if git diff --quiet; then
+            echo "Navigation already up to date; nothing to push."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add SUMMARY.md _sidebar.md Easy Medium Hard
+          git commit -m "Regenerate GitBook navigation"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify the state GitBook will sync
+        run: ./tools/check-nav.sh
+
+      - name: Summary
+        run: |
+          {
+            echo "### GitBook sync"
+            echo
+            if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+              echo "Navigation had drifted; regenerated and pushed a commit."
+              echo "GitBook Git sync picks this up on the new push."
+            else
+              echo "Navigation was already correct — GitBook syncs this commit as-is."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
