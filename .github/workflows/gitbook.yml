@@ -143,6 +143,19 @@ jobs:
           echo "--- permissions GitHub expected ---"
           grep -i '^x-accepted-github-permissions:' "$headers" || echo "(header not present)"
 
+          # Which account does the stored secret actually belong to? This repo
+          # runs Actions under the software-engineer-learning org, while the
+          # dispatch target is a personal repo, so the usual mistake is that the
+          # org secret holds a different token than the one being tested locally.
+          # Printing the resolved login (never the token) settles that instantly.
+          echo "--- identity of the stored token ---"
+          who="$(curl -sS -H "Authorization: Bearer ${SITE_DISPATCH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user \
+            | sed -n 's/.*"login": *"\([^"]*\)".*/\1/p' | head -1)"
+          echo "SITE_DISPATCH_TOKEN authenticates as: ${who:-<could not resolve>}"
+          echo "It must be a token owned by the account that can write to lyxuansang91/swe-site."
+
           case "$code" in
             401)
               echo "::error::SITE_DISPATCH_TOKEN was rejected (401). The token is invalid, expired, or stored with stray whitespace. Re-create it and re-save the secret." ;;

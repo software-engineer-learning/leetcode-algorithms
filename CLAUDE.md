@@ -46,7 +46,14 @@ To check the whole publishing surface before pushing:
 ./tools/check-nav.sh   # nav freshness, link resolution, README counts, math convention
 ```
 
-CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages.
+CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages. That workflow then dispatches a rebuild of `swe-site`, authenticated with the `SITE_DISPATCH_TOKEN` secret. If that dispatch returns 403, diagnose the token's scoping with:
+
+```bash
+./tools/check-dispatch-token.sh              # read-only checks
+./tools/check-dispatch-token.sh --dispatch   # also fire a real deploy
+```
+
+It reads the token from `$SITE_DISPATCH_TOKEN` or prompts for it — never pass a token as a command-line argument.
 
 ## Conventions
 
