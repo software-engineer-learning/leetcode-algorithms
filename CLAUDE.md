@@ -40,6 +40,14 @@ The repo is published two ways from the same markdown, each with its own generat
 
 Both scripts derive everything from the `<Difficulty>/<id>.<Title>/solution*.md` layout, so correct folder naming matters.
 
+To check the whole publishing surface before pushing:
+
+```bash
+./tools/check-nav.sh   # nav freshness, link resolution, README counts, math convention
+```
+
+CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages.
+
 ## Conventions
 
 ### Directory naming
