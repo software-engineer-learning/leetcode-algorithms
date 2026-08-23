@@ -78,7 +78,7 @@ It reads the token from `$SITE_DISPATCH_TOKEN` or prompts for it — never pass 
 
 Follow the structure used across the repo:
 
-```md
+````md
 # Intuition
 
 Brief explanation of the key insight.
@@ -105,7 +105,7 @@ Step-by-step algorithm description.
 ```rust
 ...
 ```
-```
+````
 
 Notes:
 
@@ -119,6 +119,16 @@ Notes:
   `tools/fix-math-markdown.py` and `tools/fix_complexity_markdown.py` are
   older scripts that convert math *away* from LaTeX (to Unicode/code spans)
   and contradict the current `$$...$$` convention — do not run them.
+- Open a code fence with three backticks and a bare language token, nothing
+  else. LeetCode's editorial copy adds a trailing `[]` (as in go-space-[]);
+  strip it. GitBook tolerates the suffix, but strict CommonMark parsers
+  (MkDocs/pymdown-superfences, which builds swe.springlee.dev) then fail to
+  see the line as a fence at all, so the code leaks into the page as prose
+  and mangles everything after it.
+- Always close the final fence. An unterminated block renders on GitBook,
+  which closes it implicitly at end of file, but breaks every other renderer.
+- When a fenced block itself contains fences (e.g. the template above), use
+  four backticks for the outer fence.
 - Keep explanations concise and focused on why the approach works.
 - Match the documentation style of nearby problems in the same folder/difficulty.
 - Optional `description.md` can contain the LeetCode problem statement, examples, and constraints.

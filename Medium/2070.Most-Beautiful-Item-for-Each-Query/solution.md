@@ -29,7 +29,7 @@ For each query price, we need to find the maximum beauty among all items with pr
   - Only extra space used is for the output array
 
 # Code
-```java []
+```java
 class Solution {
     public int[] maximumBeauty(int[][] items, int[] queries) {
         Arrays.sort(items, (a, b) -> a[0] - b[0]);

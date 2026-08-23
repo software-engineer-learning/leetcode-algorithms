@@ -37,7 +37,7 @@ Using two pointers, we can:
 
 ## Code
 
-```go []
+```go
 func addSpaces(s string, spaces []int) string {
     a := make([]uint8, 0, len(s) + len(spaces))
     for i, j := 0, 0; i < len(s); i++ {

@@ -25,7 +25,7 @@
 <!-- Add your space complexity here, e.g. O(n) -->
 
 ## Code
-```cpp []
+```cpp
 class Solution {
 public:
     long long maxMatrixSum(vector<vector<int>>& matrix) {
@@ -46,7 +46,7 @@ public:
 };
 ```
 
-```rust []
+```rust
 impl Solution {
     pub fn max_matrix_sum(matrix: Vec<Vec<i32>>) -> i64 {
         let (mut sum, mut min_abs, mut count_neg) = (0i64, i32::MAX, 0);
@@ -67,7 +67,7 @@ impl Solution {
 }
 ```
 
-```go []
+```go
 
 import "math"
 func maxMatrixSum(matrix [][]int) int64 {

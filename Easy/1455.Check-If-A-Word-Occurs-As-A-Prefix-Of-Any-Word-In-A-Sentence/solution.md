@@ -29,7 +29,7 @@ This problem can be solved by splitting the sentence into words, iterating throu
 
 ## Go
 
-```go []
+```go
 import "strings"
 
 func isPrefixOfWord(sentence string, searchWord string) int {
@@ -45,7 +45,7 @@ func isPrefixOfWord(sentence string, searchWord string) int {
 
 ## Java
 
-```java []
+```java
 class Solution {
     public int isPrefixOfWord(String sentence, String searchWord) {
         String[] splitted = sentence.split(" ");

@@ -26,7 +26,7 @@ This problem can be solved efficiently using a monotonic stack. The stack helps 
 
 ## Go
 
-```go []
+```go
 func finalPrices(prices []int) []int {
     n := len(prices)
     stack := []int{}
@@ -49,7 +49,7 @@ func finalPrices(prices []int) []int {
 
 ## Rust
 
-```rust []
+```rust
 use std::collections::VecDeque;
 impl Solution {
     pub fn final_prices(prices: Vec<i32>) -> Vec<i32> {

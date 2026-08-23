@@ -43,7 +43,7 @@ You need: **problem id**, **exact title**, **difficulty** (Easy/Medium/Hard), an
 
 Use the repo template exactly:
 
-```md
+````md
 # Intuition
 
 Brief explanation of the key insight.
@@ -70,7 +70,7 @@ Step-by-step algorithm description.
 ```rust
 ...
 ```
-```
+````
 
 Rules:
 
@@ -78,6 +78,11 @@ Rules:
   when documenting multiple languages. Use a single language-specific file
   (`solution-go.md`, `solution-rust.md`, `solution-cpp.md`) only when the user
   asks for that layout or just one language with extra context.
+- Open code fences with three backticks and a bare language token, nothing
+  else. When pasting from LeetCode, strip the trailing `[]` it adds after the
+  language — GitBook tolerates it, but the MkDocs build of swe.springlee.dev
+  stops recognising the line as a fence and the code leaks in as prose.
+  Always close the final fence too.
 - Use `$$...$$` (KaTeX) for **all** math, including big-O. GitBook's Git sync only
   renders double-dollar math; single `$...$` shows up as literal text there.
   GitHub renders `$$...$$` too, so it works on both. Do **not** use single `$...$`

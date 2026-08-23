@@ -27,7 +27,8 @@
 
 - Note: save every recursive-call's results into a variable is more readable and easier to dry-run/mind-debugging than directly call the recursive inside the check max function, but YMMV.
 
-```class Solution {
+```cpp
+class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size(), res = 0;
