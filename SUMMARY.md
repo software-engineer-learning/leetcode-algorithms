@@ -139,6 +139,7 @@
   * [go](Medium/1905.Count-Sub-Islands/solution-go.md)
   * [java](Medium/1905.Count-Sub-Islands/solution-java.md)
 * [1922. Count Good Numbers](Medium/1922.Count-Good-Numbers/solution.md)
+* [1927. Sum Game](Medium/1927.Sum-Game/solution.md)
 * [1942. The Number of the Smallest Unoccupied Chair](Medium/1942.The-Number-of-the-Smallest-Unoccupied-Chair/solution.md)
 * [1963. Minimum Number of Swaps to Make the String Balanced](Medium/1963.Minimum-Number-of-Swaps-to-Make-the-String-Balanced/solution.md)
 * [1975. Maxium Matrix Sum](Medium/1975.Maxium-Matrix-Sum/solution.md)
