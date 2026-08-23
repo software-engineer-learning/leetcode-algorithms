@@ -49,8 +49,8 @@ half of the returned condition.
 ### Where the 9 comes from
 
 Group the blanks into pairs, which is possible because there is an even number of
-them. Writing `a` for the left blank count and `b` for the right, and taking
-$$a \le b$$ for concreteness:
+them. Writing `a` for the left blank count and `b` for the right, and
+taking $$a \le b$$ for concreteness:
 
 - **`a` cross pairs**, each holding one blank in the left half and one in the right.
 - **`(b - a) / 2` same-side pairs**, each holding two blanks in the right half —
@@ -70,16 +70,17 @@ pair, so every pair resolves this way. Cross pairs move `sumDiff` by `0`; each o
 the `(b - a) / 2` same-side pairs drives it down by `9`. The final difference is
 therefore forced to
 
-$$\text{sumDiff} - \frac{9 \cdot (b - a)}{2}
-  \;=\; \text{sumDiff} + \frac{9 \cdot \text{cntDiff}}{2}$$
+$$\text{sumDiff} - \frac{9 \cdot (b - a)}{2} = \text{sumDiff} + \frac{9 \cdot \text{cntDiff}}{2}$$
 
 since $$\text{cntDiff} = a - b$$. Bob wins exactly when that lands on zero.
 
 ### Why the formula is doubled
 
-Setting the expression above to zero gives
-$$\text{sumDiff} = -\,\frac{9 \cdot \text{cntDiff}}{2}$$, which involves a division
-by two. Multiplying both sides through by `2` clears it:
+Setting the expression above to zero gives the balance point
+
+$$\text{sumDiff} = -\frac{9 \cdot \text{cntDiff}}{2}$$
+
+which involves a division by two. Multiplying both sides through by `2` clears it:
 
 $$2 \cdot \text{sumDiff} + 9 \cdot \text{cntDiff} = 0$$
 
@@ -110,8 +111,8 @@ even, 2*sumDiff + 9*cntDiff != 0  -> Alice wins
 The signed convention keeps working in both directions with no special cases:
 
 - `cntDiff < 0` — the right half holds surplus blanks, so those pairs will add to
-  the right. Bob needs the left half to start *ahead*, and indeed
-  $$\text{sumDiff} = -9 \cdot \text{cntDiff} / 2$$ is then positive.
+  the right. Bob needs the left half to start *ahead*, and the required
+  value $$-9 \cdot \text{cntDiff} / 2$$ is then positive.
 - `cntDiff > 0` — the surplus is on the left, so Bob needs the left half to start
   *behind*, and the required `sumDiff` is negative.
 - `cntDiff == 0` — the blanks pair up across the halves and cancel, so Bob simply
