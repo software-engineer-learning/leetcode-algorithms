@@ -42,7 +42,7 @@ done
 if [ -z "$REPO" ] && [ -f "$WORKFLOW" ]; then
   REPO="$(sed -n 's|.*api\.github\.com/repos/\([^/]*/[^/]*\)/dispatches.*|\1|p' "$WORKFLOW" | head -1)"
 fi
-REPO="${REPO:-lyxuansang91/swe-site}"
+REPO="${REPO:-software-engineer-learning/swe-site}"
 
 if [ -z "${SITE_DISPATCH_TOKEN:-}" ]; then
   printf 'SITE_DISPATCH_TOKEN (input hidden): ' >&2

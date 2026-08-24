@@ -115,7 +115,7 @@ jobs:
         run: |
           if [ -z "${SITE_DISPATCH_TOKEN}" ]; then
             echo "::error::SITE_DISPATCH_TOKEN is not set — swe-site will not rebuild."
-            echo "Add a fine-grained PAT for lyxuansang91/swe-site with 'Contents: read and write'."
+            echo "Add a fine-grained PAT for software-engineer-learning/swe-site with 'Contents: read and write'."
             exit 1
           fi
           # No -f here: it suppresses the response body, and GitHub puts the
@@ -129,11 +129,11 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Authorization: Bearer ${SITE_DISPATCH_TOKEN}" \
-            https://api.github.com/repos/lyxuansang91/swe-site/dispatches \
+            https://api.github.com/repos/software-engineer-learning/swe-site/dispatches \
             -d '{"event_type":"content-updated"}')"
 
           if [ "$code" = "204" ]; then
-            echo "Dispatched content-updated to lyxuansang91/swe-site."
+            echo "Dispatched content-updated to software-engineer-learning/swe-site."
             exit 0
           fi
 
@@ -154,13 +154,13 @@ jobs:
             https://api.github.com/user \
             | sed -n 's/.*"login": *"\([^"]*\)".*/\1/p' | head -1)"
           echo "SITE_DISPATCH_TOKEN authenticates as: ${who:-<could not resolve>}"
-          echo "It must be a token owned by the account that can write to lyxuansang91/swe-site."
+          echo "It must be a token owned by the account that can write to software-engineer-learning/swe-site."
 
           case "$code" in
             401)
               echo "::error::SITE_DISPATCH_TOKEN was rejected (401). The token is invalid, expired, or stored with stray whitespace. Re-create it and re-save the secret." ;;
             403)
-              echo "::error::Token authenticated but is not authorized (403). Fine-grained PATs need lyxuansang91/swe-site listed under 'Repository access' AND 'Contents: Read and write'. Check both." ;;
+              echo "::error::Token authenticated but is not authorized (403). Fine-grained PATs need software-engineer-learning/swe-site listed under 'Repository access' AND 'Contents: Read and write'. Check both." ;;
             404)
               echo "::error::Repository not visible to this token (404). Fine-grained PATs return 404 for private repos they were not granted access to — add swe-site to the token's selected repositories." ;;
             *)
