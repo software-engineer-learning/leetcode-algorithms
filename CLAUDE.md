@@ -46,14 +46,16 @@ To check the whole publishing surface before pushing:
 ./tools/check-nav.sh   # nav freshness, link resolution, README counts, math convention
 ```
 
-CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages. That workflow then dispatches a rebuild of `swe-site`, authenticated with the `SITE_DISPATCH_TOKEN` secret. If that dispatch returns 403, diagnose the token's scoping with:
+CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages. That workflow then rebuilds `swe-site` by calling a Cloudflare Pages **deploy hook** stored in the `SITE_DEPLOY_HOOK` secret. The hook is an unguessable URL with no auth header — possession of the URL is the authorisation, so there is no token to scope or renew, but the URL itself is a secret and must never be logged. Check it with:
 
 ```bash
-./tools/check-dispatch-token.sh              # read-only checks
-./tools/check-dispatch-token.sh --dispatch   # also fire a real deploy
+./tools/check-deploy-hook.sh          # shape checks only, no deploy
+./tools/check-deploy-hook.sh --fire   # actually trigger a rebuild
 ```
 
-It reads the token from `$SITE_DISPATCH_TOKEN` or prompts for it — never pass a token as a command-line argument.
+It reads the URL from `$SITE_DEPLOY_HOOK` or prompts for it — never pass it as a command-line argument. Create or regenerate the hook in the Cloudflare dashboard under Workers & Pages → `swe-site` → Settings → Builds & deployments → Deploy hooks.
+
+This replaced an earlier `repository_dispatch` call authenticated with a personal access token. That approach could not work: `swe-site` belongs to the `software-engineer-learning` org, and a fine-grained PAT owned by a user account can never hold write permissions on an organisation's repository.
 
 ## Conventions
 
