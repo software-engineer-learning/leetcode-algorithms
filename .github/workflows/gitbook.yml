@@ -17,11 +17,16 @@ name: GitBook
 # regenerated SUMMARY.md instead of racing the commit that fixes it. This
 # replaces the old trigger-site-deploy.yml.
 #
-# The rebuild goes through a Cloudflare Pages deploy hook rather than a GitHub
-# repository_dispatch. A deploy hook is an unguessable URL that needs no token,
-# so there is nothing to scope to an owner and nothing that expires -- the
-# previous PAT approach could not work at all, because swe-site belongs to the
-# software-engineer-learning org while the token was owned by a user account.
+# The rebuild goes through a GitHub repository_dispatch at swe-site, which is
+# what swe-site/.github/workflows/deploy.yml listens for. That workflow runs
+# build.sh, which clones all four content repos, runs scripts/prepare.sh and
+# mkdocs build, then uploads the result with `wrangler pages deploy`.
+#
+# Do NOT swap this back to a Cloudflare Pages deploy hook. swe-site is a Direct
+# Upload project, so a hook has no repo to clone and no build command to run --
+# it re-serves the already-uploaded assets, which looks like a successful deploy
+# while the content stays stale. Deploy hooks only build on Git-connected Pages
+# projects, and connecting swe-site would run its build twice.
 #
 # The bot commit does not re-run this workflow: GitHub suppresses workflow
 # triggers for pushes made with the default GITHUB_TOKEN, so there is no loop.
@@ -117,39 +122,47 @@ jobs:
 
       - name: Trigger swe-site rebuild
         env:
-          SITE_DEPLOY_HOOK: ${{ secrets.SITE_DEPLOY_HOOK }}
+          SITE_DISPATCH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
         run: |
-          if [ -z "${SITE_DEPLOY_HOOK}" ]; then
-            echo "::error::SITE_DEPLOY_HOOK is not set — swe-site will not rebuild."
-            echo "Create one in the Cloudflare dashboard: Workers & Pages -> swe-site ->"
-            echo "Settings -> Builds & deployments -> Deploy hooks. Save the whole URL as"
-            echo "the SITE_DEPLOY_HOOK secret; the URL itself is the credential."
+          if [ -z "${SITE_DISPATCH_TOKEN}" ]; then
+            echo "::error::SITE_DISPATCH_TOKEN is not set — swe-site will not rebuild."
+            echo "Create a classic PAT with the 'repo' scope on an account that can write to"
+            echo "software-engineer-learning/swe-site, then save it as an organisation secret"
+            echo "named SITE_DISPATCH_TOKEN so every content repo picks it up at once."
             exit 1
           fi
 
-          # No -f: it discards the response body, and Cloudflare reports the
-          # reason for a failure there. The hook takes no auth header and no
-          # payload -- possession of the URL is the authorisation, which is why
-          # it must never be echoed.
+          # No -f: it discards the response body, and GitHub explains a refusal there.
           resp="$(mktemp)"
-          code="$(curl -sS -X POST -o "$resp" -w '%{http_code}' "${SITE_DEPLOY_HOOK}")"
+          code="$(curl -sS -X POST \
+            -o "$resp" -w '%{http_code}' \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${SITE_DISPATCH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/software-engineer-learning/swe-site/dispatches \
+            -d "{\"event_type\":\"content-updated\",\"client_payload\":{\"repo\":\"${GITHUB_REPOSITORY}\",\"sha\":\"${GITHUB_SHA}\"}}")"
 
-          if [ "$code" = "200" ] && grep -q '"success":[[:space:]]*true' "$resp"; then
-            echo "Deploy hook accepted — swe-site is rebuilding."
+          # A successful dispatch is 204 with an empty body.
+          if [ "$code" = "204" ]; then
+            echo "Dispatch accepted — swe-site is rebuilding."
             exit 0
           fi
 
-          echo "Cloudflare returned HTTP $code"
+          echo "GitHub returned HTTP $code"
           echo "--- response body ---"
           cat "$resp"; echo
 
           case "$code" in
-            401|403)
-              echo "::error::Deploy hook rejected ($code). The hook was probably deleted or regenerated in the Cloudflare dashboard — create a new one and update the SITE_DEPLOY_HOOK secret." ;;
+            401)
+              echo "::error::Token rejected (401). SITE_DISPATCH_TOKEN is expired, revoked or truncated — regenerate it and update the organisation secret." ;;
+            403)
+              echo "::error::Token refused (403). It lacks write access to swe-site. A classic PAT needs the 'repo' scope; a fine-grained PAT needs 'Contents: read and write' on swe-site AND the organisation must allow fine-grained tokens (Org settings -> Personal access tokens). If the org enforces SAML SSO, authorise the token for it." ;;
             404)
-              echo "::error::Deploy hook not found (404). The stored URL points at a hook that no longer exists, or the secret is truncated. Re-copy the full URL from Cloudflare." ;;
+              echo "::error::Repository not found (404). GitHub returns 404 rather than 403 when the token cannot see swe-site at all — check the token's repository access." ;;
+            422)
+              echo "::error::Dispatch rejected (422). The payload was malformed, or swe-site's deploy.yml no longer listens for the 'content-updated' event type." ;;
             *)
-              echo "::error::Deploy hook call failed with HTTP $code." ;;
+              echo "::error::Dispatch failed with HTTP $code." ;;
           esac
           exit 1
 
@@ -165,5 +178,5 @@ jobs:
               echo "Navigation was already correct — GitBook syncs this commit as-is."
             fi
             echo
-            echo "Called the swe-site deploy hook."
+            echo "Fired the content-updated dispatch at swe-site."
           } >> "$GITHUB_STEP_SUMMARY"

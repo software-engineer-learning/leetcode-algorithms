@@ -46,16 +46,16 @@ To check the whole publishing surface before pushing:
 ./tools/check-nav.sh   # nav freshness, link resolution, README counts, math convention
 ```
 
-CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages. That workflow then rebuilds `swe-site` by calling a Cloudflare Pages **deploy hook** stored in the `SITE_DEPLOY_HOOK` secret. The hook is an unguessable URL with no auth header — possession of the URL is the authorisation, so there is no token to scope or renew, but the URL itself is a secret and must never be logged. Check it with:
+CI runs the same script: `.github/workflows/gitbook.yml` validates it on pull requests and, on pushes to `main`, regenerates the navigation and commits any drift so GitBook's Git sync publishes correct pages. That workflow then rebuilds `swe-site` by POSTing a `content-updated` **repository_dispatch** to `software-engineer-learning/swe-site`, authenticated with the `SITE_DISPATCH_TOKEN` secret (a classic PAT with the `repo` scope). `swe-site/.github/workflows/deploy.yml` listens for that event and is the only thing that rebuilds the site — it clones all four content repos, runs `mkdocs build`, and uploads the result with `wrangler pages deploy`. Check the token with:
 
 ```bash
-./tools/check-deploy-hook.sh          # shape checks only, no deploy
-./tools/check-deploy-hook.sh --fire   # actually trigger a rebuild
+./tools/check-dispatch-token.sh          # token and permission checks, no deploy
+./tools/check-dispatch-token.sh --fire   # actually trigger a rebuild
 ```
 
-It reads the URL from `$SITE_DEPLOY_HOOK` or prompts for it — never pass it as a command-line argument. Create or regenerate the hook in the Cloudflare dashboard under Workers & Pages → `swe-site` → Settings → Builds & deployments → Deploy hooks.
+It reads the token from `$SITE_DISPATCH_TOKEN` or prompts for it — never pass it as a command-line argument.
 
-This replaced an earlier `repository_dispatch` call authenticated with a personal access token. That approach could not work: `swe-site` belongs to the `software-engineer-learning` org, and a fine-grained PAT owned by a user account can never hold write permissions on an organisation's repository.
+**Do not swap this for a Cloudflare Pages deploy hook.** That was tried and it silently did nothing: `swe-site` is a Direct Upload Pages project, so a hook has no repo to clone and no build command to run — it re-serves the already-uploaded assets, returning `success: true` while the content stays stale. Deploy hooks only build on Git-connected Pages projects. The hook was adopted on the belief that a fine-grained PAT owned by a personal account can never write to an org repo; that is not true — it works once the org enables fine-grained token access, and a classic PAT with `repo` scope works regardless.
 
 ## Conventions
 
