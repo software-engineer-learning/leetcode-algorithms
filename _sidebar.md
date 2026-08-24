@@ -209,6 +209,7 @@
   - [1301. Number of Paths with Max Score](Hard/1301.Number-of-Paths-with-Max-Score/solution.md)
   - [1510. Stone Game IV](Hard/1510.Stone-Game-IV/solution.md)
   - [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](Hard/1579.Remove-Max-Number-of-Edges-to-Keep-Graph-Fully-Traversable/solution.md)
+  - [1872. Stone Game VIII](Hard/1872.Stone-Game-VIII/solution.md)
   - [2071. Maximum Number of Tasks You Can Assign](Hard/2071.Maximum-Number-of-Tasks-You-Can-Assign/solution.md)
   - [2302. Count Subarrays With Score Less Than K](Hard/2302.Count-Subarrays-With-Score-Less-Than-K/solution.md)
   - [2392. Build a Matrix With Conditions](Hard/2392.Build-a-Matrix-With-Conditions/solution.md)
