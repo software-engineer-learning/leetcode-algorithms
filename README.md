@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **204** problems with at least one solution file.
+Total: **205** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (52)
+### Easy (53)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -77,6 +77,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3622. Check Divisibility by Digit Sum and Product                  | [Link](https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product/)                  | [main](Easy/3622.Check-Divisibility-by-Digit-Sum-and-Product/solution.md)                                                                 |
 | 3637. Trionic Array I                                              | [Link](https://leetcode.com/problems/trionic-array-i/)                                              | [main](Easy/3637.Trionic-Array-I/solution.md)                                                                                             |
 | 3658. GCD of Odd and Even Sums                                     | [Link](https://leetcode.com/problems/gcd-of-odd-and-even-sums/)                                     | [main](Easy/3658.GCD-of-Odd-and-Even-Sums/solution.md)                                                                                   |
+| 3718. Smallest Missing Multiple of K                               | [Link](https://leetcode.com/problems/smallest-missing-multiple-of-k/)                               | [main](Easy/3718.Smallest-Missing-Multiple-of-K/solution.md)                                                                            |
 | 3731. Find Missing Elements                                        | [Link](https://leetcode.com/problems/find-missing-elements/)                                        | [main](Easy/3731.Find-Missing-Elements/solution.md)                                                                                     |
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 

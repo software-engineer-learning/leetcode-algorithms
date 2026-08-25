@@ -59,6 +59,7 @@
 * [3622. Check Divisibility by Digit Sum and Product](Easy/3622.Check-Divisibility-by-Digit-Sum-and-Product/solution.md)
 * [3637. Trionic Array I](Easy/3637.Trionic-Array-I/solution.md)
 * [3658. GCD of Odd and Even Sums](Easy/3658.GCD-of-Odd-and-Even-Sums/solution.md)
+* [3718. Smallest Missing Multiple of K](Easy/3718.Smallest-Missing-Multiple-of-K/solution.md)
 * [3731. Find Missing Elements](Easy/3731.Find-Missing-Elements/solution.md)
 * [3754. Concatenate Non Zero Digits and Multiply by Sum I](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)
 
