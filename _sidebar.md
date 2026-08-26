@@ -170,6 +170,7 @@
   - [2707. Extra Characters In A String](Medium/2707.Extra-Characters-In-A-String/solution.md)
   - [2779. Maximum Beauty Of An Array After Applying Operation](Medium/2779.Maximum-Beauty-Of-An-Array-After-Applying-Operation/solution.md)
   - [2825. Make String a Subsequence Using Cyclic Increments](Medium/2825.Make-String-a-Subsequence-Using-Cyclic-Increments/solution.md)
+  - [2904. Shortest and Lexicographically Smallest Beautiful String](Medium/2904.Shortest-and-Lexicographically-Smallest-Beautiful-String/solution.md)
   - [2924. Find Champion II](Medium/2924.Find-Champion-II/solution.md)
   - [2958. Length of Longest Subarray With at Most K Frequency](Medium/2958.Length-of-Longest-Subarray-With-at-Most-K-Frequency/solution.md)
   - [3016. Minimum Number of Pushes to Type Word II](Medium/3016.Minimum-Number-of-Pushes-to-Type-Word-II/solution.md)
