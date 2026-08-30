@@ -142,6 +142,7 @@
   - [2028. Find Missing Observations](Medium/2028.Find-Missing-Observations/solution.md)
   - [2058. Find the Minimum and Maximum Number of Nodes Between Critical Points](Medium/2058.Find-the-Minimum-and-Maximum-Number-of-Nodes-Between-Critical-Points/solution.md)
   - [2070. Most Beautiful Item for Each Query](Medium/2070.Most-Beautiful-Item-for-Each-Query/solution.md)
+  - [2091. Removing Minimum and Maximum From Array](Medium/2091.Removing-Minimum-and-Maximum-From-Array/solution.md)
   - 2096. Step By Step Directions From A Binary Tree Node To Another
     - [go](Medium/2096.Step-By-Step-Directions-From-A-Binary-Tree-Node-To-Another/solution-go.md)
   - [2109. Adding Spaces To A String](Medium/2109.Adding-Spaces-To-A-String/solution.md)
