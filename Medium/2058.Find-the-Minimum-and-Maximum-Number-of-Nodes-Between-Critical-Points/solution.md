@@ -46,6 +46,8 @@ than with a bounds check:
   fails and the node is skipped.
 - **Go** starts `cur` at `head.Next` so the head is never tested, and loops
   `for cur.Next != nil` so it stops before the tail.
+- **Python** does the same as Go: `cur_node` starts at `head.next` and the loop
+  runs `while cur_node.next is not None`.
 - **C++** starts its window at `head->next` and ends when `tmp1` becomes null,
   which is the same bracketing.
 
@@ -62,22 +64,25 @@ point was found, where `first_idx == last_idx` and `min_distance` is still
 The first two clauses are redundant — if `first_idx` is `-1` then nothing was ever
 found and `last_idx` is `-1` as well, so the third clause already covers it.
 
-## The Go version counts from a shifted origin
+## The Go and Python versions count from a shifted origin
 
-Go initialises `pos = 0` while `cur` already points at the **second** node, so
-`pos` runs one behind the true 0-based index. For `[5,3,1,2,5,1,2]` the critical
-points sit at true indices `2, 4, 5` but Go records them as `1, 3, 4`.
+Both initialise their counter at `0` while the cursor already points at the
+**second** node, so it runs one behind the true 0-based index. For
+`[5,3,1,2,5,1,2]` the critical points sit at true indices `2, 4, 5` but Go and
+Python both record them as `1, 3, 4`.
 
 That is harmless because every reported value is a **difference**, and a constant
 offset cancels: the gaps are `2, 1` either way and the span is `3` either way. The
 Rust and C++ versions track absolute indices instead, and all three agree on every
 output.
 
-## Both pointer versions rely on the list having two or more nodes
+## The Go and Python versions rely on the list having two or more nodes
 
-Go dereferences `head.Next` before the loop, so a single-node list sets `cur` to
-`nil` and then panics on `cur.Next`. Verified: it aborts with a nil pointer
-dereference. The constraints guarantee at least two nodes, so it never triggers,
+Both dereference the second node before the loop starts, so a single-node list
+breaks them: Go sets `cur` to `nil` and panics on `cur.Next`, and Python sets
+`cur_node` to `None` and raises
+`AttributeError: 'NoneType' object has no attribute 'next'`. Both were confirmed
+by running them. The constraints guarantee at least two nodes so neither triggers,
 but it is a genuine dependency on the input promise rather than a defensive
 implementation. The C++ version instead returns `[-1, -1]` up front for any list
 shorter than three nodes.
@@ -130,9 +135,10 @@ A fully alternating list: every interior node is critical, so the minimum gap is
 
 - Time complexity: $$O(n)$$ — one traversal, constant work per node, where `n` is
   the number of nodes.
-- Space complexity: $$O(1)$$ for the Go and Rust versions, which keep only a few
-  indices. The C++ version stores every critical index, so it is $$O(c)$$ where
-  `c` is the number of critical points — up to $$O(n)$$ on an alternating list.
+- Space complexity: $$O(1)$$ for the Go, Rust and Python versions, which keep only
+  a few indices. The C++ version stores every critical index, so it is $$O(c)$$
+  where `c` is the number of critical points — up to $$O(n)$$ on an alternating
+  list.
 
 # Code
 
@@ -247,6 +253,49 @@ sidestepping lifetimes entirely.
 `last_idx - first_idx`. The compiler emits an unused-variable warning for it, so
 dropping it and its `mut` is a harmless cleanup.
 
+## Python
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
+        ans = [-1, -1]
+        prev_node, cur_node = head, head.next
+        prev_index, first_index = -1, -1
+        index = 0
+        while cur_node.next is not None:
+            if (
+                (cur_node.val < prev_node.val and cur_node.val < cur_node.next.val)
+                or (cur_node.val > prev_node.val and cur_node.val > cur_node.next.val)
+            ):
+                if first_index == -1:
+                    first_index = index
+                    prev_index = index
+                else:
+                    if ans[0] == -1:
+                        ans[0] = index - prev_index
+                    else:
+                        ans[0] = min(ans[0], index - prev_index)
+                    ans[1] = index - first_index
+                    prev_index = index
+            index += 1
+            prev_node = cur_node
+            cur_node = cur_node.next
+
+        return ans
+```
+
+Structurally this is the Go version in Python: the same shifted `index`, the same
+write-into-`ans` trick that makes the `[-1, -1]` default fall out for free, and the
+same reliance on the list having at least two nodes. It keeps a single
+`prev_index` rather than Go's `prePos`/`curPos` pair, updating it at the end of
+each branch, which is a little easier to follow — there is only ever one "previous
+critical point" to remember.
+
 ## C++
 
 ```cpp
@@ -295,9 +344,9 @@ closer to the definition at the cost of holding the indices.
 | `[1,2,1]` | `1` | `[-1,-1]` | exactly one critical point |
 | `[2,2,2,2]` | none | `[-1,-1]` | a flat run has no strict extremes |
 
-The Go and Rust implementations were checked against a reference that collects
-every critical index from the definition, then takes the minimum adjacent gap and
-the total span. The corpus was **15840** cases: the three examples, every list of
+The Go, Rust and Python implementations were checked against a reference that
+collects every critical index from the definition, then takes the minimum adjacent
+gap and the total span. The corpus was **15840** cases: the three examples, every list of
 length 2 to 8 over the alphabet `{1,2,3}` (exhaustive, so plateaus and ties are
 covered densely), 4000 random lists over `{1,2,3,4}`, and 2000 random lists over
-the full value range. Both matched the reference on every case.
+the full value range. All three matched the reference on every case.
