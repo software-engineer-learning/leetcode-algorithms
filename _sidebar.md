@@ -188,6 +188,7 @@
   - [3514. Number of Unique XOR Triplets II](Medium/3514.Number-of-Unique-XOR-Triplets-II/solution.md)
   - [3517. Smallest Palindromic Rearrangement I](Medium/3517.Smallest-Palindromic-Rearrangement-I/solution.md)
   - [3532. Path Existence Queries in a Graph I](Medium/3532.Path-Existence-Queries-in-a-Graph-I/solution.md)
+  - [3568. Minimum Moves to Clean the Classroom](Medium/3568.Minimum-Moves-to-Clean-the-Classroom/solution.md)
   - [3702. Longest Subsequence With Non Zero Bitwise XOR](Medium/3702.Longest-Subsequence-With-Non-Zero-Bitwise-XOR/solution.md)
   - [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
   - [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
