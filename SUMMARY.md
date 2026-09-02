@@ -62,6 +62,7 @@
 * [3718. Smallest Missing Multiple of K](Easy/3718.Smallest-Missing-Multiple-of-K/solution.md)
 * [3731. Find Missing Elements](Easy/3731.Find-Missing-Elements/solution.md)
 * [3754. Concatenate Non Zero Digits and Multiply by Sum I](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)
+* [3875. Construct Uniform Parity Array I](Easy/3875.Construct-Uniform-Parity-Array-I/solution.md)
 
 ## Medium
 

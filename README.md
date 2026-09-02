@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **208** problems with at least one solution file.
+Total: **209** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (53)
+### Easy (54)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -80,6 +80,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3718. Smallest Missing Multiple of K                               | [Link](https://leetcode.com/problems/smallest-missing-multiple-of-k/)                               | [main](Easy/3718.Smallest-Missing-Multiple-of-K/solution.md)                                                                            |
 | 3731. Find Missing Elements                                        | [Link](https://leetcode.com/problems/find-missing-elements/)                                        | [main](Easy/3731.Find-Missing-Elements/solution.md)                                                                                     |
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
+| 3875. Construct Uniform Parity Array I                             | [Link](https://leetcode.com/problems/construct-uniform-parity-array-i/)                             | [main](Easy/3875.Construct-Uniform-Parity-Array-I/solution.md)                                                                            |
 
 ### Medium (121)
 
