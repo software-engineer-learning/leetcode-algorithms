@@ -19,7 +19,7 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **209** problems with at least one solution file.
+Total: **210** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
@@ -82,7 +82,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 | 3875. Construct Uniform Parity Array I                             | [Link](https://leetcode.com/problems/construct-uniform-parity-array-i/)                             | [main](Easy/3875.Construct-Uniform-Parity-Array-I/solution.md)                                                                            |
 
-### Medium (121)
+### Medium (122)
 
 | Problem                                                                          | LeetCode                                                                                                          | Solution                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -207,6 +207,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3702. Longest Subsequence With Non-Zero Bitwise XOR                              | [Link](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor/)                              | [main](Medium/3702.Longest-Subsequence-With-Non-Zero-Bitwise-XOR/solution.md)                                                                                                                                                                                                                           |
 | 3756. Concatenate Non-Zero Digits and Multiply by Sum II                           | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/)                         | [main](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)                                                                                                                                                                                                                      |
 | 3867. Sum of GCD of Formed Pairs                                                   | [Link](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/)                                                 | [main](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)                                                                                                                                                                                                                                              |
+| 3876. Construct Uniform Parity Array II                                            | [Link](https://leetcode.com/problems/construct-uniform-parity-array-ii/)                                          | [main](Medium/3876.Construct-Uniform-Parity-Array-II/solution.md)                                                                                                                                                                                                                                       |
 
 ### Hard (34)
 

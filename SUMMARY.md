@@ -198,6 +198,7 @@
 * [3702. Longest Subsequence With Non Zero Bitwise XOR](Medium/3702.Longest-Subsequence-With-Non-Zero-Bitwise-XOR/solution.md)
 * [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
 * [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
+* [3876. Construct Uniform Parity Array II](Medium/3876.Construct-Uniform-Parity-Array-II/solution.md)
 
 ## Hard
 
