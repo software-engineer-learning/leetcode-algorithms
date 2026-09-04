@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **210** problems with at least one solution file.
+Total: **212** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (54)
+### Easy (55)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,8 +81,9 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3731. Find Missing Elements                                        | [Link](https://leetcode.com/problems/find-missing-elements/)                                        | [main](Easy/3731.Find-Missing-Elements/solution.md)                                                                                     |
 | 3754. Concatenate Non-Zero Digits and Multiply by Sum I            | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)            | [main](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)                                                           |
 | 3875. Construct Uniform Parity Array I                             | [Link](https://leetcode.com/problems/construct-uniform-parity-array-i/)                             | [main](Easy/3875.Construct-Uniform-Parity-Array-I/solution.md)                                                                            |
+| 3903. Smallest Stable Index I                                      | [Link](https://leetcode.com/problems/smallest-stable-index-i/)                                      | [main](Easy/3903.Smallest-Stable-Index-I/solution.md)                                                                                     |
 
-### Medium (122)
+### Medium (123)
 
 | Problem                                                                          | LeetCode                                                                                                          | Solution                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -208,6 +209,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3756. Concatenate Non-Zero Digits and Multiply by Sum II                           | [Link](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/)                         | [main](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)                                                                                                                                                                                                                      |
 | 3867. Sum of GCD of Formed Pairs                                                   | [Link](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/)                                                 | [main](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)                                                                                                                                                                                                                                              |
 | 3876. Construct Uniform Parity Array II                                            | [Link](https://leetcode.com/problems/construct-uniform-parity-array-ii/)                                          | [main](Medium/3876.Construct-Uniform-Parity-Array-II/solution.md)                                                                                                                                                                                                                                       |
+| 3904. Smallest Stable Index II                                                     | [Link](https://leetcode.com/problems/smallest-stable-index-ii/)                                                   | [main](Medium/3904.Smallest-Stable-Index-II/solution.md)                                                                                                                                                                                                                                                |
 
 ### Hard (34)
 

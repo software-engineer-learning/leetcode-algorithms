@@ -63,6 +63,7 @@
 * [3731. Find Missing Elements](Easy/3731.Find-Missing-Elements/solution.md)
 * [3754. Concatenate Non Zero Digits and Multiply by Sum I](Easy/3754.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-I/solution.md)
 * [3875. Construct Uniform Parity Array I](Easy/3875.Construct-Uniform-Parity-Array-I/solution.md)
+* [3903. Smallest Stable Index I](Easy/3903.Smallest-Stable-Index-I/solution.md)
 
 ## Medium
 
@@ -199,6 +200,7 @@
 * [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
 * [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
 * [3876. Construct Uniform Parity Array II](Medium/3876.Construct-Uniform-Parity-Array-II/solution.md)
+* [3904. Smallest Stable Index II](Medium/3904.Smallest-Stable-Index-II/solution.md)
 
 ## Hard
 
