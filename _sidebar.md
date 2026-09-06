@@ -201,6 +201,7 @@
   - [23. Merge k Sorted Lists](Hard/23.Merge-k-Sorted-Lists/solution.md)
   - [37. Sudoku Solver](Hard/37.%20Sudoku%20Solver/solution.md)
   - [41. First Missing Positive](Hard/41.First-Missing-Positive/solution.md)
+  - [115. Distinct Subsequences](Hard/115.Distinct-Subsequences/solution.md)
   - [188. Best Time to Buy and Sell Stock IV](Hard/188.Best-Time-to-Buy-and-Sell-Stock-IV/solution.md)
   - [212. Word Search II](Hard/212.Word-Search-II/solution.md)
   - [214. Shortest Palindrome](Hard/214.Shortest-Palindrome/solution.md)
