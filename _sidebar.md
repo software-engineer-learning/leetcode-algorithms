@@ -213,6 +213,7 @@
   - [726. Number of Atoms](Hard/726.Number-of-Atoms/solution.md)
   - [773. Sliding Puzzle](Hard/773.Sliding-Puzzle/solution.md)
   - [862. Shortest Subarray with Sum at Least K](Hard/862.Shortest-Subarray-with-Sum-at-Least-K/solution.md)
+  - [940. Distinct Subsequences II](Hard/940.Distinct-Subsequences-II/solution.md)
   - [995. Minimum Number of K Consecutive Bit Flips](Hard/995.Minimum-Number-of-K-Consecutive-Bit-Flips/solution.md)
   - [1106. Parsing A Boolean Expression](Hard/1106.Parsing-A-Boolean-Expression/solution.md)
   - [1301. Number of Paths with Max Score](Hard/1301.Number-of-Paths-with-Max-Score/solution.md)
