@@ -200,6 +200,7 @@
 * [3702. Longest Subsequence With Non Zero Bitwise XOR](Medium/3702.Longest-Subsequence-With-Non-Zero-Bitwise-XOR/solution.md)
 * [3756. Concatenate Non Zero Digits and Multiply by Sum II](Medium/3756.Concatenate-Non-Zero-Digits-and-Multiply-by-Sum-II/solution.md)
 * [3867. Sum of GCD of Formed Pairs](Medium/3867.Sum-of-GCD-of-Formed-Pairs/solution.md)
+* [3871. Count Commas in Range II](Medium/3871.Count-Commas-in-Range-II/solution.md)
 * [3876. Construct Uniform Parity Array II](Medium/3876.Construct-Uniform-Parity-Array-II/solution.md)
 * [3904. Smallest Stable Index II](Medium/3904.Smallest-Stable-Index-II/solution.md)
 
