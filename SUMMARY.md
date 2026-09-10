@@ -164,6 +164,7 @@
   * [java](Medium/2196.Create-Binary-Tree-From-Descriptions/solution-java.md)
   * [rust](Medium/2196.Create-Binary-Tree-From-Descriptions/solution-rust.md)
 * [2226. Maximum candies allocate to K children](Medium/2226.%20Maximum-candies-allocate-to-K-children/solution.md)
+* [2265. Count Nodes Equal to Average of Subtree](Medium/2265.Count-Nodes-Equal-to-Average-of-Subtree/solution.md)
 * [2270. Number Of Ways To Split Array](Medium/2270.Number-Of-Ways-To-Split-Array/solution.md)
 * [2285. Maximum Total Importance of Roads](Medium/2285.Maximum-Total-Importance-of-Roads/solution.md)
 * [2326. Spiral Matrix IV](Medium/2326.Spiral-Matrix-IV/solution.md)
