@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **217** problems with at least one solution file.
+Total: **218** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (56)
+### Easy (57)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,6 +73,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 3314. Construct the Minimum Bitwise Array I                        | [Link](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i/)                        | [main](Easy/3314.Construct-the-Minimum-Bitwise-Array-I/solution.md)                                                                       |
 | 3375. Minimum Operations to Make Array Values Equal to k           | [Link](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/)           | [main](Easy/3375.Minimum-Operations-to-Make-Array-Values-Equal-to-k/solution.md)                                                          |
 | 3471. Find the Largest Almost Missing Integer                      | [Link](https://leetcode.com/problems/find-the-largest-almost-missing-integer/)                      | [main](Easy/3471.Find-the-Largest-Almost-Missing-Integer/solution.md)                                                                    |
+| 3483. Unique 3-Digit Even Numbers                                  | [Link](https://leetcode.com/problems/unique-3-digit-even-numbers/)                                  | [main](Easy/3483.Unique-3-Digit-Even-Numbers/solution.md)                                                                                |
 | 3536. Maximum Product of Two Digits                                | [Link](https://leetcode.com/problems/maximum-product-of-two-digits/)                                | [main](Easy/3536.Maximum-Product-of-Two-Digits/solution.md)                                                                              |
 | 3622. Check Divisibility by Digit Sum and Product                  | [Link](https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product/)                  | [main](Easy/3622.Check-Divisibility-by-Digit-Sum-and-Product/solution.md)                                                                 |
 | 3637. Trionic Array I                                              | [Link](https://leetcode.com/problems/trionic-array-i/)                                              | [main](Easy/3637.Trionic-Array-I/solution.md)                                                                                             |
