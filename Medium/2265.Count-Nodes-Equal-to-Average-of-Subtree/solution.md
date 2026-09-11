@@ -255,7 +255,7 @@ which is a habit worth keeping in a function that might later want to call it.
 | `[0]` | `1` | zero value, `0 / 1 == 0` |
 | `[2,1,4]` | `3` | root `2` matches `7 / 3 = 2` by flooring |
 | 1000-node left spine of `7`s | `1000` | maximum depth; every node averages `7` |
-| complete tree of 1000 nodes | — | maximum size |
+| complete tree of 1000 nodes, values `0..999` | `500` | maximum size |
 
 All three implementations were checked against a brute force that, for every node,
 walks that node's entire subtree from scratch and compares against the linear
