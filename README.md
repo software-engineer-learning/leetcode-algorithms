@@ -19,11 +19,11 @@ Easy/350.Intersection-of-Two-Arrays-II/
 
 ## Solutions index
 
-Total: **218** problems with at least one solution file.
+Total: **219** problems with at least one solution file.
 
 Solution links use variant names when multiple approaches or languages exist (`main` = `solution.md`, others = `solution-<variant>.md`).
 
-### Easy (57)
+### Easy (58)
 
 | Problem                                                            | LeetCode                                                                                            | Solution                                                                                                                                  |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -61,6 +61,7 @@ Solution links use variant names when multiple approaches or languages exist (`m
 | 1979. Find Greatest Common Divisor of Array                        | [Link](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)                        | [main](Easy/1979.Find-Greatest-Common-Divisor-of-Array/solution.md)                                                                      |
 | 2022. Convert 1D Array Into 2D Array                               | [Link](https://leetcode.com/problems/convert-1d-array-into-2d-array/)                               | [main](Easy/2022.Convert-1D-Array-Into-2D-Array/solution.md)                                                                              |
 | 2053. Kth Distinct String in an Array                              | [Link](https://leetcode.com/problems/kth-distinct-string-in-an-array/)                              | [main](Easy/2053.Kth-Distinct-String-in-an-Array/solution.md)                                                                             |
+| 2094. Finding 3-Digit Even Numbers                                 | [Link](https://leetcode.com/problems/finding-3-digit-even-numbers/)                                 | [main](Easy/2094.Finding-3-Digit-Even-Numbers/solution.md)                                                                                |
 | 2191. Sort the Jumbled Numbers                                     | [Link](https://leetcode.com/problems/sort-the-jumbled-numbers/)                                     | [main](Easy/2191.Sort-the-Jumbled-Numbers/solution.md)                                                                                    |
 | 2418. Sort the People                                              | [Link](https://leetcode.com/problems/sort-the-people/)                                              | [main](Easy/2418.Sort-the-People/solution.md)                                                                                             |
 | 2558. Take Gifts From The Richest Pile                             | [Link](https://leetcode.com/problems/take-gifts-from-the-richest-pile/)                             | [main](Easy/2558.Take-Gifts-From-The-Richest-Pile/solution.md)                                                                            |

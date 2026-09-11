@@ -39,6 +39,7 @@
   - [1979. Find Greatest Common Divisor of Array](Easy/1979.Find-Greatest-Common-Divisor-of-Array/solution.md)
   - [2022. Convert 1D Array Into 2D Array](Easy/2022.Convert-1D-Array-Into-2D-Array/solution.md)
   - [2053. Kth Distinct String in an Array](Easy/2053.Kth-Distinct-String-in-an-Array/solution.md)
+  - [2094. Finding 3 Digit Even Numbers](Easy/2094.Finding-3-Digit-Even-Numbers/solution.md)
   - [2191. Sort the Jumbled Numbers](Easy/2191.Sort-the-Jumbled-Numbers/solution.md)
   - [2418. Sort the People](Easy/2418.Sort-the-People/solution.md)
   - [2558. Take Gifts From The Richest Pile](Easy/2558.Take-Gifts-From-The-Richest-Pile/solution.md)
